@@ -1,0 +1,951 @@
+10
+
+dir
+10398
+svn+ssh://svn.cern.ch/reps/totem/branches/CMSSW_7_0_4_ctpps/offline/cmssw/src/Geometry/TotemRPData/data
+svn+ssh://svn.cern.ch/reps/totem
+
+
+
+2015-02-25T14:44:50.791172Z
+10174
+tsodzawi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4525493e-7705-40b1-a816-d608a930855b
+
+2010_10_05
+dir
+
+2010_08_14_offsets
+dir
+
+RP_Vertical_Device.xml
+file
+
+
+
+
+2015-05-11T11:35:20.000000Z
+9da279f74d539340a9128652f4c58a2b
+2010-03-12T16:58:55.442940Z
+2333
+dmierzej
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2664
+
+RP_Sensitive_Dets.xml
+file
+
+
+
+
+2015-05-11T11:35:20.000000Z
+033017c825ffe6bd959f1da74c3f4a3c
+2010-03-12T16:58:55.442940Z
+2333
+dmierzej
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+591
+
+RP_450_Beta_11_220
+dir
+
+2010_10_07
+dir
+
+2010_08_16_offsets
+dir
+
+RP_Transformations.xml
+file
+
+
+
+
+2015-05-11T11:35:20.000000Z
+7356964a906ef1cc50bd7d7d0d2ce2c1
+2010-03-12T16:58:55.442940Z
+2333
+dmierzej
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2432
+
+2010_10_08
+dir
+
+2010_08_18_offsets
+dir
+
+2010_06_25
+dir
+
+RP_450_Beta_11_147
+dir
+
+2010_09_21_vsym
+dir
+
+2010_07_29-30_offsets
+dir
+
+RP_3500_Beta_90_220
+dir
+
+2010_08_24_offsets
+dir
+
+2010_08_26_offsets
+dir
+
+2010_09_21
+dir
+
+RP_Beta_90_150_out
+dir
+
+2010_09_28
+dir
+
+RP_1180_Beta_11_147_220
+dir
+
+2010_10_05_vsym
+dir
+
+RP_4000_Beta_90_6sigV_12sigH_220
+dir
+
+RP_3500_Beta_3.5_100urad_220_20sigma
+dir
+
+RP_4000_Beta_90_6sigV_12sigH_147
+dir
+
+2010_08_04-05
+dir
+
+RP_Materials.xml
+file
+
+
+
+
+2015-05-11T11:35:20.000000Z
+02babcd0158d1e75e4a423486a9d5c0e
+2010-03-12T16:58:55.442940Z
+2333
+dmierzej
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6707
+
+RP_3500_Beta_2.0_220
+dir
+
+RP_Garage
+dir
+
+2010_10_24
+dir
+
+RP_Beta_90_right_arm_150_220
+dir
+
+2010_10_26
+dir
+
+2010_07_14
+dir
+
+2010_07_15
+dir
+
+2011_05_17
+dir
+
+RP_Device.xml
+file
+
+
+
+
+2015-05-11T11:35:20.000000Z
+3621d5bb0f8014cbc38acb07acde7460
+2010-03-12T16:58:55.442940Z
+2333
+dmierzej
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2352
+
+2011_05_18
+dir
+
+RP_Horizontal_Device.xml
+file
+
+
+
+
+2015-05-11T11:35:20.000000Z
+9d45b0c04d0f26987e245c393c734454
+2010-03-12T16:58:55.442940Z
+2333
+dmierzej
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3217
+
+OneRPTestBeam
+dir
+
+2010_10_29-30
+dir
+
+RP_V:2.7_H:3.3
+dir
+
+RP_3500_Beta_3.5_100urad_220_25sigma
+dir
+
+2010_10_05_offsets
+dir
+
+2012_07_07_1
+dir
+
+RP_Hybrid.xml
+file
+
+
+
+
+2015-05-11T11:35:20.000000Z
+c173516b64024ea089f6e7e55ee237ca
+2010-08-25T17:08:20.817293Z
+3210
+dmierzej
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13680
+
+2010_10_07_offsets
+dir
+
+2010_10_29_temp
+dir
+
+2012_07_07_2
+dir
+
+2010_10_08_offsets
+dir
+
+2010_06_25_offsets
+dir
+
+RP_Param_Beam_Region.xml
+file
+
+
+
+
+2015-05-11T11:35:20.000000Z
+76e95f2ed19f07f03b4abc40be6c3752
+2015-01-20T13:21:24.267895Z
+9998
+tsodzawi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1620
+
+RP_3500_Beta_2.0_150
+dir
+
+2013_01_22
+dir
+
+RP_Box
+dir
+
+RP_Detectors_Assembly.xml
+file
+
+
+
+
+2015-05-11T11:35:21.000000Z
+0e45bc8ebcb20dfc535b1c5c001badd4
+2015-01-12T13:11:26.135450Z
+9975
+tsodzawi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2172
+
+RP_450_Beta_11_220_7sigma
+dir
+
+RP_Beta_2_220_RPs_only
+dir
+
+RP_Beta_1535_150_out
+dir
+
+2010_10_14_offsets
+dir
+
+RP_4000_Beta_0p6_145urd_inverted_100sigV_12sigH_220
+dir
+
+2010_09_28_vsym
+dir
+
+RP_Beta_90
+dir
+
+2010_09_21_offsets
+dir
+
+RP_3500_Beta_3.5_100urad_220
+dir
+
+2013_02_03
+dir
+
+RP_3500_Beta_5.0_220
+dir
+
+2010_07_30
+dir
+
+2010_09_28_offsets
+dir
+
+RP_Detectors_Assembly
+dir
+
+2012_10_24-25_1
+dir
+
+RP_4000_Beta_0p7_12sigV_20sigH_220
+dir
+
+RP_Beta_90_220_vertical
+dir
+
+RP_4000_Beta_90_6sigV_12sigH_147_220
+dir
+
+RP_Beta_1540_150_out
+dir
+
+RP_Stations_Assembly.xml
+file
+
+
+
+
+2015-05-11T11:35:21.000000Z
+2d4db3dfb1c7f982a9008bb1434b7ba6
+2015-01-20T13:21:24.267895Z
+9998
+tsodzawi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2085
+
+RP_4000_Beta_0p7_12sigV_20sigH_147
+dir
+
+RP_3500_Beta_11_220
+dir
+
+2010_08_04-05_offsets
+dir
+
+RP_4000_Beta_0p6_145urd_16sigV_16sigH_220
+dir
+
+2012_07_12-13
+dir
+
+2010_10_24_offsets
+dir
+
+2010_10_26_offsets
+dir
+
+RP_3500_Beta_1535_220
+dir
+
+2010_10_28_offsets
+dir
+
+RP_Beta_90_150_220_vertical
+dir
+
+2010_07_14_offsets
+dir
+
+2012_10_11
+dir
+
+2010_07_15_offsets
+dir
+
+2013_02_11
+dir
+
+2013_02_12
+dir
+
+2013_02_14
+dir
+
+2012_06_30
+dir
+
+2010_09_21_vsym2
+dir
+
+2010_08_18
+dir
+
+2011_10_20_1
+dir
+
+2010_10_29-30_offsets
+dir
+
+2011_10_20_2
+dir
+
+2011_10_20_3
+dir
+
+RP_3500_Beta_2.0_150_220
+dir
+
+RP_3500_Beta_2.5_150_220
+dir
+
+RP_Beta_2_All_RP
+dir
+
+RP_Box.xml
+file
+
+
+
+
+2015-05-11T11:35:21.000000Z
+ee9fc42f5ab51b8fc16d8fe30bf88a8f
+2015-01-12T13:11:26.135450Z
+9975
+tsodzawi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1515
+
+RP_3500_Beta_2.5_220
+dir
+
+2010_07_28_offsets
+dir
+
+2010_08_24
+dir
+
+2012_10_24-25_2a
+dir
+
+2012_10_24-25_2b
+dir
+
+TwoRPTestBeam
+dir
+
+2010_07_15_beam_pos
+dir
+
+2011_06_29
+dir
+
+RP_Beta_90_right_arm_220
+dir
+
+RP_1180_Beta_11_220
+dir
+
+RP_Dist_Beam_Low_Betha
+dir
+
+RP_220_Left_Station.xml
+file
+
+
+
+
+2015-05-11T11:35:21.000000Z
+da5a01f6c299e7b085414409129a2fd9
+2015-01-12T13:11:26.135450Z
+9975
+tsodzawi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11452
+
+RP_1180_Beta_11_147
+dir
+
+2012_07_07_1a
+dir
+
+RP_450_Beta_11_147_220
+dir
+
+2012_07_07_1c
+dir
+
+2012_07_07_1e
+dir
+
+RP_147_Left_Station.xml
+file
+
+
+
+
+2015-05-11T11:35:21.000000Z
+bbd56170d3cb7c7a3d81c07660116fa6
+2015-02-25T14:44:50.791172Z
+10174
+tsodzawi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14163
+
+RP_Cuts_Per_Region.xml
+file
+
+
+
+
+2015-05-11T11:35:21.000000Z
+f257d1725ed27280a80c3ed9b11dd9bc
+2010-11-24T16:51:00.616609Z
+3629
+dmierzej
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3907
+
+RP_Dist_Beam_High_Betha
+dir
+
+RP_4000_Beta_0p7_12sigV_20sigH_147_220
+dir
+
+RP_V:1.2_H:0.65
+dir
+
+2011_10_18
+dir
+
+RP_3500_Beta_2.5_150
+dir
+
+RP_220_Right_Station.xml
+file
+
+
+
+
+2015-05-11T11:35:21.000000Z
+54cd4f3487c0df8060b096fc7b3f5dbc
+2015-01-12T13:11:26.135450Z
+9975
+tsodzawi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11370
+
+2012_04_01_1
+dir
+
+2012_04_01_2
+dir
+
+RP_147_Right_Station.xml
+file
+
+
+
+
+2015-05-11T11:35:21.000000Z
+609a4c7873d86cc484e54784a8d5c51e
+2015-02-25T14:44:50.791172Z
+10174
+tsodzawi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14115
+
+RP_3500_Beta_3.5_100urad_220_30sigma
+dir
+
+TotemRPGlobal.xml
+file
+
+
+
+
+2015-05-11T11:35:21.000000Z
+347669d186355c32fc89e7d5ea75d260
+2010-03-12T16:58:55.442940Z
+2333
+dmierzej
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+913
+

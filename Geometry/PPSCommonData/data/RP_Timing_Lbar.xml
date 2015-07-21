@@ -1,0 +1,59 @@
+<DDDefinition xmlns="http://www.cern.ch/mms/DDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cern.ch/mms/DDL 
+../DDLSchema.xsd">
+
+<!--
+    Detector
+                 x
+                 | |   | |   | |   | |   | |
+                 | |   | |   | |   | |   | |
+                 | |   | |   | |   | |   | |
+                 | |   | |   | |   | |   | |
+                 | |   | |   | |   | |   | |
+                 | |   | |   | |   | |   | |
+                 | |   | |   | |   | |   | |
+                 | |   | |   | |   | |   | |
+                 | |   | |   | |   | |   | |
+z    ===============   | |   | |   | |   | |
+     ====================    | |   | |   | |
+     ==========================    | |   | |
+     ================================    | |
+     ======================================
+
+************************************BEAM********************************************
+
+
+
+TIMING LBAR
+-->
+
+
+   <ConstantsSection label="RP_Timing_Lbar.xml">
+        <Constant name="wind_x" value="2*mm"/>
+        <Constant name="wind_y" value="3*mm"/>
+        <Constant name="wind_z" value="3*mm"/>
+        <Constant name="shift" value="57.5*mm"/>
+        <Constant name="shiftx" value="40*mm"/>
+    </ConstantsSection>
+
+
+
+<SolidSection label="RP_Timing_Lbar.xml">
+    <Box name="window_box"  dx="[wind_x]/2" dy="[wind_y]/2" dz="[wind_z]/2"/>
+</SolidSection>
+
+
+
+
+<LogicalPartSection label="RP_Timing_Lbar.xml">
+
+     <LogicalPart name="window_box" category="unspecified">
+             <rSolid name="window_box"/>
+             <rMaterial name="materials:Glass"/>
+     </LogicalPart>
+</LogicalPartSection>
+
+
+</DDDefinition>
+
+
+

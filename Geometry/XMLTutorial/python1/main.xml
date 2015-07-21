@@ -1,0 +1,24 @@
+<DDDefinition xmlns="http://www.cern.ch/cms/DDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cern.ch/cms/DDL 
+../DDLSchema.xsd">
+
+<SolidSection label="main.xml">
+   <Tubs name="MainCylinder" rMin="0*m" rMax="1*m" dz="2*m" startPhi="0*deg" deltaPhi="360*deg"/>
+   <Box name="Box" dx="0.5*m" dy="0.1*m" dz="0.25*m"/>
+</SolidSection>
+
+<LogicalPartSection label="main.xml">
+     <LogicalPart name="MainCylinder" category="unspecified">
+             <rSolid name="MainCylinder"/>
+             <rMaterial name="materials:Air"/>
+     </LogicalPart>
+     <LogicalPart name="Box" category="unspecified">
+             <rSolid name="Box"/>
+             <rMaterial name="materials:Air"/>
+      </LogicalPart>
+</LogicalPartSection>
+
+
+
+
+</DDDefinition>
+

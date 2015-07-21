@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/Users/Macbook/geant4.10.00.p02/source/persistency/gdml/schema/">
+
+  <define>
+    <matrix coldim="2" name="RINDEX0x7fb4a97e4da0" values="1.23984e-06 1.00132 1.7712e-06 1.00133 2.0664e-06 1.00134 2.47968e-06 1.00135 2.69531e-06 1.00136 3"/>
+    <matrix coldim="2" name="RINDEX0x7fb4a97e5070" values="1.09853e-06 1.44887 1.16526e-06 1.44963 1.16966e-06 1.44968 1.22275e-06 1.45025 1.45503e-06 1.45247"/>
+  </define>
+
+  <materials>
+    <isotope N="24" Z="12" name="Mg240x7fb4a9446510">
+      <atom unit="g/mole" value="23.985"/>
+    </isotope>
+    <isotope N="25" Z="12" name="Mg250x7fb4a9446a40">
+      <atom unit="g/mole" value="24.9858"/>
+    </isotope>
+    <isotope N="26" Z="12" name="Mg260x7fb4a9446a80">
+      <atom unit="g/mole" value="25.9826"/>
+    </isotope>
+    <element name="Mg0x7fb4a9446ac0">
+      <fraction n="0.7899" ref="Mg240x7fb4a9446510"/>
+      <fraction n="0.1" ref="Mg250x7fb4a9446a40"/>
+      <fraction n="0.1101" ref="Mg260x7fb4a9446a80"/>
+    </element>
+    <isotope N="19" Z="9" name="F190x7fb4a9446cc0">
+      <atom unit="g/mole" value="18.9984"/>
+    </isotope>
+    <element name="F0x7fb4a9446d00">
+      <fraction n="1" ref="F190x7fb4a9446cc0"/>
+    </element>
+    <material name="G4_MAGNESIUM_FLUORIDE0x7fb4a9446940" state="solid">
+      <MEE unit="eV" value="134.3"/>
+      <D unit="g/cm3" value="3"/>
+      <fraction n="0.390117293749963" ref="Mg0x7fb4a9446ac0"/>
+      <fraction n="0.609882706250037" ref="F0x7fb4a9446d00"/>
+    </material>
+    <isotope N="12" Z="6" name="C120x7fb4a97e3ac0">
+      <atom unit="g/mole" value="12"/>
+    </isotope>
+    <isotope N="13" Z="6" name="C130x7fb4a97e4070">
+      <atom unit="g/mole" value="13.0034"/>
+    </isotope>
+    <element name="Carbon0x7fb4a97e3a10">
+      <fraction n="0.9893" ref="C120x7fb4a97e3ac0"/>
+      <fraction n="0.0107" ref="C130x7fb4a97e4070"/>
+    </element>
+    <isotope N="19" Z="9" name="F190x7fb4a97e2620">
+      <atom unit="g/mole" value="18.9984"/>
+    </isotope>
+    <element name="Fluorine0x7fb4a97e41d0">
+      <fraction n="1" ref="F190x7fb4a97e2620"/>
+    </element>
+    <material name="Perfluorobutane0x7fb4a97e4380" state="gas">
+      <property name="RINDEX" ref="RINDEX0x7fb4a97e4da0"/>
+      <T unit="K" value="298.15"/>
+      <P unit="pascal" value="506625"/>
+      <MEE unit="eV" value="106.820113683626"/>
+      <D unit="g/cm3" value="0.01121"/>
+      <fraction n="0.201841773302909" ref="Carbon0x7fb4a97e3a10"/>
+      <fraction n="0.798158226697091" ref="Fluorine0x7fb4a97e41d0"/>
+    </material>
+    <isotope N="54" Z="26" name="Fe540x7fb4a97e2d60">
+      <atom unit="g/mole" value="53.9396"/>
+    </isotope>
+    <isotope N="56" Z="26" name="Fe560x7fb4a97e2da0">
+      <atom unit="g/mole" value="55.9349"/>
+    </isotope>
+    <isotope N="57" Z="26" name="Fe570x7fb4a97e2de0">
+      <atom unit="g/mole" value="56.9354"/>
+    </isotope>
+    <isotope N="58" Z="26" name="Fe580x7fb4a97e2e20">
+      <atom unit="g/mole" value="57.9333"/>
+    </isotope>
+    <element name="Fe0x7fb4a97e2e60">
+      <fraction n="0.05845" ref="Fe540x7fb4a97e2d60"/>
+      <fraction n="0.91754" ref="Fe560x7fb4a97e2da0"/>
+      <fraction n="0.02119" ref="Fe570x7fb4a97e2de0"/>
+      <fraction n="0.00282" ref="Fe580x7fb4a97e2e20"/>
+    </element>
+    <isotope N="50" Z="24" name="Cr500x7fb4a97e3090">
+      <atom unit="g/mole" value="49.946"/>
+    </isotope>
+    <isotope N="52" Z="24" name="Cr520x7fb4a97e30d0">
+      <atom unit="g/mole" value="51.9405"/>
+    </isotope>
+    <isotope N="53" Z="24" name="Cr530x7fb4a97e15e0">
+      <atom unit="g/mole" value="52.9407"/>
+    </isotope>
+    <isotope N="54" Z="24" name="Cr540x7fb4a97e3210">
+      <atom unit="g/mole" value="53.9389"/>
+    </isotope>
+    <element name="Cr0x7fb4a97e3250">
+      <fraction n="0.04345" ref="Cr500x7fb4a97e3090"/>
+      <fraction n="0.83789" ref="Cr520x7fb4a97e30d0"/>
+      <fraction n="0.09501" ref="Cr530x7fb4a97e15e0"/>
+      <fraction n="0.02365" ref="Cr540x7fb4a97e3210"/>
+    </element>
+    <isotope N="58" Z="28" name="Ni580x7fb4a97e3460">
+      <atom unit="g/mole" value="57.9353"/>
+    </isotope>
+    <isotope N="60" Z="28" name="Ni600x7fb4a97e34a0">
+      <atom unit="g/mole" value="59.9308"/>
+    </isotope>
+    <isotope N="61" Z="28" name="Ni610x7fb4a97e34e0">
+      <atom unit="g/mole" value="60.9311"/>
+    </isotope>
+    <isotope N="62" Z="28" name="Ni620x7fb4a97e3520">
+      <atom unit="g/mole" value="61.9283"/>
+    </isotope>
+    <isotope N="64" Z="28" name="Ni640x7fb4a97e3560">
+      <atom unit="g/mole" value="63.928"/>
+    </isotope>
+    <element name="Ni0x7fb4a97e35e0">
+      <fraction n="0.680769" ref="Ni580x7fb4a97e3460"/>
+      <fraction n="0.262231" ref="Ni600x7fb4a97e34a0"/>
+      <fraction n="0.011399" ref="Ni610x7fb4a97e34e0"/>
+      <fraction n="0.036345" ref="Ni620x7fb4a97e3520"/>
+      <fraction n="0.009256" ref="Ni640x7fb4a97e3560"/>
+    </element>
+    <material name="G4_STAINLESS-STEEL0x7fb4a97e2c60" state="solid">
+      <MEE unit="eV" value="282.97693634122"/>
+      <D unit="g/cm3" value="8"/>
+      <fraction n="0.746212874621521" ref="Fe0x7fb4a97e2e60"/>
+      <fraction n="0.169001044311525" ref="Cr0x7fb4a97e3250"/>
+      <fraction n="0.0847860810669534" ref="Ni0x7fb4a97e35e0"/>
+    </material>
+    <isotope N="28" Z="14" name="Si280x7fb4a94483e0">
+      <atom unit="g/mole" value="27.9769"/>
+    </isotope>
+    <isotope N="29" Z="14" name="Si290x7fb4a9448d90">
+      <atom unit="g/mole" value="28.9765"/>
+    </isotope>
+    <isotope N="30" Z="14" name="Si300x7fb4a9448dd0">
+      <atom unit="g/mole" value="29.9738"/>
+    </isotope>
+    <element name="Si0x7fb4a9448e30">
+      <fraction n="0.922296077703922" ref="Si280x7fb4a94483e0"/>
+      <fraction n="0.0468319531680468" ref="Si290x7fb4a9448d90"/>
+      <fraction n="0.0308719691280309" ref="Si300x7fb4a9448dd0"/>
+    </element>
+    <material name="Fused_Quartz0x7fb4a9448c90" state="solid">
+      <property name="RINDEX" ref="RINDEX0x7fb4a97e5070"/>
+      <T unit="K" value="25"/>
+      <MEE unit="eV" value="173"/>
+      <D unit="g/cm3" value="2.203"/>
+      <fraction n="1" ref="Si0x7fb4a9448e30"/>
+    </material>
+    <isotope N="12" Z="6" name="C120x7fb4a97e0d90">
+      <atom unit="g/mole" value="12"/>
+    </isotope>
+    <isotope N="13" Z="6" name="C130x7fb4a97e0dd0">
+      <atom unit="g/mole" value="13.0034"/>
+    </isotope>
+    <element name="C0x7fb4a97e0e20">
+      <fraction n="0.9893" ref="C120x7fb4a97e0d90"/>
+      <fraction n="0.0107" ref="C130x7fb4a97e0dd0"/>
+    </element>
+    <isotope N="14" Z="7" name="N140x7fb4a97e1000">
+      <atom unit="g/mole" value="14.0031"/>
+    </isotope>
+    <isotope N="15" Z="7" name="N150x7fb4a97e1060">
+      <atom unit="g/mole" value="15.0001"/>
+    </isotope>
+    <element name="N0x7fb4a97e10b0">
+      <fraction n="0.99632" ref="N140x7fb4a97e1000"/>
+      <fraction n="0.00368" ref="N150x7fb4a97e1060"/>
+    </element>
+    <isotope N="16" Z="8" name="O160x7fb4a97e1270">
+      <atom unit="g/mole" value="15.9949"/>
+    </isotope>
+    <isotope N="17" Z="8" name="O170x7fb4a97e12f0">
+      <atom unit="g/mole" value="16.9991"/>
+    </isotope>
+    <isotope N="18" Z="8" name="O180x7fb4a97e1330">
+      <atom unit="g/mole" value="17.9992"/>
+    </isotope>
+    <element name="O0x7fb4a97e1370">
+      <fraction n="0.99757" ref="O160x7fb4a97e1270"/>
+      <fraction n="0.00038" ref="O170x7fb4a97e12f0"/>
+      <fraction n="0.00205" ref="O180x7fb4a97e1330"/>
+    </element>
+    <isotope N="36" Z="18" name="Ar360x7fb4a97e1560">
+      <atom unit="g/mole" value="35.9675"/>
+    </isotope>
+    <isotope N="38" Z="18" name="Ar380x7fb4a97e15a0">
+      <atom unit="g/mole" value="37.9627"/>
+    </isotope>
+    <isotope N="40" Z="18" name="Ar400x7fb4a97e12b0">
+      <atom unit="g/mole" value="39.9624"/>
+    </isotope>
+    <element name="Ar0x7fb4a97e1660">
+      <fraction n="0.003365" ref="Ar360x7fb4a97e1560"/>
+      <fraction n="0.000632" ref="Ar380x7fb4a97e15a0"/>
+      <fraction n="0.996003" ref="Ar400x7fb4a97e12b0"/>
+    </element>
+    <material name="G4_AIR0x7fb4a97e0c90" state="gas">
+      <MEE unit="eV" value="85.7"/>
+      <D unit="g/cm3" value="0.00120479"/>
+      <fraction n="0.000124000124000124" ref="C0x7fb4a97e0e20"/>
+      <fraction n="0.755267755267755" ref="N0x7fb4a97e10b0"/>
+      <fraction n="0.231781231781232" ref="O0x7fb4a97e1370"/>
+      <fraction n="0.0128270128270128" ref="Ar0x7fb4a97e1660"/>
+    </material>
+  </materials>
+
+  <solids>
+    <box lunit="mm" name="Mirror_Case0x7fb4a95a3e20" x="3" y="53" z="70"/>
+    <opticalsurface finish="0" model="1" name="Mirror_Surface" type="0" value="0"/>
+    <box lunit="mm" name="Mirror_wall0x7fb4a95a41b0" x="53" y="1" z="200"/>
+    <box lunit="mm" name="Body_Gas_No_PMT_Column0x7fb4a95a3dc0" x="53" y="53" z="200"/>
+    <box lunit="mm" name="PMT_Gas_Column0x7fb4a95a42d0" x="56.5" y="53" z="53"/>
+    <union name="Body_Gas0x7fb4a95a4330">
+      <first ref="Body_Gas_No_PMT_Column0x7fb4a95a3dc0"/>
+      <second ref="PMT_Gas_Column0x7fb4a95a42d0"/>
+      <position name="Body_Gas0x7fb4a95a4330_pos" unit="mm" x="54.75" y="0" z="61.5"/>
+    </union>
+    <box lunit="mm" name="Body_External_Full0x7fb4a95a3d60" x="66" y="66" z="201"/>
+    <opticalsurface finish="0" model="1" name="Aluminium_Surface" type="0" value="0"/>
+    <box lunit="mm" name="PMT_Glass0x7fb4a95a4270" x="2" y="53" z="53"/>
+    <opticalsurface finish="0" model="1" name="PMT_Glass_Surface" type="1" value="0"/>
+    <box lunit="mm" name="PMT_Room0x7fb4a95a4210" x="60" y="63" z="63"/>
+    <box lunit="mm" name="Envelope0x7fb4a95a3d00" x="1000" y="1000" z="1000"/>
+    <box lunit="mm" name="World0x7fb4a95a3980" x="1100" y="1100" z="1100"/>
+  </solids>
+
+  <structure>
+    <volume name="Mirror0x7fb4a95a4b40">
+      <materialref ref="G4_MAGNESIUM_FLUORIDE0x7fb4a9446940"/>
+      <solidref ref="Mirror_Case0x7fb4a95a3e20"/>
+    </volume>
+    <volume name="Mirror0x7fb4a95a4bd0">
+      <materialref ref="G4_MAGNESIUM_FLUORIDE0x7fb4a9446940"/>
+      <solidref ref="Mirror_wall0x7fb4a95a41b0"/>
+    </volume>
+    <volume name="Body_Gas0x7fb4a95a4ab0">
+      <materialref ref="Perfluorobutane0x7fb4a97e4380"/>
+      <solidref ref="Body_Gas0x7fb4a95a4330"/>
+      <physvol name="Mirror0x7fb4a959fb10">
+        <volumeref ref="Mirror0x7fb4a95a4b40"/>
+        <position name="Mirror0x7fb4a959fb10_pos" unit="mm" x="-0.690602486691017" y="0" z="65.5"/>
+        <rotation name="Mirror0x7fb4a959fb10_rot" unit="deg" x="0" y="-45" z="0"/>
+      </physvol>
+      <physvol name="Mirror0x7fb4a959fb50">
+        <volumeref ref="Mirror0x7fb4a95a4bd0"/>
+        <position name="Mirror0x7fb4a959fb50_pos" unit="mm" x="0" y="-26.5" z="0"/>
+      </physvol>
+    </volume>
+    <volume name="Body_External0x7fb4a95a4a20">
+      <materialref ref="G4_STAINLESS-STEEL0x7fb4a97e2c60"/>
+      <solidref ref="Body_External_Full0x7fb4a95a3d60"/>
+      <physvol name="Body0x7fb4a95a5040">
+        <volumeref ref="Body_Gas0x7fb4a95a4ab0"/>
+      </physvol>
+    </volume>
+    <volume name="PMT_Glass0x7fb4a95a44c0">
+      <materialref ref="Fused_Quartz0x7fb4a9448c90"/>
+      <solidref ref="PMT_Glass0x7fb4a95a4270"/>
+    </volume>
+    <volume name="PMT_Room0x7fb4a95a4870">
+      <materialref ref="G4_STAINLESS-STEEL0x7fb4a97e2c60"/>
+      <solidref ref="PMT_Room0x7fb4a95a4210"/>
+      <physvol name="PMT_Glass0x7fb4a959fad0">
+        <volumeref ref="PMT_Glass0x7fb4a95a44c0"/>
+        <position name="PMT_Glass0x7fb4a959fad0_pos" unit="mm" x="21" y="0" z="0"/>
+      </physvol>
+    </volume>
+    <volume name="Envelope0x7fb4a95a4990">
+      <materialref ref="G4_AIR0x7fb4a97e0c90"/>
+      <solidref ref="Envelope0x7fb4a95a3d00"/>
+      <physvol name="Body_External0x7fb4a95a5000">
+        <volumeref ref="Body_External0x7fb4a95a4a20"/>
+        <position name="Body_External0x7fb4a95a5000_pos" unit="mm" x="0" y="0" z="100.5"/>
+      </physvol>
+      <physvol name="PMTRoom0x7fb4a95a5080">
+        <volumeref ref="PMT_Room0x7fb4a95a4870"/>
+        <position name="PMTRoom0x7fb4a95a5080_pos" unit="mm" x="63" y="0" z="161.5"/>
+      </physvol>
+    </volume>
+    <volume name="World0x7fb4a95a4900">
+      <materialref ref="G4_AIR0x7fb4a97e0c90"/>
+      <solidref ref="World0x7fb4a95a3980"/>
+      <physvol name="Envelope0x7fb4a95a4fc0">
+        <volumeref ref="Envelope0x7fb4a95a4990"/>
+      </physvol>
+    </volume>
+    <skinsurface name="Mirror_Surface" surfaceproperty="Mirror_Surface">
+      <volumeref ref="Mirror0x7fb4a95a4b40"/>
+    </skinsurface>
+    <skinsurface name="Mirror_Surfacewall" surfaceproperty="Mirror_Surface">
+      <volumeref ref="Mirror0x7fb4a95a4bd0"/>
+    </skinsurface>
+    <skinsurface name="PMT_Glass_Surface" surfaceproperty="PMT_Glass_Surface">
+      <volumeref ref="PMT_Glass0x7fb4a95a44c0"/>
+    </skinsurface>
+    <bordersurface name="Body_Surface" surfaceproperty="Aluminium_Surface">
+      <physvolref ref="Body_External0x7fb4a95a5000"/>
+      <physvolref ref="Body0x7fb4a95a5040"/>
+    </bordersurface>
+    <bordersurface name="PMT_Gas_Surface" surfaceproperty="Aluminium_Surface">
+      <physvolref ref="PMTRoom0x7fb4a95a5080"/>
+      <physvolref ref="Body0x7fb4a95a5040"/>
+    </bordersurface>
+  </structure>
+
+  <setup name="Default" version="1.0">
+    <world ref="World0x7fb4a95a4900"/>
+  </setup>
+
+</gdml>

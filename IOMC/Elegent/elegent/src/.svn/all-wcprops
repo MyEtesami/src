@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/svn/!svn/ver/45/trunk/src
+END
+ElegentTDistributionSampler.cc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/38/trunk/src/ElegentTDistributionSampler.cc
+END
+JenkovszkyModel.cc
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/39/trunk/src/JenkovszkyModel.cc
+END
+Model.cc
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/37/trunk/src/Model.cc
+END
+InterpolationModel.cc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/37/trunk/src/InterpolationModel.cc
+END
+ElegentBDistributionSampler.cc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/38/trunk/src/ElegentBDistributionSampler.cc
+END
+BHModel.cc
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/39/trunk/src/BHModel.cc
+END
+BSWModel.cc
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/45/trunk/src/BSWModel.cc
+END
+Constants.cc
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/41/trunk/src/Constants.cc
+END
+ExpModel.cc
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/39/trunk/src/ExpModel.cc
+END
+PPPModel.cc
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/39/trunk/src/PPPModel.cc
+END
+ElegentTest.cc
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/10/trunk/src/ElegentTest.cc
+END
+IslamModel.cc
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/39/trunk/src/IslamModel.cc
+END
+Generator.cc
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/10/trunk/src/Generator.cc
+END
+ModelFactory.cc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/41/trunk/src/ModelFactory.cc
+END
+Math.cc
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/19/trunk/src/Math.cc
+END
+ElegentSDistributionSampler.cc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/45/trunk/src/ElegentSDistributionSampler.cc
+END
+CoulombInterference.cc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/8/trunk/src/CoulombInterference.cc
+END

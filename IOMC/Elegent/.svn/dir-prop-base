@@ -1,0 +1,6 @@
+K 13
+svn:externals
+V 51
+elegent -r48 http://elegent.hepforge.org/svn/trunk
+
+END

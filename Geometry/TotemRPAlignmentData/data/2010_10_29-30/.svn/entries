@@ -1,0 +1,40 @@
+10
+
+dir
+10398
+svn+ssh://svn.cern.ch/reps/totem/branches/CMSSW_7_0_4_ctpps/offline/cmssw/src/Geometry/TotemRPAlignmentData/data/2010_10_29-30
+svn+ssh://svn.cern.ch/reps/totem
+
+
+
+2010-11-26T16:52:02.965056Z
+3647
+hniewiad
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4525493e-7705-40b1-a816-d608a930855b
+
+offset_geo_ver_unit_rot_ver1.1_manual_x_cor
+dir
+
+version1.0
+dir
+
+version3.0
+dir
+
+offset_geo_ver_unit_rot_ver1.0
+dir
+

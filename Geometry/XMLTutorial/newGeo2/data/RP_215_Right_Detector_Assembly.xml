@@ -1,0 +1,539 @@
+<DDDefinition xmlns="http://www.cern.ch/mms/DDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cern.ch/mms/DDL 
+../DDLSchema.xsd">
+
+<PosPartSection label="RP_215_Right_Detector_Assembly.xml">
+<PosPart copyNumber="1">
+     <rParent name="RP_Timing_Box_Right:RP_Cylinder_primary_vacuum"/>
+     <rChild name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rRotation name="PPS_Transformations:RP_90_z_270_y_rot"/>
+        <Translation x="0*m " y="0*m " z="-29.9*mm " />
+</PosPart>
+
+<PosPart copyNumber="1">
+	<rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+	<rChild name="RP_Timing_Lbar:LbarE24"/>
+	<Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]"  y="-1.6*mm" z="2.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="1">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]+58.8*mm+[RP_Timing_Lbar:wind_x]/2"  y="-1.6*mm" z="2.5*mm-[RP_Timing_Lbar:shift]+11.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="2">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarE24"/>
+        <Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]" y="4.8*mm" z="2.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+
+<PosPart copyNumber="2">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]+58.8*mm+[RP_Timing_Lbar:wind_x]/2"  y="4.8*mm" z="2.5*mm-[RP_Timing_Lbar:shift]+11.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+
+<PosPart copyNumber="3">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarE24"/>
+        <Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]" y="-1.6*mm" z="72.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+
+<PosPart copyNumber="3">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]+58.8*mm+[RP_Timing_Lbar:wind_x]/2"  y="-1.6*mm" z="72.5*mm-[RP_Timing_Lbar:shift]+11.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="4">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarE24"/>
+        <Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]" y="4.8*mm" z="72.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+
+<PosPart copyNumber="4">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]+58.8*mm+[RP_Timing_Lbar:wind_x]/2"  y="4.8*mm" z="72.5*mm-[RP_Timing_Lbar:shift]+11.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="1">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarE13"/>
+        <Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]" y="-4.8*mm" z="0*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="5">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]+58.8*mm+[RP_Timing_Lbar:wind_x]/2"  y="-4.8*mm" z="0*mm-[RP_Timing_Lbar:shift]+9*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+
+
+<PosPart copyNumber="2">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarE13"/>
+        <Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]" y="1.6*mm" z="0*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="6">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]+58.8*mm+[RP_Timing_Lbar:wind_x]/2"  y="1.6*mm" z="0*mm-[RP_Timing_Lbar:shift]+9*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="3">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarE13"/>
+        <Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]" y="-4.8*mm" z="70*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="7">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]+58.8*mm+[RP_Timing_Lbar:wind_x]/2"  y="-4.8*mm" z="70*mm-[RP_Timing_Lbar:shift]+9*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="4">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarE13"/>
+        <Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]" y="1.6*mm" z="70*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="8">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="14.3*mm-[RP_Timing_Lbar:shiftx]+58.8*mm+[RP_Timing_Lbar:wind_x]/2"  y="1.6*mm" z="70*mm-[RP_Timing_Lbar:shift]+9*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+
+
+
+<PosPart copyNumber="1">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarD24"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]" y="-1.6*mm" z="7.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="9">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]+61.90*mm+[RP_Timing_Lbar:wind_x]/2"  y="-1.6*mm" z="7.5*mm-[RP_Timing_Lbar:shift]+16.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="2">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarD24"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]" y="4.8*mm" z="7.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="10">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]+61.90*mm+[RP_Timing_Lbar:wind_x]/2"  y="4.8*mm" z="7.5*mm-[RP_Timing_Lbar:shift]+16.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="3">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarD24"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]" y="-1.6*mm" z="77.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="11">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]+61.90*mm+[RP_Timing_Lbar:wind_x]/2"  y="-1.6*mm" z="77.5*mm-[RP_Timing_Lbar:shift]+16.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="4">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarD24"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]" y="4.8*mm" z="77.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+
+<PosPart copyNumber="12">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]+61.90*mm+[RP_Timing_Lbar:wind_x]/2"  y="4.8*mm" z="77.5*mm-[RP_Timing_Lbar:shift]+16.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="1">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarD13"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]" y="-4.8*mm" z="5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="13">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]+61.90*mm+[RP_Timing_Lbar:wind_x]/2"  y="-4.8*mm" z="5*mm-[RP_Timing_Lbar:shift]+14*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="2">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarD13"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]" y="1.6*mm" z="5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="14">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]+61.90*mm+[RP_Timing_Lbar:wind_x]/2"  y="1.6*mm" z="5*mm-[RP_Timing_Lbar:shift]+14*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="3">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarD13"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]" y="-4.8*mm" z="75*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="15">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]+61.90*mm+[RP_Timing_Lbar:wind_x]/2"  y="-4.8*mm" z="75*mm-[RP_Timing_Lbar:shift]+14*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="4">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarD13"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]" y="1.6*mm" z="75*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="16">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="11.1*mm-[RP_Timing_Lbar:shiftx]+61.90*mm+[RP_Timing_Lbar:wind_x]/2"  y="1.6*mm" z="75*mm-[RP_Timing_Lbar:shift]+14*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="1">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarC24"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]" y="-1.6*mm" z="12.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="17">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]+65*mm+[RP_Timing_Lbar:wind_x]/2"  y="-1.6*mm" z="12.5*mm-[RP_Timing_Lbar:shift]+21.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="2">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarC24"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]" y="4.8*mm" z="12.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="18">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]+65*mm+[RP_Timing_Lbar:wind_x]/2"  y="4.8*mm" z="12.5*mm-[RP_Timing_Lbar:shift]+21.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="3">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarC24"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]" y="-1.6*mm" z="82.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="19">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]+65*mm+[RP_Timing_Lbar:wind_x]/2"  y="-1.6*mm" z="82.5*mm-[RP_Timing_Lbar:shift]+21.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="4">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarC24"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]" y="4.8*mm" z="82.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="20">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]+65*mm+[RP_Timing_Lbar:wind_x]/2"  y="4.8*mm" z="82.5*mm-[RP_Timing_Lbar:shift]+21.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="1">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarC13"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]" y="-4.8*mm" z="10*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="21">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]+65*mm+[RP_Timing_Lbar:wind_x]/2"  y="-4.8*mm" z="10*mm-[RP_Timing_Lbar:shift]+19*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="2">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarC13"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]" y="1.6*mm" z="10*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="22">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]+65*mm+[RP_Timing_Lbar:wind_x]/2"  y="1.6*mm" z="10*mm-[RP_Timing_Lbar:shift]+19*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="3">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarC13"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]" y="-4.8*mm" z="80*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="23">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]+65*mm+[RP_Timing_Lbar:wind_x]/2"  y="-4.8*mm" z="80*mm-[RP_Timing_Lbar:shift]+19*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="4">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarC13"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]" y="1.6*mm" z="80*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="24">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="7.9*mm-[RP_Timing_Lbar:shiftx]+65*mm+[RP_Timing_Lbar:wind_x]/2"  y="1.6*mm" z="80*mm-[RP_Timing_Lbar:shift]+19*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+
+
+<PosPart copyNumber="1">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarB24"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]" y="-1.6*mm" z="17.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="25">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]+68.10*mm+[RP_Timing_Lbar:wind_x]/2"  y="-1.6*mm" z="17.5*mm-[RP_Timing_Lbar:shift]+26.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="2">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarB24"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]" y="4.8*mm" z="17.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="26">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]+68.10*mm+[RP_Timing_Lbar:wind_x]/2"  y="4.8*mm" z="17.5*mm-[RP_Timing_Lbar:shift]+26.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="3">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarB24"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]" y="-1.6*mm" z="87.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="27">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]+68.10*mm+[RP_Timing_Lbar:wind_x]/2"  y="-1.6*mm" z="87.5*mm-[RP_Timing_Lbar:shift]+26.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="4">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarB24"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]" y="4.8*mm" z="87.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="28">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]+68.10*mm+[RP_Timing_Lbar:wind_x]/2"  y="4.8*mm" z="87.5*mm-[RP_Timing_Lbar:shift]+26.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+
+<PosPart copyNumber="1">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarB13"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]" y="-4.8*mm" z="15*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="29">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]+68.10*mm+[RP_Timing_Lbar:wind_x]/2"  y="-4.8*mm" z="15*mm-[RP_Timing_Lbar:shift]+24*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="2">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarB13"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]" y="1.6*mm" z="15*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="30">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]+68.10*mm+[RP_Timing_Lbar:wind_x]/2"  y="1.6*mm" z="15*mm-[RP_Timing_Lbar:shift]+24*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="3">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarB13"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]" y="-4.8*mm" z="85*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="31">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]+68.10*mm+[RP_Timing_Lbar:wind_x]/2"  y="-4.8*mm" z="85*mm-[RP_Timing_Lbar:shift]+24*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="4">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarB13"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]" y="1.6*mm" z="85*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="32">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="4.7*mm-[RP_Timing_Lbar:shiftx]+68.10*mm+[RP_Timing_Lbar:wind_x]/2"  y="1.6*mm" z="85*mm-[RP_Timing_Lbar:shift]+24*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+
+
+
+
+
+
+
+<PosPart copyNumber="1">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarA24"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]" y="-1.6*mm" z="22.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="33">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]+71.2*mm+[RP_Timing_Lbar:wind_x]/2"  y="-1.6*mm" z="22.5*mm-[RP_Timing_Lbar:shift]+31.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="2">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarA24"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]" y="4.8*mm" z="22.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="34">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]+71.2*mm+[RP_Timing_Lbar:wind_x]/2"  y="4.8*mm" z="22.5*mm-[RP_Timing_Lbar:shift]+31.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="3">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarA24"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]" y="-1.6*mm" z="92.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="35">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]+71.2*mm+[RP_Timing_Lbar:wind_x]/2"  y="-1.6*mm" z="92.5*mm-[RP_Timing_Lbar:shift]+31.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="4">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarA24"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]" y="4.8*mm" z="92.5*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="36">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]+71.2*mm+[RP_Timing_Lbar:wind_x]/2"  y="4.8*mm" z="92.5*mm-[RP_Timing_Lbar:shift]+31.5*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+
+<PosPart copyNumber="1">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarA13"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]" y="-4.8*mm" z="20*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="37">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]+71.2*mm+[RP_Timing_Lbar:wind_x]/2"  y="-4.8*mm" z="20*mm-[RP_Timing_Lbar:shift]+29*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="2">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarA13"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]" y="1.6*mm" z="20*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="38">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]+71.2*mm+[RP_Timing_Lbar:wind_x]/2"  y="1.6*mm" z="20*mm-[RP_Timing_Lbar:shift]+29*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+
+<PosPart copyNumber="3">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarA13"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]" y="-4.8*mm" z="90*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="39">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]+71.2*mm+[RP_Timing_Lbar:wind_x]/2"  y="-4.8*mm" z="90*mm-[RP_Timing_Lbar:shift]+29*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+
+<PosPart copyNumber="4">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:LbarA13"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]" y="1.6*mm" z="90*mm-[RP_Timing_Lbar:shift] " />
+</PosPart>
+<PosPart copyNumber="40">
+        <rParent name="RP_Timing_Box_Right:PPS_timing_box"/>
+        <rChild name="RP_Timing_Lbar:window_box"/>
+        <Translation x="1.5*mm-[RP_Timing_Lbar:shiftx]+71.2*mm+[RP_Timing_Lbar:wind_x]/2"  y="1.6*mm" z="90*mm-[RP_Timing_Lbar:shift]+29*mm-[RP_Timing_Lbar:wind_z]/2 " />
+</PosPart>
+
+
+
+
+<PosPart copyNumber="1">
+     <rParent name="RP_Timing_Box_Right:RP_Cylinder_primary_vacuum"/>
+     <rChild name="RP_Timing_Box_Right:RP_Cylinder_lower_part_foil"/>
+        <Translation x="0*m " y="0*mm " z="[Cylindrical_pot:height_lower_part]/2-[Cylindrical_pot:height]/2" />
+</PosPart>
+
+<PosPart copyNumber="1">
+     <rParent name="RP_Timing_Box_Right:RP_Cylinder_primary_vacuum"/>
+     <rChild name="RP_Timing_Box_Right:RP_Cylinder_lower_part_wall"/>
+        <Translation x="0*m " y="0*mm " z="[Cylindrical_pot:height_lower_part]/2-[Cylindrical_pot:height]/2" />
+</PosPart>
+
+
+<PosPart copyNumber="1">
+     <rParent name="RP_Timing_Box_Right:RP_Cylinder_primary_vacuum"/>
+     <rChild name="RP_Timing_Box_Right:RP_Cylinder_upper_part"/>
+        <Translation x="0*m " y="0*mm " z="[Cylindrical_pot:height_upper_part]/2-[Cylindrical_pot:height]/2+[Cylindrical_pot:height_lower_part]-[Cylindrical_pot:shift_upper_lower_part]" />
+</PosPart>
+
+
+
+<PosPart copyNumber="1">
+     <rParent name="RP_Timing_Box_Right:RP_Cylinder_primary_vacuum"/>
+     <rChild name="RP_Timing_Box_Right:RP_Cylinder_ferrite"/>
+        <Translation x="0*m " y="0*mm " z="[Cylindrical_pot:height_ferrite]/2+[Cylindrical_pot:height]/2-[Cylindrical_pot:ferrite_upper_part_distance]" />
+</PosPart>
+
+<PosPart copyNumber="1">
+     <rParent name="RP_Timing_Box_Right:RP_Cylinder_primary_vacuum"/>
+     <rChild name="RP_Timing_Box_Right:RP_Cylinder_bottom_wall"/>
+        <Translation x="0*m " y="0*mm " z="[Cylindrical_pot:wall_thickness_bottom_wall]/2-[Cylindrical_pot:height]/2" />
+</PosPart>
+
+</PosPartSection>
+
+</DDDefinition>

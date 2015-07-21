@@ -1,0 +1,12 @@
+K 10
+svn:ignore
+V 22
+stats*
+results*
+*.asy
+
+K 13
+svn:mergeinfo
+V 103
+/branches/CMSSW_6_2_0/offline/cmssw/src/RecoTotemRP/RPStationMultiTrackFinderFitter:9524-9643,9946-9947
+END

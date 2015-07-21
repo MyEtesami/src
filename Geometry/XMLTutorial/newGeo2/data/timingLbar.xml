@@ -1,0 +1,671 @@
+<DDDefinition xmlns="http://www.cern.ch/mms/DDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cern.ch/mms/DDL 
+../DDLSchema.xsd">
+
+    <ConstantsSection label="Cylindrical_pot.xml">
+        <Constant name="wind_x" value="2*mm"/>
+        <Constant name="wind_y" value="3*mm"/>
+        <Constant name="wind_z" value="3*mm"/>
+        <Constant name="shift" value="57.5*mm"/>
+        <Constant name="shiftx" value="35.6*mm"/>
+    </ConstantsSection>
+
+
+
+<SolidSection label="timingLbar.xml">
+    <Box name="PPS_timing_box"  dx="35.6*mm" dy="6*mm" dz="66.5*mm"/>
+    <Box name="window_box"  dx="[wind_x]/2" dy="[wind_y]/2" dz="[wind_z]/2"/>
+
+
+    <Box  name="BoxHE24" dx="1.5*mm" dy="1.5*mm" dz="11.5*mm"/>
+    <Box  name="BoxVE24" dx="29.4*mm" dy="1.5*mm" dz="1.5*mm"/>
+<UnionSolid name="LbarE24" firstSolid="BoxHE24" secondSolid="BoxVE24">
+     <Translation x="30.95*mm" y="0" z="10*mm"/>
+</UnionSolid>
+
+    <Box  name="BoxHE13" dx="1.5*mm" dy="1.5*mm" dz="9*mm"/>
+    <Box  name="BoxVE13" dx="29.4*mm" dy="1.5*mm" dz="1.5*mm"/>
+<UnionSolid name="LbarE13" firstSolid="BoxHE13" secondSolid="BoxVE13">
+     <Translation x="30.95*mm" y="0" z="7.5*mm"/>
+</UnionSolid>
+
+
+
+    <Box  name="BoxHD24" dx="1.5*mm" dy="1.5*mm" dz="16.5*mm"/>
+    <Box  name="BoxVD24" dx="30.95*mm" dy="1.5*mm" dz="1.5*mm"/>
+<UnionSolid name="LbarD24" firstSolid="BoxHD24" secondSolid="BoxVD24">
+     <Translation x="32.45*mm" y="0" z="15*mm"/>
+</UnionSolid>
+
+    <Box  name="BoxHD13" dx="1.5*mm" dy="1.5*mm" dz="14*mm"/>
+    <Box  name="BoxVD13" dx="30.95*mm" dy="1.5*mm" dz="1.5*mm"/>
+<UnionSolid name="LbarD13" firstSolid="BoxHD13" secondSolid="BoxVD13">
+     <Translation x="32.45*mm" y="0" z="12.5*mm"/>
+</UnionSolid>
+
+
+
+
+    <Box  name="BoxHC24" dx="1.5*mm" dy="1.5*mm" dz="21.5*mm"/>
+    <Box  name="BoxVC24" dx="32.5*mm" dy="1.5*mm" dz="1.5*mm"/>
+<UnionSolid name="LbarC24" firstSolid="BoxHC24" secondSolid="BoxVC24">
+     <Translation x="34*mm" y="0" z="20*mm"/>
+</UnionSolid>
+
+    <Box  name="BoxHC13" dx="1.5*mm" dy="1.5*mm" dz="19*mm"/>
+    <Box  name="BoxVC13" dx="32.5*mm" dy="1.5*mm" dz="1.5*mm"/>
+<UnionSolid name="LbarC13" firstSolid="BoxHC13" secondSolid="BoxVC13">
+     <Translation x="34*mm" y="0" z="17.5*mm"/>
+</UnionSolid>
+
+
+
+    <Box  name="BoxHB24" dx="1.5*mm" dy="1.5*mm" dz="26.5*mm"/>
+    <Box  name="BoxVB24" dx="34.05*mm" dy="1.5*mm" dz="1.5*mm"/>
+<UnionSolid name="LbarB24" firstSolid="BoxHB24" secondSolid="BoxVB24">
+     <Translation x="35.55*mm" y="0" z="25*mm"/>
+</UnionSolid>
+
+    <Box  name="BoxHB13" dx="1.5*mm" dy="1.5*mm" dz="24*mm"/>
+    <Box  name="BoxVB13" dx="34.05*mm" dy="1.5*mm" dz="1.5*mm"/>
+<UnionSolid name="LbarB13" firstSolid="BoxHB13" secondSolid="BoxVB13">
+     <Translation x="35.55*mm" y="0" z="22.5*mm"/>
+</UnionSolid>
+
+
+
+
+    <Box  name="BoxHA24" dx="1.5*mm" dy="1.5*mm" dz="31.5*mm"/>
+    <Box  name="BoxVA24" dx="35.6*mm" dy="1.5*mm" dz="1.5*mm"/>
+<UnionSolid name="LbarA24" firstSolid="BoxHA24" secondSolid="BoxVA24">
+     <Translation x="37.1*mm" y="0" z="30*mm"/>
+</UnionSolid>
+
+    <Box  name="BoxHA13" dx="1.5*mm" dy="1.5*mm" dz="29*mm"/>
+    <Box  name="BoxVA13" dx="35.6*mm" dy="1.5*mm" dz="1.5*mm"/>
+<UnionSolid name="LbarA13" firstSolid="BoxHA13" secondSolid="BoxVA13">
+     <Translation x="37.1*mm" y="0" z="27.5*mm"/>
+</UnionSolid>
+
+
+</SolidSection>
+
+<PosPartSection label="timingLbar.xml">
+<PosPart copyNumber="1">
+     <rParent name="Cylindrical_pot:RP_Cylinder_primary_vacuum"/>
+     <rChild name="PPS_timing_box"/>
+        <rRotation name="PPS_Transformations:RP_90_z_270_y_rot"/>
+        <Translation x="0*m " y="0*m " z="-29.9*mm " />
+</PosPart>
+
+<PosPart copyNumber="1">
+	<rParent name="PPS_timing_box"/>
+	<rChild name="LbarE24"/>
+	<Translation x="14.3*mm-[shiftx]"  y="-1.6*mm" z="2.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="1">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="14.3*mm-[shiftx]+58.8*mm+[wind_x]/2"  y="-1.6*mm" z="2.5*mm-[shift]+11.5*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="2">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarE24"/>
+        <Translation x="14.3*mm-[shiftx]" y="4.8*mm" z="2.5*mm-[shift] " />
+</PosPart>
+
+<PosPart copyNumber="2">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="14.3*mm-[shiftx]+58.8*mm+[wind_x]/2"  y="4.8*mm" z="2.5*mm-[shift]+11.5*mm-[wind_z]/2 " />
+</PosPart>
+
+
+
+<PosPart copyNumber="3">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarE24"/>
+        <Translation x="14.3*mm-[shiftx]" y="-1.6*mm" z="72.5*mm-[shift] " />
+</PosPart>
+
+<PosPart copyNumber="3">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="14.3*mm-[shiftx]+58.8*mm+[wind_x]/2"  y="-1.6*mm" z="72.5*mm-[shift]+11.5*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="4">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarE24"/>
+        <Translation x="14.3*mm-[shiftx]" y="4.8*mm" z="72.5*mm-[shift] " />
+</PosPart>
+
+<PosPart copyNumber="4">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="14.3*mm-[shiftx]+58.8*mm+[wind_x]/2"  y="4.8*mm" z="72.5*mm-[shift]+11.5*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="1">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarE13"/>
+        <Translation x="14.3*mm-[shiftx]" y="-4.8*mm" z="0*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="5">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="14.3*mm-[shiftx]+58.8*mm+[wind_x]/2"  y="-4.8*mm" z="0*mm-[shift]+9*mm-[wind_z]/2 " />
+</PosPart>
+
+
+
+
+<PosPart copyNumber="2">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarE13"/>
+        <Translation x="14.3*mm-[shiftx]" y="1.6*mm" z="0*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="6">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="14.3*mm-[shiftx]+58.8*mm+[wind_x]/2"  y="1.6*mm" z="0*mm-[shift]+9*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="3">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarE13"/>
+        <Translation x="14.3*mm-[shiftx]" y="-4.8*mm" z="70*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="7">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="14.3*mm-[shiftx]+58.8*mm+[wind_x]/2"  y="-4.8*mm" z="70*mm-[shift]+9*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="4">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarE13"/>
+        <Translation x="14.3*mm-[shiftx]" y="1.6*mm" z="70*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="8">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="14.3*mm-[shiftx]+58.8*mm+[wind_x]/2"  y="1.6*mm" z="70*mm-[shift]+9*mm-[wind_z]/2 " />
+</PosPart>
+
+
+
+
+
+<PosPart copyNumber="1">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarD24"/>
+        <Translation x="11.1*mm-[shiftx]" y="-1.6*mm" z="7.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="9">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="11.1*mm-[shiftx]+61.90*mm+[wind_x]/2"  y="-1.6*mm" z="7.5*mm-[shift]+16.5*mm-[wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="2">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarD24"/>
+        <Translation x="11.1*mm-[shiftx]" y="4.8*mm" z="7.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="10">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="11.1*mm-[shiftx]+61.90*mm+[wind_x]/2"  y="4.8*mm" z="7.5*mm-[shift]+16.5*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="3">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarD24"/>
+        <Translation x="11.1*mm-[shiftx]" y="-1.6*mm" z="77.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="11">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="11.1*mm-[shiftx]+61.90*mm+[wind_x]/2"  y="-1.6*mm" z="77.5*mm-[shift]+16.5*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="4">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarD24"/>
+        <Translation x="11.1*mm-[shiftx]" y="4.8*mm" z="77.5*mm-[shift] " />
+</PosPart>
+
+<PosPart copyNumber="12">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="11.1*mm-[shiftx]+61.90*mm+[wind_x]/2"  y="4.8*mm" z="77.5*mm-[shift]+16.5*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="1">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarD13"/>
+        <Translation x="11.1*mm-[shiftx]" y="-4.8*mm" z="5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="13">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="11.1*mm-[shiftx]+61.90*mm+[wind_x]/2"  y="-4.8*mm" z="5*mm-[shift]+14*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="2">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarD13"/>
+        <Translation x="11.1*mm-[shiftx]" y="1.6*mm" z="5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="14">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="11.1*mm-[shiftx]+61.90*mm+[wind_x]/2"  y="1.6*mm" z="5*mm-[shift]+14*mm-[wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="3">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarD13"/>
+        <Translation x="11.1*mm-[shiftx]" y="-4.8*mm" z="75*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="15">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="11.1*mm-[shiftx]+61.90*mm+[wind_x]/2"  y="-4.8*mm" z="75*mm-[shift]+14*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="4">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarD13"/>
+        <Translation x="11.1*mm-[shiftx]" y="1.6*mm" z="75*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="16">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="11.1*mm-[shiftx]+61.90*mm+[wind_x]/2"  y="1.6*mm" z="75*mm-[shift]+14*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="1">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarC24"/>
+        <Translation x="7.9*mm-[shiftx]" y="-1.6*mm" z="12.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="17">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="7.9*mm-[shiftx]+65*mm+[wind_x]/2"  y="-1.6*mm" z="12.5*mm-[shift]+21.5*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="2">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarC24"/>
+        <Translation x="7.9*mm-[shiftx]" y="4.8*mm" z="12.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="18">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="7.9*mm-[shiftx]+65*mm+[wind_x]/2"  y="4.8*mm" z="12.5*mm-[shift]+21.5*mm-[wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="3">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarC24"/>
+        <Translation x="7.9*mm-[shiftx]" y="-1.6*mm" z="82.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="19">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="7.9*mm-[shiftx]+65*mm+[wind_x]/2"  y="-1.6*mm" z="82.5*mm-[shift]+21.5*mm-[wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="4">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarC24"/>
+        <Translation x="7.9*mm-[shiftx]" y="4.8*mm" z="82.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="20">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="7.9*mm-[shiftx]+65*mm+[wind_x]/2"  y="4.8*mm" z="82.5*mm-[shift]+21.5*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="1">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarC13"/>
+        <Translation x="7.9*mm-[shiftx]" y="-4.8*mm" z="10*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="21">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="7.9*mm-[shiftx]+65*mm+[wind_x]/2"  y="-4.8*mm" z="10*mm-[shift]+19*mm-[wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="2">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarC13"/>
+        <Translation x="7.9*mm-[shiftx]" y="1.6*mm" z="10*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="22">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="7.9*mm-[shiftx]+65*mm+[wind_x]/2"  y="1.6*mm" z="10*mm-[shift]+19*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="3">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarC13"/>
+        <Translation x="7.9*mm-[shiftx]" y="-4.8*mm" z="80*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="23">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="7.9*mm-[shiftx]+65*mm+[wind_x]/2"  y="-4.8*mm" z="80*mm-[shift]+19*mm-[wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="4">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarC13"/>
+        <Translation x="7.9*mm-[shiftx]" y="1.6*mm" z="80*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="24">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="7.9*mm-[shiftx]+65*mm+[wind_x]/2"  y="1.6*mm" z="80*mm-[shift]+19*mm-[wind_z]/2 " />
+</PosPart>
+
+
+
+
+<PosPart copyNumber="1">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarB24"/>
+        <Translation x="4.7*mm-[shiftx]" y="-1.6*mm" z="17.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="25">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="4.7*mm-[shiftx]+68.10*mm+[wind_x]/2"  y="-1.6*mm" z="17.5*mm-[shift]+26.5*mm-[wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="2">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarB24"/>
+        <Translation x="4.7*mm-[shiftx]" y="4.8*mm" z="17.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="26">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="4.7*mm-[shiftx]+68.10*mm+[wind_x]/2"  y="4.8*mm" z="17.5*mm-[shift]+26.5*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="3">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarB24"/>
+        <Translation x="4.7*mm-[shiftx]" y="-1.6*mm" z="87.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="27">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="4.7*mm-[shiftx]+68.10*mm+[wind_x]/2"  y="-1.6*mm" z="87.5*mm-[shift]+26.5*mm-[wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="4">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarB24"/>
+        <Translation x="4.7*mm-[shiftx]" y="4.8*mm" z="87.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="28">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="4.7*mm-[shiftx]+68.10*mm+[wind_x]/2"  y="4.8*mm" z="87.5*mm-[shift]+26.5*mm-[wind_z]/2 " />
+</PosPart>
+
+
+
+<PosPart copyNumber="1">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarB13"/>
+        <Translation x="4.7*mm-[shiftx]" y="-4.8*mm" z="15*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="29">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="4.7*mm-[shiftx]+68.10*mm+[wind_x]/2"  y="-4.8*mm" z="15*mm-[shift]+24*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="2">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarB13"/>
+        <Translation x="4.7*mm-[shiftx]" y="1.6*mm" z="15*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="30">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="4.7*mm-[shiftx]+68.10*mm+[wind_x]/2"  y="1.6*mm" z="15*mm-[shift]+24*mm-[wind_z]/2 " />
+</PosPart>
+
+
+<PosPart copyNumber="3">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarB13"/>
+        <Translation x="4.7*mm-[shiftx]" y="-4.8*mm" z="85*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="31">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="4.7*mm-[shiftx]+68.10*mm+[wind_x]/2"  y="-4.8*mm" z="85*mm-[shift]+24*mm-[wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="4">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarB13"/>
+        <Translation x="4.7*mm-[shiftx]" y="1.6*mm" z="85*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="32">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="4.7*mm-[shiftx]+68.10*mm+[wind_x]/2"  y="1.6*mm" z="85*mm-[shift]+24*mm-[wind_z]/2 " />
+</PosPart>
+
+
+
+
+
+
+
+
+
+<PosPart copyNumber="1">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarA24"/>
+        <Translation x="1.5*mm-[shiftx]" y="-1.6*mm" z="22.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="33">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="1.5*mm-[shiftx]+71.2*mm+[wind_x]/2"  y="-1.6*mm" z="22.5*mm-[shift]+31.5*mm-[wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="2">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarA24"/>
+        <Translation x="1.5*mm-[shiftx]" y="4.8*mm" z="22.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="34">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="1.5*mm-[shiftx]+71.2*mm+[wind_x]/2"  y="4.8*mm" z="22.5*mm-[shift]+31.5*mm-[wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="3">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarA24"/>
+        <Translation x="1.5*mm-[shiftx]" y="-1.6*mm" z="92.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="35">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="1.5*mm-[shiftx]+71.2*mm+[wind_x]/2"  y="-1.6*mm" z="92.5*mm-[shift]+31.5*mm-[wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="4">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarA24"/>
+        <Translation x="1.5*mm-[shiftx]" y="4.8*mm" z="92.5*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="36">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="1.5*mm-[shiftx]+71.2*mm+[wind_x]/2"  y="4.8*mm" z="92.5*mm-[shift]+31.5*mm-[wind_z]/2 " />
+</PosPart>
+
+
+
+<PosPart copyNumber="1">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarA13"/>
+        <Translation x="1.5*mm-[shiftx]" y="-4.8*mm" z="20*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="37">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="1.5*mm-[shiftx]+71.2*mm+[wind_x]/2"  y="-4.8*mm" z="20*mm-[shift]+29*mm-[wind_z]/2 " />
+</PosPart>
+
+<PosPart copyNumber="2">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarA13"/>
+        <Translation x="1.5*mm-[shiftx]" y="1.6*mm" z="20*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="38">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="1.5*mm-[shiftx]+71.2*mm+[wind_x]/2"  y="1.6*mm" z="20*mm-[shift]+29*mm-[wind_z]/2 " />
+</PosPart>
+
+
+
+<PosPart copyNumber="3">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarA13"/>
+        <Translation x="1.5*mm-[shiftx]" y="-4.8*mm" z="90*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="39">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="1.5*mm-[shiftx]+71.2*mm+[wind_x]/2"  y="-4.8*mm" z="90*mm-[shift]+29*mm-[wind_z]/2 " />
+</PosPart>
+
+
+
+<PosPart copyNumber="4">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="LbarA13"/>
+        <Translation x="1.5*mm-[shiftx]" y="1.6*mm" z="90*mm-[shift] " />
+</PosPart>
+<PosPart copyNumber="40">
+        <rParent name="PPS_timing_box"/>
+        <rChild name="window_box"/>
+        <Translation x="1.5*mm-[shiftx]+71.2*mm+[wind_x]/2"  y="1.6*mm" z="90*mm-[shift]+29*mm-[wind_z]/2 " />
+</PosPart>
+
+
+
+
+</PosPartSection>
+<LogicalPartSection label="timingLbar.xml">
+     <LogicalPart name="PPS_timing_box" category="unspecified">
+             <rSolid name="PPS_timing_box"/>
+             <rMaterial name="materials:Vacuum"/>
+     </LogicalPart>
+
+     <LogicalPart name="window_box" category="unspecified">
+             <rSolid name="window_box"/>
+             <rMaterial name="materials:Glass"/>
+     </LogicalPart>
+
+
+     <LogicalPart name="LbarE24" category="unspecified">
+             <rSolid name="LbarE24"/>
+             <rMaterial name="materials:Quartz"/>
+      </LogicalPart>
+     <LogicalPart name="LbarE13" category="unspecified">
+             <rSolid name="LbarE13"/>
+             <rMaterial name="materials:Quartz"/>
+      </LogicalPart>
+
+
+
+     <LogicalPart name="LbarD24" category="unspecified">
+             <rSolid name="LbarD24"/>
+             <rMaterial name="materials:Quartz"/>
+      </LogicalPart>
+     <LogicalPart name="LbarD13" category="unspecified">
+             <rSolid name="LbarD13"/>
+             <rMaterial name="materials:Quartz"/>
+      </LogicalPart>
+
+
+
+
+     <LogicalPart name="LbarC24" category="unspecified">
+             <rSolid name="LbarC24"/>
+             <rMaterial name="materials:Quartz"/>
+      </LogicalPart>
+     <LogicalPart name="LbarC13" category="unspecified">
+             <rSolid name="LbarC13"/>
+             <rMaterial name="materials:Quartz"/>
+      </LogicalPart>
+
+
+
+
+     <LogicalPart name="LbarB24" category="unspecified">
+             <rSolid name="LbarB24"/>
+             <rMaterial name="materials:Quartz"/>
+      </LogicalPart>
+     <LogicalPart name="LbarB13" category="unspecified">
+             <rSolid name="LbarB13"/>
+             <rMaterial name="materials:Quartz"/>
+      </LogicalPart>
+
+
+
+
+     <LogicalPart name="LbarA24" category="unspecified">
+             <rSolid name="LbarA24"/>
+             <rMaterial name="materials:Quartz"/>
+      </LogicalPart>
+     <LogicalPart name="LbarA13" category="unspecified">
+             <rSolid name="LbarA13"/>
+             <rMaterial name="materials:Quartz"/>
+      </LogicalPart>
+
+
+
+
+
+</LogicalPartSection>
+
+
+
+
+</DDDefinition>
+

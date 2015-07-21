@@ -1,0 +1,80 @@
+10
+
+dir
+10661
+svn+ssh://svn.cern.ch/reps/totem/branches/CMSSW_7_0_4_ctpps/offline/cmssw/src/L1TriggerTotem/CoincidenceChip
+svn+ssh://svn.cern.ch/reps/totem
+
+
+
+2015-06-29T12:34:06.682055Z
+10614
+jkaspar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4525493e-7705-40b1-a816-d608a930855b
+
+test
+dir
+
+interface
+dir
+
+plugins
+dir
+
+python
+dir
+
+scripts
+dir
+
+src
+dir
+
+BuildFile.xml
+file
+
+
+
+
+2015-07-11T13:49:17.000000Z
+471113d07e966118480b9f89a7d2f24d
+2015-06-29T12:34:06.682055Z
+10614
+jkaspar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+309
+

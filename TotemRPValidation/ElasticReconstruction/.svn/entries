@@ -1,0 +1,77 @@
+10
+
+dir
+10661
+svn+ssh://svn.cern.ch/reps/totem/branches/CMSSW_7_0_4_ctpps/offline/cmssw/src/TotemRPValidation/ElasticReconstruction
+svn+ssh://svn.cern.ch/reps/totem
+
+
+
+2015-01-12T14:00:26.185795Z
+9977
+tsodzawi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4525493e-7705-40b1-a816-d608a930855b
+
+interface
+dir
+
+plugins
+dir
+
+python
+dir
+
+doc
+dir
+
+src
+dir
+
+BuildFile.xml
+file
+
+
+
+
+2015-07-11T13:48:46.000000Z
+c1de5e4ba5cde4042b718edf233ab0ca
+2011-11-03T12:48:24.504973Z
+5280
+jkaspar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+518
+

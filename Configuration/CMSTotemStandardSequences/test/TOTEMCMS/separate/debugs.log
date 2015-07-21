@@ -1,0 +1,60 @@
+21-Jun-2015 09:32:45 CEST  Initiating request to open file file:GEN.root
+21-Jun-2015 09:32:47 CEST  Successfully opened file file:GEN.root
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:49 CEST  Run: 1
+PP_Timing_SD : Assigns SD to LV window_box
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:49 CEST  Run: 1
+ Creating myPPSTimingNumberingScheme
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:49 CEST  Run: 1
+Totem_RP_SD: Instantiation completed
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+*******************************************************
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+*                                                     *
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+* Constructing a Totem_RP_SD  with name TotemHitsRP
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+*                                                     *
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+*******************************************************
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+Totem_RP_SD : Assigns SD to LV RP_Silicon_Detector
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+ Creating myRPNumberingScheme
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+Totem_RP_SD: Instantiation completed
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+TotemRP::Proton parameterisation initialization begin !!
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+TotemRP::Parameterization being initialized for Beam_IP_150_R
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+TotemRP::Parameterization being initialized for Beam_IP_150_L
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+Root file opened, pointer:0x7f71e4849000
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+Parameterizations read from file, pointers:0x7f71e1fba000 0x7f71e1fbd000 
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+TotemRP::Fast transport models have been initialized. 
+%MSG
+21-Jun-2015 09:32:57 CEST  Closed file file:GEN.root
+%MSG-i TotemRP:  21-Jun-2015 09:32:57 CEST PostEndRun
+ Deleting myPPSTimingNumberingScheme
+%MSG
+%MSG-i TotemRP:  21-Jun-2015 09:32:57 CEST PostEndRun
+ Deleting myRPNumberingScheme
+%MSG

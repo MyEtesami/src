@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/45/trunk/distributions
+END
+generate_t_distributions
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/43/trunk/distributions/generate_t_distributions
+END
+generate_b_distributions
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/43/trunk/distributions/generate_b_distributions
+END
+generate_s_distributions
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/45/trunk/distributions/generate_s_distributions
+END

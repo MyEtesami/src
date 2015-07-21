@@ -1,0 +1,77 @@
+10
+
+dir
+10661
+svn+ssh://svn.cern.ch/reps/totem/branches/CMSSW_7_0_4_ctpps/offline/cmssw/src/RecoTotemT1T2/T2MakeCluster
+svn+ssh://svn.cern.ch/reps/totem
+
+
+
+2013-09-20T14:49:17.958391Z
+8196
+mkijania
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4525493e-7705-40b1-a816-d608a930855b
+
+interface
+dir
+
+plugins
+dir
+
+python
+dir
+
+src
+dir
+
+data
+dir
+
+BuildFile.xml
+file
+
+
+
+
+2015-07-11T13:49:29.000000Z
+15d84dc72cc458e7f8a90e9e5bcb4aab
+2013-09-10T14:35:47.440461Z
+8145
+psikora
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+752
+

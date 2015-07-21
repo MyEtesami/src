@@ -1,0 +1,1970 @@
+%MSG-i BeamOpticsParamsESSource::BeamOpticsParamsESSource:  (NoModuleName)  21-Jun-2015 09:32:45 CEST pre-events
+
+%MSG
+21-Jun-2015 09:32:45 CEST  Initiating request to open file file:GEN.root
+21-Jun-2015 09:32:47 CEST  Successfully opened file file:GEN.root
+%MSG-i Root_Information:  AfterFile TClass::TClass() 21-Jun-2015 09:32:47 CEST  pre-events
+no dictionary for class pair<edm::IndexIntoFile::IndexRunKey,Long64_t> is available
+%MSG
+%MSG-i Root_Information:  AfterFile TClass::TClass() 21-Jun-2015 09:32:47 CEST  pre-events
+no dictionary for class pair<edm::IndexIntoFile::IndexRunLumiKey,Long64_t> is available
+%MSG
+%MSG-i Root_Information:  AfterFile TClass::TClass() 21-Jun-2015 09:32:47 CEST  pre-events
+no dictionary for class pair<edm::BranchKey,const edm::BranchDescription> is available
+%MSG
+%MSG-i Root_Information:  AfterFile TClass::TClass() 21-Jun-2015 09:32:47 CEST  pre-events
+no dictionary for class pair<edm::BranchID,unsigned int> is available
+%MSG
+%MSG-i Root_Information:  SmearingGenerator:SmearingGenerator@ctor  TClass::TClass() 21-Jun-2015 09:32:47 CEST pre-events
+no dictionary for class pair<string,unsigned long long> is available
+%MSG
+%MSG-i Root_Information:  SmearingGenerator:SmearingGenerator@ctor  TClass::TClass() 21-Jun-2015 09:32:47 CEST pre-events
+no dictionary for class pair<int,HepMC::GenVertex*> is available
+%MSG
+%MSG-i Root_Information:  SmearingGenerator:SmearingGenerator@ctor  TClass::TClass() 21-Jun-2015 09:32:47 CEST pre-events
+no dictionary for class pair<int,HepMC::GenParticle*> is available
+%MSG
+%MSG-i FastCloningDisabled:  AfterModBeginStream 21-Jun-2015 09:32:47 CEST  BeforeEvents
+Fast copying of file file:GEN.root to file file:TOTEM-SIM.root is disabled because:
+some events were not copied because of maxEvents limit.
+
+%MSG
+%MSG-i EventSetupDependency:  AfterSource 21-Jun-2015 09:32:47 CEST BeforeEvents
+The EventSetup record RealGeometryRecord depends on at least one Record 
+ (RPRealAlignmentRecord) which is not present in the job.
+ This may lead to an exception begin thrown during event processing.
+ If no exception occurs during the job than it is usually safe to ignore this message.
+%MSG
+%MSG-i EventSetupDependency:  AfterSource 21-Jun-2015 09:32:47 CEST BeforeEvents
+The EventSetup record IdealGeometryRecord depends on at least one Record 
+ (GeometryFileRcd, PGeometricDetExtraRcd) which is not present in the job.
+ This may lead to an exception begin thrown during event processing.
+ If no exception occurs during the job than it is usually safe to ignore this message.
+%MSG
+%MSG-i EventSetupDependency:  AfterSource 21-Jun-2015 09:32:47 CEST BeforeEvents
+The EventSetup record MeasuredGeometryRecord depends on at least one Record 
+ (RPMeasuredAlignmentRecord) which is not present in the job.
+ This may lead to an exception begin thrown during event processing.
+ If no exception occurs during the job than it is usually safe to ignore this message.
+%MSG
+%MSG-i EventSetupDependency:  AfterSource 21-Jun-2015 09:32:47 CEST BeforeEvents
+The EventSetup record IdealMagneticFieldRecord depends on at least one Record 
+ (RunInfoRcd, GeometryFileRcd) which is not present in the job.
+ This may lead to an exception begin thrown during event processing.
+ If no exception occurs during the job than it is usually safe to ignore this message.
+%MSG
+%MSG-i EventSetupDependency:  AfterSource 21-Jun-2015 09:32:47 CEST BeforeEvents
+The EventSetup record MisalignedGeometryRecord depends on at least one Record 
+ (RPMisalignedAlignmentRecord) which is not present in the job.
+ This may lead to an exception begin thrown during event processing.
+ If no exception occurs during the job than it is usually safe to ignore this message.
+%MSG
+%MSG-i DDLParser:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:47 CEST  Run: 1
+Start Parsing.  Validation is set off for the time being.
+%MSG
+%MSG-i SimG4CoreGeometry:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:48 CEST Run: 1
+ World volume defined 
+%MSG
+%MSG-i DDLParser:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:48 CEST  Run: 1
+Start Parsing.  Validation is set off for the time being.
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[8] (key:14200)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[8] (key:14200)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[7] (key:14200)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[7] (key:14200)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[6] (key:14200)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[6] (key:14200)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[5] (key:14200)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[5] (key:14200)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[4] (key:14200)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[4] (key:14200)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[3] (key:14200)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[3] (key:14200)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[2] (key:14200)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[2] (key:14200)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[1] (key:14200)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[1] (key:14200)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[9] (key:14200)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[9] (key:14200)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[10] (key:14200)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[10] (key:14200)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[11] (key:14200)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[11] (key:14200)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[12] (key:14200)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 142[12] (key:14200)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[12] (key:14100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[12] (key:14100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[11] (key:14100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[11] (key:14100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[10] (key:14100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[10] (key:14100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[9] (key:14100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[9] (key:14100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[8] (key:14100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[8] (key:14100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[7] (key:14100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[7] (key:14100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[6] (key:14100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[6] (key:14100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[5] (key:14100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[5] (key:14100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[4] (key:14100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[4] (key:14100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[3] (key:14100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[3] (key:14100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[2] (key:14100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[2] (key:14100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[1] (key:14100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1 to 141[1] (key:14100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[8] (key:18300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[8] (key:18300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[1] (key:18300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[1] (key:18300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[2] (key:18300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[2] (key:18300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[3] (key:18300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[3] (key:18300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[4] (key:18300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[4] (key:18300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[5] (key:18300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[5] (key:18300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[6] (key:18300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[6] (key:18300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[7] (key:18300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[7] (key:18300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[9] (key:18300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[9] (key:18300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[10] (key:18300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[10] (key:18300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[11] (key:18300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[11] (key:18300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[12] (key:18300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 183[12] (key:18300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[1] (key:18400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[1] (key:18400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[2] (key:18400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[2] (key:18400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[3] (key:18400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[3] (key:18400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[4] (key:18400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[4] (key:18400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[12] (key:18100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[12] (key:18100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[11] (key:18100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[11] (key:18100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[10] (key:18100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[10] (key:18100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[9] (key:18100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[9] (key:18100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[8] (key:18100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[8] (key:18100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[5] (key:18600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[5] (key:18600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[1] (key:18600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[1] (key:18600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[2] (key:18600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[2] (key:18600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[3] (key:18600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[3] (key:18600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[4] (key:18600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[4] (key:18600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[6] (key:18600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[6] (key:18600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[7] (key:18600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[7] (key:18600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[8] (key:18600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[8] (key:18600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[9] (key:18600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[9] (key:18600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[10] (key:18600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[10] (key:18600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[11] (key:18600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[11] (key:18600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[12] (key:18600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 186[12] (key:18600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[1] (key:17600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[1] (key:17600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[12] (key:18400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[12] (key:18400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[11] (key:18400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[11] (key:18400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[10] (key:18400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[10] (key:18400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[9] (key:18400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[9] (key:18400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[8] (key:18400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[8] (key:18400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[7] (key:18400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[7] (key:18400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[6] (key:18400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[6] (key:18400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[5] (key:18400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 184[5] (key:18400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[2] (key:17800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[2] (key:17800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[1] (key:17800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[1] (key:17800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[3] (key:17800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[3] (key:17800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[4] (key:17800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[4] (key:17800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[5] (key:17800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[5] (key:17800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[6] (key:17800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[6] (key:17800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[7] (key:17800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[7] (key:17800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[8] (key:17800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[8] (key:17800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[9] (key:17800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[9] (key:17800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[7] (key:18100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[7] (key:18100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[12] (key:17600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[12] (key:17600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[11] (key:17600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[11] (key:17600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[10] (key:17600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[10] (key:17600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[9] (key:17600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[9] (key:17600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[8] (key:17600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[8] (key:17600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[7] (key:17600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[7] (key:17600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[6] (key:17600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[6] (key:17600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[5] (key:17600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[5] (key:17600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[4] (key:17600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[4] (key:17600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[3] (key:17600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[3] (key:17600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[2] (key:17600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.994 to 176[2] (key:17600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[10] (key:17800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[10] (key:17800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[1] (key:18100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[1] (key:18100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[2] (key:18100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[2] (key:18100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[3] (key:18100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[3] (key:18100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[4] (key:18100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[4] (key:18100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[5] (key:18100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[5] (key:18100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[6] (key:18100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.005 to 181[6] (key:18100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[11] (key:17800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[11] (key:17800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[12] (key:17800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 178[12] (key:17800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[1] (key:17900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[1] (key:17900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[2] (key:17900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[2] (key:17900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[3] (key:17900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[3] (key:17900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[4] (key:17900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[4] (key:17900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[5] (key:17900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[5] (key:17900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[6] (key:17900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[6] (key:17900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[7] (key:17900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[7] (key:17900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[8] (key:17900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[8] (key:17900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[9] (key:17900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[9] (key:17900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[10] (key:17900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[10] (key:17900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[11] (key:17900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[11] (key:17900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[12] (key:17900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 1.004 to 179[12] (key:17900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[8] (key:23800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[8] (key:23800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[1] (key:23800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[1] (key:23800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[2] (key:23800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[2] (key:23800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[3] (key:23800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[3] (key:23800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[4] (key:23800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[4] (key:23800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[5] (key:23800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[5] (key:23800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[6] (key:23800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[6] (key:23800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[7] (key:23800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[7] (key:23800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[9] (key:23800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[9] (key:23800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[10] (key:23800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[10] (key:23800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[11] (key:23800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[11] (key:23800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[12] (key:23800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 238[12] (key:23800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[1] (key:23900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[1] (key:23900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[2] (key:23900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[2] (key:23900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[3] (key:23900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[3] (key:23900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[4] (key:23900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[4] (key:23900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[12] (key:23600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[12] (key:23600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[11] (key:23600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[11] (key:23600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[10] (key:23600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[10] (key:23600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[9] (key:23600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[9] (key:23600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[7] (key:23600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[7] (key:23600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[5] (key:24100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[5] (key:24100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[1] (key:24100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[1] (key:24100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[2] (key:24100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[2] (key:24100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[3] (key:24100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[3] (key:24100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[4] (key:24100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[4] (key:24100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[6] (key:24100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[6] (key:24100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[7] (key:24100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[7] (key:24100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[8] (key:24100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[8] (key:24100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[9] (key:24100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[9] (key:24100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[10] (key:24100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[10] (key:24100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[11] (key:24100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[11] (key:24100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[12] (key:24100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 241[12] (key:24100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[8] (key:23600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[8] (key:23600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[12] (key:23900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[12] (key:23900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[11] (key:23900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[11] (key:23900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[10] (key:23900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[10] (key:23900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[9] (key:23900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[9] (key:23900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[8] (key:23900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[8] (key:23900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[7] (key:23900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[7] (key:23900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[6] (key:23900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[6] (key:23900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[5] (key:23900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 239[5] (key:23900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[1] (key:23300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[1] (key:23300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[2] (key:23300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[2] (key:23300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[3] (key:23300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[3] (key:23300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[4] (key:23300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[4] (key:23300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[5] (key:23300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[5] (key:23300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[6] (key:23300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[6] (key:23300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[7] (key:23300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[7] (key:23300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[8] (key:23300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[8] (key:23300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[6] (key:23600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[6] (key:23600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[12] (key:23100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[12] (key:23100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[11] (key:23100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[11] (key:23100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[10] (key:23100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[10] (key:23100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[9] (key:23100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[9] (key:23100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[8] (key:23100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[8] (key:23100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[7] (key:23100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[7] (key:23100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[6] (key:23100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[6] (key:23100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[5] (key:23100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[5] (key:23100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[4] (key:23100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[4] (key:23100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[3] (key:23100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[3] (key:23100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[2] (key:23100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[2] (key:23100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[1] (key:23100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.965 to 231[1] (key:23100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[9] (key:23300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[9] (key:23300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[1] (key:23600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[1] (key:23600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[2] (key:23600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[2] (key:23600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[3] (key:23600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[3] (key:23600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[4] (key:23600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[4] (key:23600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[5] (key:23600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.953 to 236[5] (key:23600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[10] (key:23300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[10] (key:23300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[11] (key:23300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[11] (key:23300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[12] (key:23300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 233[12] (key:23300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[1] (key:23400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[1] (key:23400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[2] (key:23400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[2] (key:23400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[3] (key:23400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[3] (key:23400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[4] (key:23400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[4] (key:23400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[5] (key:23400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[5] (key:23400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[6] (key:23400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[6] (key:23400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[7] (key:23400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[7] (key:23400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[8] (key:23400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[8] (key:23400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[9] (key:23400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[9] (key:23400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[10] (key:23400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[10] (key:23400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[11] (key:23400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[11] (key:23400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[12] (key:23400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.958 to 234[12] (key:23400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[3] (key:29400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[3] (key:29400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[1] (key:29300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[1] (key:29300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[2] (key:29300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[2] (key:29300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[3] (key:29300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[3] (key:29300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[4] (key:29300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[4] (key:29300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[5] (key:29300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[5] (key:29300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[6] (key:29300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[6] (key:29300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[8] (key:29300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[8] (key:29300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 293[9] (key:29309)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 293[9] (key:29309)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 293[10] (key:29310)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 293[10] (key:29310)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 293[11] (key:29311)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 293[11] (key:29311)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[12] (key:29300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[12] (key:29300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[1] (key:29400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[1] (key:29400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[2] (key:29400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[2] (key:29400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[7] (key:29100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[7] (key:29100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[7] (key:29300)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 293[7] (key:29300)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[8] (key:29100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[8] (key:29100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.978 to 291[9] (key:29109)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.978 to 291[9] (key:29109)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.978 to 291[10] (key:29110)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.978 to 291[10] (key:29110)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.978 to 291[11] (key:29111)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.978 to 291[11] (key:29111)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[12] (key:29100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[12] (key:29100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[5] (key:29600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[5] (key:29600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[1] (key:29600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[1] (key:29600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[2] (key:29600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[2] (key:29600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[3] (key:29600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[3] (key:29600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[4] (key:29600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[4] (key:29600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[6] (key:29600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[6] (key:29600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[7] (key:29600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[7] (key:29600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[8] (key:29600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[8] (key:29600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.991 to 296[9] (key:29609)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.991 to 296[9] (key:29609)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.991 to 296[10] (key:29610)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.991 to 296[10] (key:29610)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.991 to 296[11] (key:29611)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.991 to 296[11] (key:29611)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[12] (key:29600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 296[12] (key:29600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[4] (key:29400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[4] (key:29400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[12] (key:29400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[12] (key:29400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 294[11] (key:29411)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 294[11] (key:29411)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 294[10] (key:29410)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 294[10] (key:29410)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 294[9] (key:29409)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 294[9] (key:29409)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[8] (key:29400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[8] (key:29400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[7] (key:29400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[7] (key:29400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[6] (key:29400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[6] (key:29400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[5] (key:29400)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 294[5] (key:29400)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[1] (key:28800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[1] (key:28800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[2] (key:28800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[2] (key:28800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[3] (key:28800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[3] (key:28800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[4] (key:28800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[4] (key:28800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[5] (key:28800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[5] (key:28800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[6] (key:28800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[6] (key:28800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[7] (key:28800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[7] (key:28800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[8] (key:28800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[8] (key:28800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[12] (key:28600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[12] (key:28600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.991 to 286[11] (key:28611)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.991 to 286[11] (key:28611)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.991 to 286[10] (key:28610)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.991 to 286[10] (key:28610)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.991 to 286[9] (key:28609)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.991 to 286[9] (key:28609)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[8] (key:28600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[8] (key:28600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[7] (key:28600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[7] (key:28600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[6] (key:28600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[6] (key:28600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[5] (key:28600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[5] (key:28600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[4] (key:28600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[4] (key:28600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[3] (key:28600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[3] (key:28600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[2] (key:28600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[2] (key:28600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[1] (key:28600)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.918 to 286[1] (key:28600)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[6] (key:29100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[6] (key:29100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[1] (key:29100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[1] (key:29100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[2] (key:29100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[2] (key:29100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[3] (key:29100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[3] (key:29100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[4] (key:29100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[4] (key:29100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[5] (key:29100)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.906 to 291[5] (key:29100)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 288[9] (key:28809)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 288[9] (key:28809)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 288[10] (key:28810)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 288[10] (key:28810)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 288[11] (key:28811)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 288[11] (key:28811)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[12] (key:28800)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 288[12] (key:28800)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[1] (key:28900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[1] (key:28900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[2] (key:28900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[2] (key:28900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[3] (key:28900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[3] (key:28900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[4] (key:28900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[4] (key:28900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[5] (key:28900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[5] (key:28900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[6] (key:28900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[6] (key:28900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[7] (key:28900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[7] (key:28900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[8] (key:28900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[8] (key:28900)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 289[9] (key:28909)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 289[9] (key:28909)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 289[10] (key:28910)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 289[10] (key:28910)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 289[11] (key:28911)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.998 to 289[11] (key:28911)
+%MSG
+%MSG-i MagneticField:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[12] (key:28900)
+%MSG
+%MSG-i VolumeBasedMagneticFieldESProducer:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+Applying scaling factor 0.924 to 289[12] (key:28900)
+%MSG
+%MSG-i SimG4CoreSensitiveDetector:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+ AttachSD: trying to find something for PPSTimingSensitiveDetector PPSTimingHits
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:49 CEST  Run: 1
+PP_Timing_SD : Assigns SD to LV window_box
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:49 CEST  Run: 1
+ Creating myPPSTimingNumberingScheme
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:49 CEST  Run: 1
+Totem_RP_SD: Instantiation completed
+%MSG
+%MSG-i SimG4CoreSensitiveDetector:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:49 CEST Run: 1
+ AttachSD: trying to find something for RomanPotSensitiveDetector TotemHitsRP
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+*******************************************************
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+*                                                     *
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+* Constructing a Totem_RP_SD  with name TotemHitsRP
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+*                                                     *
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+*******************************************************
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+Totem_RP_SD : Assigns SD to LV RP_Silicon_Detector
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+ Creating myRPNumberingScheme
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+Totem_RP_SD: Instantiation completed
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:50 CEST Run: 1
+ RunManager: Sensitive Detector  building finished; found 2 Tk type Producers, and 0 Calo type producers 
+%MSG
+%MSG-i PhysicsList:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+You are using the simulation engine: QGSP_EMV 3.3  + TOTEM Fast Proton Beam Transport 
+
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+TotemRP::Proton parameterisation initialization begin !!
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+TotemRP::Parameterization being initialized for Beam_IP_150_R
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+TotemRP::Parameterization being initialized for Beam_IP_150_L
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+Root file opened, pointer:0x7f71e4849000
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+Parameterizations read from file, pointers:0x7f71e1fba000 0x7f71e1fbd000 
+%MSG
+%MSG-i TotemRP:  OscarProducer:g4SimHits@beginRun 21-Jun-2015 09:32:50 CEST  Run: 1
+TotemRP::Fast transport models have been initialized. 
+%MSG
+%MSG-i TotemRPParametrizedPhysics:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:50 CEST Run: 1
+TotemRPParametrizedPhysics: adding the FastSimulationManagerProcess
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:53 CEST Run: 1
+SteppingAction:: KillBeamPipe = 1 CriticalDensity = 6241.51 g/cc; CriticalEnergyForVacuum = 2 Mev; MaxTrackTime = 500 ns
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:53 CEST Run: 1
+SteppingAction::MaxTrackTime for ZDCRegion is 2000
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:53 CEST Run: 1
+SteppingAction::MaxTrackTime for QuadRegion is 0
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:53 CEST Run: 1
+SteppingAction::MaxTrackTime for InterimRegion is 0
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:53 CEST Run: 1
+StackingAction initiated with flag for saving decay products in  Tracker: 1 in Calo: 0 in Muon: 0
+               saveFirstSecondary: 1 Flag for tracking neutrino: 0 Killing Flag 0 protons below 30 MeV, neutrons below 30 MeV and ions below 30 MeV
+               kill tracks with time larger than 500 ns and kill Delta Ray flag set to 0
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:53 CEST Run: 1
+StackingAction::MaxTrackTime for ZDCRegion is 2000
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:53 CEST Run: 1
+StackingAction::MaxTrackTime for QuadRegion is 0
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:53 CEST Run: 1
+StackingAction::MaxTrackTime for InterimRegion is 0
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:53 CEST Run: 1
+StackingAction: Russian Roulette for gamma Elimit(MeV)= 10
+                 ECAL Prob= 0.3
+                 HCAL Prob= 0.3
+             MuonIron Prob= 0.3
+            PreShower Prob= 0.3
+               CASTOR Prob= 0.3
+                World Prob= 0.3
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:53 CEST Run: 1
+StackingAction: Russian Roulette for neutron Elimit(MeV)= 10
+                 ECAL Prob= 0.1
+                 HCAL Prob= 0.1
+             MuonIron Prob= 0.1
+            PreShower Prob= 0.1
+               CASTOR Prob= 0.1
+                World Prob= 0.1
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:53 CEST Run: 1
+# of LV for Tracker 4 for Calo 0 for Muon 0
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:53 CEST Run: 1
+Tracker vol 0 name BEAM
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:53 CEST Run: 1
+Tracker vol 1 name BEAM1
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:53 CEST Run: 1
+Tracker vol 2 name BEAM2
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits@beginRun  21-Jun-2015 09:32:53 CEST Run: 1
+Tracker vol 3 name BEAM3
+%MSG
+Begin processing the 1st record. Run 1, Event 1, LumiSection 1 at 21-Jun-2015 09:32:53.102 CEST
+%MSG-i GetByLabelWithoutRegistration:  SmearingGenerator:SmearingGenerator  21-Jun-2015 09:32:53 CEST Run: 1 Event: 1
+::getByLabel without corresponding call to consumes or mayConsumes for this module.
+  type: edm::HepMCProduct
+  module label: generator
+  product instance name: ''
+  process name: ''
+
+%MSG
+%MSG-i GetByLabelWithoutRegistration:  OscarProducer:g4SimHits  21-Jun-2015 09:32:53 CEST Run: 1 Event: 1
+::getByLabel without corresponding call to consumes or mayConsumes for this module.
+  type: edm::HepMCProduct
+  module label: generator
+  product instance name: ''
+  process name: ''
+
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:53 CEST  Run: 1 Event: 1
+Pointer for Tracker 0 and for Calo 0
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:53 CEST  Run: 1 Event: 1
+SteppingAction fails to initialize some the region pointers correctly
+%MSG
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:53 CEST  Run: 1 Event: 1
+ RunManager: saved : Event  1 of weight 1 with 2 tracks and 1 vertices, generated by 18 particles 
+%MSG
+Begin processing the 2nd record. Run 1, Event 2, LumiSection 1 at 21-Jun-2015 09:32:53.132 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:53 CEST  Run: 1 Event: 2
+ RunManager: saved : Event  2 of weight 1 with 152 tracks and 10 vertices, generated by 308 particles 
+%MSG
+Begin processing the 3rd record. Run 1, Event 3, LumiSection 1 at 21-Jun-2015 09:32:53.314 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:53 CEST  Run: 1 Event: 3
+ RunManager: saved : Event  3 of weight 1 with 235 tracks and 14 vertices, generated by 443 particles 
+%MSG
+Begin processing the 4th record. Run 1, Event 4, LumiSection 1 at 21-Jun-2015 09:32:53.588 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:53 CEST  Run: 1 Event: 4
+ RunManager: saved : Event  4 of weight 1 with 134 tracks and 13 vertices, generated by 262 particles 
+%MSG
+Begin processing the 5th record. Run 1, Event 5, LumiSection 1 at 21-Jun-2015 09:32:53.752 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:54 CEST  Run: 1 Event: 5
+ RunManager: saved : Event  5 of weight 1 with 313 tracks and 15 vertices, generated by 614 particles 
+%MSG
+Begin processing the 6th record. Run 1, Event 6, LumiSection 1 at 21-Jun-2015 09:32:54.178 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:54 CEST  Run: 1 Event: 6
+ RunManager: saved : Event  6 of weight 1 with 52 tracks and 5 vertices, generated by 93 particles 
+%MSG
+Begin processing the 7th record. Run 1, Event 7, LumiSection 1 at 21-Jun-2015 09:32:54.224 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:54 CEST  Run: 1 Event: 7
+ RunManager: saved : Event  7 of weight 1 with 7 tracks and 3 vertices, generated by 26 particles 
+%MSG
+Begin processing the 8th record. Run 1, Event 8, LumiSection 1 at 21-Jun-2015 09:32:54.232 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:54 CEST  Run: 1 Event: 8
+ RunManager: saved : Event  8 of weight 1 with 88 tracks and 6 vertices, generated by 160 particles 
+%MSG
+Begin processing the 9th record. Run 1, Event 9, LumiSection 1 at 21-Jun-2015 09:32:54.306 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:54 CEST  Run: 1 Event: 9
+ RunManager: saved : Event  9 of weight 1 with 221 tracks and 13 vertices, generated by 416 particles 
+%MSG
+Begin processing the 10th record. Run 1, Event 10, LumiSection 1 at 21-Jun-2015 09:32:54.615 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:54 CEST  Run: 1 Event: 10
+ RunManager: saved : Event  10 of weight 1 with 42 tracks and 8 vertices, generated by 82 particles 
+%MSG
+Begin processing the 11th record. Run 1, Event 11, LumiSection 1 at 21-Jun-2015 09:32:54.654 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:54 CEST  Run: 1 Event: 11
+ RunManager: saved : Event  11 of weight 1 with 81 tracks and 8 vertices, generated by 150 particles 
+%MSG
+Begin processing the 12th record. Run 1, Event 12, LumiSection 1 at 21-Jun-2015 09:32:54.721 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:55 CEST  Run: 1 Event: 12
+ RunManager: saved : Event  12 of weight 1 with 295 tracks and 13 vertices, generated by 592 particles 
+%MSG
+Begin processing the 13th record. Run 1, Event 13, LumiSection 1 at 21-Jun-2015 09:32:55.071 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:55 CEST  Run: 1 Event: 13
+ RunManager: saved : Event  13 of weight 1 with 357 tracks and 26 vertices, generated by 749 particles 
+%MSG
+Begin processing the 14th record. Run 1, Event 14, LumiSection 1 at 21-Jun-2015 09:32:55.598 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:55 CEST  Run: 1 Event: 14
+ RunManager: saved : Event  14 of weight 1 with 32 tracks and 5 vertices, generated by 60 particles 
+%MSG
+Begin processing the 15th record. Run 1, Event 15, LumiSection 1 at 21-Jun-2015 09:32:55.618 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:56 CEST  Run: 1 Event: 15
+ RunManager: saved : Event  15 of weight 1 with 352 tracks and 16 vertices, generated by 771 particles 
+%MSG
+Begin processing the 16th record. Run 1, Event 16, LumiSection 1 at 21-Jun-2015 09:32:56.143 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:56 CEST  Run: 1 Event: 16
+ RunManager: saved : Event  16 of weight 1 with 69 tracks and 5 vertices, generated by 117 particles 
+%MSG
+Begin processing the 17th record. Run 1, Event 17, LumiSection 1 at 21-Jun-2015 09:32:56.225 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:56 CEST  Run: 1 Event: 17
+ RunManager: saved : Event  17 of weight 1 with 322 tracks and 16 vertices, generated by 618 particles 
+%MSG
+Begin processing the 18th record. Run 1, Event 18, LumiSection 1 at 21-Jun-2015 09:32:56.625 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:57 CEST  Run: 1 Event: 18
+ RunManager: saved : Event  18 of weight 1 with 501 tracks and 25 vertices, generated by 985 particles 
+%MSG
+Begin processing the 19th record. Run 1, Event 19, LumiSection 1 at 21-Jun-2015 09:32:57.303 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:57 CEST  Run: 1 Event: 19
+ RunManager: saved : Event  19 of weight 1 with 150 tracks and 11 vertices, generated by 290 particles 
+%MSG
+Begin processing the 20th record. Run 1, Event 20, LumiSection 1 at 21-Jun-2015 09:32:57.466 CEST
+%MSG-i SimG4CoreApplication:  OscarProducer:g4SimHits 21-Jun-2015 09:32:57 CEST  Run: 1 Event: 20
+ RunManager: saved : Event  20 of weight 1 with 234 tracks and 15 vertices, generated by 470 particles 
+%MSG
+%MSG-i DDCompactViewImpl:  PostEndLumi 21-Jun-2015 09:32:57 CEST PostEndLumi
+DDD transient representation has been destructed.
+%MSG
+%MSG-i DDCompactViewImpl:  PostEndLumi 21-Jun-2015 09:32:57 CEST PostEndLumi
+DDD transient representation has been destructed.
+%MSG
+21-Jun-2015 09:32:57 CEST  Closed file file:GEN.root
+%MSG-i DDCompactViewImpl:  21-Jun-2015 09:32:57 CEST PostEndRun
+DDD transient representation has been destructed.
+%MSG
+%MSG-i TotemRP:  21-Jun-2015 09:32:57 CEST PostEndRun
+ Deleting myPPSTimingNumberingScheme
+%MSG
+%MSG-i TotemRP:  21-Jun-2015 09:32:57 CEST PostEndRun
+ Deleting myRPNumberingScheme
+%MSG
