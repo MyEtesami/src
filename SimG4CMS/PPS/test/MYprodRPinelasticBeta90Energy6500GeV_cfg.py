@@ -6,11 +6,11 @@ process.setName_("prodRPinelasticBeta90Energy6500GeV")
 
 # Specify the maximum events to simulate
 process.maxEvents = cms.untracked.PSet(
-  input = cms.untracked.int32(20)
+  input = cms.untracked.int32(2)
 )
 
 # Specify the output filename
-exec 'process.' + str(process.outpath) + '.fileName = cms.untracked.string("file:MYprodRPinelasticBeta90Energy6500GeV.root")'
+exec 'process.' + str(process.outpath) + '.fileName = cms.untracked.string("file:Test_MYprodRPinelasticBeta90Energy6500GeV.root")'
 
 # particle generator paramteres
 process.load("IOMC.FlatProtonLogKsiLogTGun.Beta90Energy6500GeV_cfi")
@@ -35,6 +35,6 @@ process.g4SimHits.PPSSD = cms.PSet(
 
 
 
-process.p1 = cms.Path(process.generator*process.SmearingGenerator*process.g4SimHits*process.mix
+process.p1 = cms.Path(process.generator*process.SmearingGenerator*process.g4SimHits*process.mix*process.PPSTimingDetDigitizer
 #*process.RPSiDetDigitizer*process.RPClustProd*process.RPHecoHitProd*process.RPSinglTrackCandFind*process.RPSingleTrackCandCollFit*process.RP220Reconst
 )

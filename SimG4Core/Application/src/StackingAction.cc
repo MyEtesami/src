@@ -322,7 +322,7 @@ G4ClassificationOfNewTrack StackingAction::ClassifyNewTrack(const G4Track * aTra
       if (classification != fKill) {
 //std::cout<<"creating secondary in stacking action"<<std::endl;     
 if(aTrack->GetVolume()->GetName()=="window_box")
-std::cout<<"Mother particle: "<< mother->GetDefinition()->GetParticleName()<<" ID: "<<mother->GetTrackID()<<std::endl;
+//std::cout<<"Mother particle: "<< mother->GetDefinition()->GetParticleName()<<" ID: "<<mother->GetTrackID()<<std::endl;
    newTA->secondary(aTrack, *mother, flag);
       }
     }

@@ -54,7 +54,7 @@ process.g4SimHits.Generator.HepMCProductLabel = 'generator'
 
 ################## STEP 4 process.mix*process.RPSiDetDigitizer*process.RPClustProd*process.RPHecoHitProd*process.RPSinglTrackCandFind*process.RPSingleTrackCandCollFit
 
-process.load("Configuration.TotemStandardSequences/RP_Digi_and_TrackReconstruction_cfi")
+process.load("Configuration.TotemStandardSequences/PPSTiming_Digi_cfi")
 
 ################## STEP 5 process.InelasticReconstruction
 
