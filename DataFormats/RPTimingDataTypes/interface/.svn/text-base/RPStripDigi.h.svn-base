@@ -2,7 +2,6 @@
 #define DataFormats_TotemRPDataTypes_RP_STRIPDIGI_H
 
 
-
 #include "DataFormats/TotemRPDataTypes/interface/RPTypes.h"
 
 class RPStripDigi {
