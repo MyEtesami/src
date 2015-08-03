@@ -1,0 +1,20 @@
+SmearingGenerator.verbosity=1
+>> SmearingGenerator > seed = 3849
+----- Begin Fatal Exception 03-Aug-2015 09:49:39 CEST-----------------------
+An exception of category 'DictionaryNotFound' occurred while
+   [0] Constructing the EventProcessor
+Exception Message:
+No REFLEX data dictionary found for the following classes:
+
+edm::Wrapper<edm::DetSetVector<RPLBarDigi> >
+
+Most likely each dictionary was never generated,
+but it may be that it was generated in the wrong package.
+Please add (or move) the specification
+<class name="whatever"/>
+to the appropriate classes_def.xml file.
+If the class is a template instance, you may need
+to define a dummy variable of this type in classes.h.
+Also, if this class has any transient members,
+you need to specify them in classes_def.xml.
+----- End Fatal Exception -------------------------------------------------
