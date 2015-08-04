@@ -11,7 +11,7 @@
  
  #include "G4MaterialPropertiesTable.hh"
  #include "G4SDManager.hh"
- 
+#include "G4OpticalSurface.hh" 
  class TimingMaterialProperties
  {
   public:
