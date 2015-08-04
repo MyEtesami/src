@@ -6,7 +6,7 @@
 // Modifications: 
 ///////////////////////////////////////////////////////////////////////////////
 #include "SimG4CMS/PPS/interface/PPS_Timing_SD.h"
-#include "SimG4CMS/PPS/interface/myPPSTimingNumberingScheme.h"
+#include "SimG4CMS/PPS/interface/PPSTimingNumberingScheme.h"
 
 #include "FWCore/Framework/interface/ESHandle.h"
 #include "FWCore/Framework/interface/EventSetup.h"
@@ -98,7 +98,7 @@ std::cout<<"Register and Assign the right detector "<<std::endl;
   if (name == "PPSTimingHits")  
 {
 
-    numberingScheme = dynamic_cast<PPSTimingVDetectorOrganization*>(new myPPSTimingNumberingScheme(3));
+    numberingScheme = dynamic_cast<PPSTimingVDetectorOrganization*>(new PPSTimingNumberingScheme(3));
 std::cout<<"find PPSTimingHits as name "<<std::endl;
   }
   else 
@@ -208,9 +208,9 @@ std::cout<<"PPS_TIMING : There is no hit to process"<<std::endl<<std::endl;
 
    GetStepInfo(aStep);
   
- if ((theTrack->GetDefinition() != G4OpticalPhoton::OpticalPhotonDefinition())&&theTrack->GetDefinition()->GetParticleName()=="proton")   
+// if ((theTrack->GetDefinition() != G4OpticalPhoton::OpticalPhotonDefinition())&&theTrack->GetDefinition()->GetParticleName()=="proton")   
 //s.mohsen
-  Print_Hit_Info();
+//  Print_Hit_Info();
 
 
 //}
@@ -311,8 +311,7 @@ void PPS_Timing_SD::GetStepInfo(G4Step* aStep)
   //corrected phi and theta treatment
   G4ThreeVector gmd  = aStep->GetPreStepPoint()->GetMomentumDirection();
   // convert it to local frame
-  G4ThreeVector lmd = ((G4TouchableHistory *)(aStep->GetPreStepPoint()->GetTouchable()))->GetHistory()
-    ->GetTopTransform().TransformAxis(gmd);
+  G4ThreeVector lmd = ((G4TouchableHistory *)(aStep->GetPreStepPoint()->GetTouchable()))->GetHistory()->GetTopTransform().TransformAxis(gmd);
   Local3DPoint lnmd = ConvertToLocal3DPoint(lmd);
   ThetaAtEntry = lnmd.theta();
   PhiAtEntry = lnmd.phi();

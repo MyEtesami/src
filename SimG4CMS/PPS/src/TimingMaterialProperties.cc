@@ -12,7 +12,9 @@
  #include "FWCore/MessageLogger/interface/MessageLogger.h"
  
  #include "G4SystemOfUnits.hh"
- 
+
+#include "G4LogicalBorderSurface.hh" 
+#include "G4PhysicalVolumeStore.hh"
 
      TimingMaterialProperties::TimingMaterialProperties(int DebugLevel) 
      : theMaterialTable(), theMPDebugLevel(0), 
@@ -185,6 +187,52 @@ G4double AbsorptionLength_Glass[nEntries] =
      // Reflectivity of the mirrors in the Alignment Tubes
      //G4double Reflectivity[nEntries] = { 0.05, 0.05, 0.05 };
  
+
+
+     //  Optical Properties of the Surface 
+     //
+    G4double sigma_alpha = 0.1;			//0.1
+  
+    G4OpticalSurface* OpSilSurface = new G4OpticalSurface("SiOSurface");
+  
+    OpSilSurface->SetType(dielectric_dielectric);
+    OpSilSurface->SetFinish(polished);  
+//  OpSilSurface->SetModel(glisur); 	 
+    OpSilSurface->SetModel(unified);     
+    OpSilSurface->SetSigmaAlpha(sigma_alpha);  
+
+
+
+    // Generate & Add Material Properties Table attached to the optical surfaces
+    //
+      const G4int num = 2;
+
+      G4double Ephoton[num] = {1.76*eV, 5.79*eV};  //Si02
+
+     //  G4double Ephoton[num] = {2.10*eV, 5.82*eV};    //Al2O3
+     //
+     //   Optical SiO2/Al2O3 Surface
+     // 
+
+    G4double RefractiveIndex[num]={1.455, 1.534}; 		//  SiO2
+    G4double SpecularLobe[num]={0.1, 0.1};                    //0.1
+    G4double SpecularSpike[num]={0.9, 0.9};                    //0.9
+    G4double Backscatter[num]={0.0, 0.0};                    //0.0
+
+    G4double QualSurfaceRefl[num]={0.99, 0.99};			//0.98 
+
+    G4MaterialPropertiesTable* ST_Sur = new G4MaterialPropertiesTable();
+  
+  ST_Sur->AddProperty("RINDEX",        Ephoton, RefractiveIndex,         num);  
+  ST_Sur->AddProperty("REFLECTIVITY",  Ephoton, QualSurfaceRefl,num);
+
+  ST_Sur->AddProperty("SPECULARLOBECONSTANT",  Ephoton, SpecularLobe,    num); //
+  ST_Sur->AddProperty("SPECULARSPIKECONSTANT", Ephoton, SpecularSpike,   num);
+  ST_Sur->AddProperty("BACKSCATTERCONSTANT",   Ephoton, Backscatter,     num); //
+
+
+
+
      /* *********************************************************************** */
  
      /* *********************************************************************** */
@@ -318,5 +366,66 @@ G4double AbsorptionLength_Glass[nEntries] =
                  (*theLogicalVolume)->GetMaterial()->GetMaterialPropertiesTable()->DumpTable();
              }
          }
+       
+
+        else if ( (*theLogicalVolume)->GetName() == "window_box"  )
+         {
+     //   G4LogicalBorderSurface* SilAirBord;        
+    //G4LogicalVolumeStore::GetInstance()->push_back(SilAirBord);
+            // G4LogicalVolumeStore::Register(SilAirBord);
+              
+         }
+
+ 
+
      }
+
+
+          // Get physical volumes
+ // loop over the physical volumes and make the logicalbordersurface
+         const G4PhysicalVolumeStore * thePhysicalVolumeStore = G4PhysicalVolumeStore::GetInstance();
+       std::vector<G4VPhysicalVolume*>::const_iterator thePhysicalVolume;
+
+//G4VPhysicalVolume* WINDOW;   
+// FR means First BOX in Right and so on
+//G4VPhysicalVolume* TIMINGBOX_FR;
+//G4VPhysicalVolume* TIMINGBOX_FL;
+//G4VPhysicalVolume* TIMINGBOX_SR;
+//G4VPhysicalVolume* TIMINGBOX_SL;
+
+
+     for ( thePhysicalVolume = thePhysicalVolumeStore->begin(); thePhysicalVolume != thePhysicalVolumeStore->end(); thePhysicalVolume++ )
+
+       {
+        //   if((*thePhysicalVolume)->GetName() == "PPS_timing_box_First"&&(*thePhysicalVolume)->GetCopyNo() ==110)
+        //     TIMINGBOX_FR = *thePhysicalVolume;
+        //   if((*thePhysicalVolume)->GetName() == "PPS_timing_box_Second"&&(*thePhysicalVolume)->GetCopyNo() ==110)
+        //     TIMINGBOX_SR = *thePhysicalVolume;
+        //   if((*thePhysicalVolume)->GetName() == "PPS_timing_box_First"&&(*thePhysicalVolume)->GetCopyNo() ==10)
+        //     TIMINGBOX_FL = *thePhysicalVolume;
+        //   if((*thePhysicalVolume)->GetName() == "PPS_timing_box_Second"&&(*thePhysicalVolume)->GetCopyNo() ==10)
+        //     TIMINGBOX_SL = *thePhysicalVolume;
+       }
+
+     for ( thePhysicalVolume = thePhysicalVolumeStore->begin(); thePhysicalVolume != thePhysicalVolumeStore->end(); thePhysicalVolume++ ) 
+
+       {           
+        //  if((*thePhysicalVolume)->GetName() == "window_box"&&(*thePhysicalVolume)->GetMotherLogical()==TIMINGBOX_FR)
+        //     G4LogicalBorderSurface* SilAirBord= new G4LogicalBorderSurface("SiOSurface", *thePhysicalVolume,TIMINGBOX_FR, OpSilSurface);
+         //  if((*thePhysicalVolume)->GetName() == "window_box"&&(*thePhysicalVolume)->GetMotherLogical()==TIMINGBOX_SL)
+        //     G4LogicalBorderSurface* SilAirBord= new G4LogicalBorderSurface("SiOSurface", *thePhysicalVolume,TIMINGBOX_SL, OpSilSurface);
+        //  if((*thePhysicalVolume)->GetName() == "window_box"&&(*thePhysicalVolume)->GetMotherLogical()==TIMINGBOX_FL)
+        //     G4LogicalBorderSurface* SilAirBord= new G4LogicalBorderSurface("SiOSurface", *thePhysicalVolume,TIMINGBOX_FL, OpSilSurface);
+         //  if((*thePhysicalVolume)->GetName() == "window_box"&&(*thePhysicalVolume)->GetMotherLogical()==TIMINGBOX_SL)
+        //     G4LogicalBorderSurface* SilAirBord= new G4LogicalBorderSurface("SiOSurface", *thePhysicalVolume,TIMINGBOX_SL, OpSilSurface);
+         if((*thePhysicalVolume)->GetName() == "window_box")
+  
+          {  
+              std::cout<<"window_box PHYSICALLLLLLLLLLLLLLLLLLLLLLLLLLL VOLUMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"<<std::endl;
+               std::cout<<"(*thePhysicalVolume)->GetMotherLogical() "<<(*thePhysicalVolume)->GetMotherLogical()->GetName()<<std::endl;
+              //G4LogicalBorderSurface* SilAirBord= new G4LogicalBorderSurface("SiOSurface", *thePhysicalVolume,TIMINGBOX, OpSilSurface);     
+            }    
+       }
+
+
  } // End of set material function.

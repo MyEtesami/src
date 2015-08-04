@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DDDefinition xmlns="http://www.cern.ch/cms/DDL"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.cern.ch/cms/DDL ../../DDLSchema/DDLSchema.xsd">
+    <ConstantsSection label="RP_215_Right_Station.xml">
+        <!--Positions calculated from the wall closer to IP point-->
+        <Constant name="RP_215_Right_Station_Length" value="450*mm"/>
+        <Constant name="RP_215_Right_Station_Pipe_Length" value="150*mm"/>
+       <Constant name="RP_Device_Hor_Closed_Wall_Thick_Ext" value="2*mm"/>
+        <Constant name="RP_Device_Hor_Closed_Wall_Thick_Int" value="2*mm"/>
+        <Constant name="RP_Device_Hor_RP_Section_Tot_Length" value="[RP_Device:RP_Device_Length_y]+[RP_Device:RP_Device_Det_Bellow_Length]+[RP_Device_Hor_Closed_Wall_Thick_Ext]"/>
+        
+        <Constant name="RP_215_Right_Hor_Vac_Length" value="[RP_Device:RP_Device_Envelope_Radius]+[RP_Device:RP_Device_Length_y]/2-[RP_Device_Hor_Closed_Wall_Thick_Int]"/>
+    </ConstantsSection>
+    
+    <SolidSection label="RP_215_Right_Station.xml">  
+        <Tube rMin="0*mm" rMax="[RP_Device:RP_Device_Envelope_Radius]*1.1" dz="[RP_215_Right_Station_Length]/2" name="RP_215_Right_Station"/>
+        <Tube rMin="[RP_Device:RP_Device_Beam_Hole_Diam]/2" rMax="[RP_Device:RP_Device_Beam_Hole_Diam]/2+[RP_Device:RP_Device_Wall_Thickness]" dz="[RP_215_Right_Station_Pipe_Length]/2" name="RP_215_Right_Station_Tube_1"/>
+        <Tube rMin="[RP_Device:RP_Device_Beam_Hole_Diam]/2" rMax="[RP_Device:RP_Device_Beam_Hole_Diam]/2+[RP_Device:RP_Device_Wall_Thickness]" dz="[RP_215_Right_Station_Pipe_Length]/2" name="RP_215_Right_Station_Tube_2"/>
+        <Tube rMin="0*mm" rMax="[RP_Device:RP_Device_Beam_Hole_Diam]/2" dz="[RP_215_Right_Station_Length]/2" name="RP_215_Right_Station_Vacuum_1"/>
+        <Tube rMin="0*mm" rMax="[RP_Device:RP_Device_RP_Hole_Diam]/2" dz="[RP_215_Right_Hor_Vac_Length]/2" name="RP_215_Right_Station_Hor_Vacuum"/>
+        <UnionSolid name="RP_215_Right_Station_Vacuum_4">
+            <rSolid name="RP_215_Right_Station_Vacuum_1"/>
+            <rSolid name="RP_215_Right_Station_Hor_Vacuum"/>
+            <rRotation name="PPS_Transformations:RP_y_90_rot"/>
+            <Translation x="-(-[RP_215_Right_Hor_Vac_Length]/2+[RP_Device:RP_Device_Length_y]/2-[RP_Device_Hor_Closed_Wall_Thick_Int])" y="0*mm" z="0"/>
+        </UnionSolid>
+    </SolidSection>
+    
+    <LogicalPartSection label="RP_215_Right_Station.xml">
+        <LogicalPart name="RP_215_Right_Station">
+            <rSolid name="RP_215_Right_Station"/>
+            <rMaterial name="PPS_Materials:Air"/>
+        </LogicalPart>
+        <LogicalPart name="RP_215_Right_Station_Tube_1">
+            <rSolid name="RP_215_Right_Station_Tube_1"/>
+            <rMaterial name="PPS_Materials:AISI-316L-Steel"/>
+        </LogicalPart>
+        <LogicalPart name="RP_215_Right_Station_Tube_2">
+            <rSolid name="RP_215_Right_Station_Tube_2"/>
+            <rMaterial name="PPS_Materials:AISI-316L-Steel"/>
+        </LogicalPart>
+        <LogicalPart name="RP_215_Right_Station_Vacuum_4">
+            <rSolid name="RP_215_Right_Station_Vacuum_4"/>
+            <rMaterial name="PPS_Materials:RP_Primary_Vacuum"/>
+        </LogicalPart>
+    </LogicalPartSection>
+    
+    <PosPartSection label="RP_215_Right_Station.xml">
+
+<PosPart copyNumber="1">
+     <rParent name="cms:CMSE"/>
+     <rChild name="RP_Timing_Box_Right:RP_Cylinder_primary_vacuum"/>
+        <rRotation name="PPS_Transformations:RP_90_x_90_y_rot"/>
+        <Translation x="[Cylindrical_pot:height]/2+[Cylindrical_pot:Cylinder_beam_distance]" y="0*m " z="0*m " />
+</PosPart>
+
+
+        <PosPart>
+            <rParent name="RP_215_Right_Station"/>
+            <rChild name="RP_215_Right_Station_Tube_1"/>
+            <Translation x="0*mm" y="0*mm" z="-[RP_215_Right_Station_Length]/2+[RP_215_Right_Station_Pipe_Length]/2"/>
+        </PosPart>
+        <PosPart>
+            <rParent name="RP_215_Right_Station"/>
+            <rChild name="RP_215_Right_Station_Tube_2"/>
+            <Translation x="0*mm" y="0*mm" z="[RP_215_Right_Station_Length]/2-[RP_215_Right_Station_Pipe_Length]/2"/>
+        </PosPart>
+        <PosPart>
+            <rParent name="RP_215_Right_Station"/>
+            <rChild name="RP_215_Right_Station_Vacuum_4"/>
+        </PosPart>
+
+
+    </PosPartSection>
+</DDDefinition>
