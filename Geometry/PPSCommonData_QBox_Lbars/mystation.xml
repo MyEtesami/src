@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DDDefinition xmlns="http://www.cern.ch/cms/DDL"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.cern.ch/cms/DDL ../../DDLSchema/DDLSchema.xsd">
+    <ConstantsSection label="mystation">
+        <!--Positions calculated from the wall closer to IP point-->
+        <Constant name="RP_215_Right_Station_Length" value="450*mm"/>
+        <Constant name="RP_215_Right_Station_Pipe_Length" value="150*mm"/>
+       <Constant name="RP_Device_Hor_Closed_Wall_Thick_Ext" value="2*mm"/>
+        <Constant name="RP_Device_Hor_Closed_Wall_Thick_Int" value="2*mm"/>
+        <Constant name="RP_Device_Hor_RP_Section_Tot_Length" value="[RP_Device:RP_Device_Length_y]+[RP_Device:RP_Device_Det_Bellow_Length]+[RP_Device_Hor_Closed_Wall_Thick_Ext]"/>
+        
+        <Constant name="RP_215_Right_Hor_Vac_Length" value="[RP_Device:RP_Device_Envelope_Radius]+[RP_Device:RP_Device_Length_y]/2-[RP_Device_Hor_Closed_Wall_Thick_Int]"/>
+    </ConstantsSection>
+    
+    <SolidSection label="mystation.xml">  
+        <Tube rMin="0" rMax="[RP_Device:RP_Device_Beam_Hole_Diam]/2+[RP_Device:RP_Device_Wall_Thickness]" dz="[RP_215_Right_Station_Pipe_Length]/2" name="RP_215_Right_Station_Tube_1"/>
+
+
+
+     <Box name="window_box"  dx="1.5" dy="1.5" dz="1.5"/>
+
+    <Box  name="BoxHA" dx="1.5*mm" dy="1.5*mm" dz="29*mm"/>
+    <Box  name="BoxVA" dx="35.6*mm" dy="1.5*mm" dz="1.5*mm"/>
+<UnionSolid name="Lbar" firstSolid="BoxHA" secondSolid="BoxVA">
+     <Translation x="37.1*mm" y="0" z="27.5*mm"/>
+</UnionSolid>
+                             
+       </SolidSection>
+ 
+
+
+    <LogicalPartSection label="mystation.xml">
+        <LogicalPart name="RP_215_Right_Station_Tube_1">
+            <rSolid name="RP_215_Right_Station_Tube_1"/>
+            <rMaterial name="materials:Lead"/>
+        </LogicalPart>
+
+
+       <LogicalPart name="window_box" category="unspecified">
+             <rSolid name="window_box"/>
+             <rMaterial name="materials:Glass"/>
+             </LogicalPart>
+
+     <LogicalPart name="Lbar" category="unspecified">
+             <rSolid name="Lbar"/>
+             <rMaterial name="materials:Quartz"/>
+      </LogicalPart>
+
+
+
+    </LogicalPartSection>
+    
+    <PosPartSection label="mystation.xml">
+
+        <PosPart>
+            <rParent name="TotemRPGlobal:OTOTEM"/>
+            <rChild name="window_box"/>
+            <Translation x="3*mm+1.5*mm+35.6*mm" y="0*mm" z="215.7*m+29*mm-1.5*mm"/>
+        </PosPart>
+
+           <PosPart>
+            <rParent name="TotemRPGlobal:OTOTEM"/>
+            <rChild name="Lbar"/>
+            <Translation x="1.5*mm" y="0*mm" z="215.7*m"/>
+        </PosPart>
+
+
+
+    </PosPartSection>
+</DDDefinition>
