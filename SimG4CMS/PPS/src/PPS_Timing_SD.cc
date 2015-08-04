@@ -208,7 +208,7 @@ std::cout<<"PPS_TIMING : There is no hit to process"<<std::endl<<std::endl;
 
    GetStepInfo(aStep);
   
- if ((theTrack->GetDefinition() != G4OpticalPhoton::OpticalPhotonDefinition())&&theTrack->GetDefinition()->GetParticleName()=="proton")   
+// if ((theTrack->GetDefinition() != G4OpticalPhoton::OpticalPhotonDefinition())&&theTrack->GetDefinition()->GetParticleName()=="proton")   
 //s.mohsen
 //  Print_Hit_Info();
 
