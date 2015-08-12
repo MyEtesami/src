@@ -27,6 +27,8 @@
 //#include "Geometry/Vector/interface/LocalVector.h"
 #include "DataFormats/GeometryVector/interface/LocalPoint.h"
 #include "DataFormats/GeometryVector/interface/LocalVector.h"
+#include "G4LogicalBorderSurface.hh"
+
 
 //
 
@@ -58,6 +60,7 @@ PPS_Timing_SD::PPS_Timing_SD(std::string name, const DDCompactView & cpv, Sensit
 PPS_Timing_SD::initRun();
 
 
+
   collectionName.insert(name);
 std::cout<<"collectionName[0]: "<<collectionName[0]<<std::endl;
   
@@ -76,7 +79,11 @@ std::cout<<"collectionName[0]: "<<collectionName[0]<<std::endl;
   slave  = new TrackingSlaveSD(name);
 
 std::cout<<"MoHSENNNNNNNNNNNNNNNNNNNNNNN"<<std::endl;
-  //
+
+TimingMaterialProperties::DumpSurfaceInfo();
+ 
+
+ //
   // Now attach the right detectors (LogicalVolumes) to me
   //
   

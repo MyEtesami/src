@@ -229,7 +229,7 @@ G4double AbsorptionLength_Glass[nEntries] =
   ST_Sur->AddProperty("SPECULARLOBECONSTANT",  Ephoton, SpecularLobe,    num); //
   ST_Sur->AddProperty("SPECULARSPIKECONSTANT", Ephoton, SpecularSpike,   num);
   ST_Sur->AddProperty("BACKSCATTERCONSTANT",   Ephoton, Backscatter,     num); //
-
+    OpSilSurface->SetMaterialPropertiesTable(ST_Sur);
 
 
 
@@ -380,52 +380,172 @@ G4double AbsorptionLength_Glass[nEntries] =
 
      }
 
+TimingMaterialProperties::SetSurfaceProperties(OpSilSurface);
 
-          // Get physical volumes
- // loop over the physical volumes and make the logicalbordersurface
-         const G4PhysicalVolumeStore * thePhysicalVolumeStore = G4PhysicalVolumeStore::GetInstance();
-       std::vector<G4VPhysicalVolume*>::const_iterator thePhysicalVolume;
+ } // End of set material function.
 
-//G4VPhysicalVolume* WINDOW;   
-// FR means First BOX in Right and so on
-//G4VPhysicalVolume* TIMINGBOX_FR;
-//G4VPhysicalVolume* TIMINGBOX_FL;
-//G4VPhysicalVolume* TIMINGBOX_SR;
-//G4VPhysicalVolume* TIMINGBOX_SL;
+void TimingMaterialProperties::SetSurfaceProperties(G4OpticalSurface* OpSilSurface){
+
+
+    // Get physical volumes
+    // loop over the physical volumes and make the logicalbordersurface
+     
+
+     const G4PhysicalVolumeStore * thePhysicalVolumeStore = G4PhysicalVolumeStore::GetInstance();
+    
+      typedef std::vector<G4VPhysicalVolume*>::const_iterator     itr;
+      itr thePhysicalVolume;
+
+    
+
+     //G4VPhysicalVolume* WINDOW;   
+     // FR means First BOX in Right and so on
+
+     G4VPhysicalVolume* TIMINGBOX_FR=NULL;
+     G4VPhysicalVolume* TIMINGBOX_FL=NULL;
+     G4VPhysicalVolume* TIMINGBOX_SR=NULL;
+     G4VPhysicalVolume* TIMINGBOX_SL=NULL;
 
 
      for ( thePhysicalVolume = thePhysicalVolumeStore->begin(); thePhysicalVolume != thePhysicalVolumeStore->end(); thePhysicalVolume++ )
-
        {
-        //   if((*thePhysicalVolume)->GetName() == "PPS_timing_box_First"&&(*thePhysicalVolume)->GetCopyNo() ==110)
-        //     TIMINGBOX_FR = *thePhysicalVolume;
-        //   if((*thePhysicalVolume)->GetName() == "PPS_timing_box_Second"&&(*thePhysicalVolume)->GetCopyNo() ==110)
-        //     TIMINGBOX_SR = *thePhysicalVolume;
-        //   if((*thePhysicalVolume)->GetName() == "PPS_timing_box_First"&&(*thePhysicalVolume)->GetCopyNo() ==10)
-        //     TIMINGBOX_FL = *thePhysicalVolume;
-        //   if((*thePhysicalVolume)->GetName() == "PPS_timing_box_Second"&&(*thePhysicalVolume)->GetCopyNo() ==10)
-        //     TIMINGBOX_SL = *thePhysicalVolume;
+           if((*thePhysicalVolume)->GetName() == "PPS_timing_box_First"&&(*thePhysicalVolume)->GetCopyNo() ==110)
+             TIMINGBOX_FR = *thePhysicalVolume;
+           if((*thePhysicalVolume)->GetName() == "PPS_timing_box_Second"&&(*thePhysicalVolume)->GetCopyNo() ==110)
+             TIMINGBOX_SR = *thePhysicalVolume;
+           if((*thePhysicalVolume)->GetName() == "PPS_timing_box_First"&&(*thePhysicalVolume)->GetCopyNo() ==10)
+             TIMINGBOX_FL = *thePhysicalVolume;
+           if((*thePhysicalVolume)->GetName() == "PPS_timing_box_Second"&&(*thePhysicalVolume)->GetCopyNo() ==10)
+             TIMINGBOX_SL = *thePhysicalVolume;
+
+           
        }
 
-     for ( thePhysicalVolume = thePhysicalVolumeStore->begin(); thePhysicalVolume != thePhysicalVolumeStore->end(); thePhysicalVolume++ ) 
+     for(thePhysicalVolume = thePhysicalVolumeStore->begin(); thePhysicalVolume != thePhysicalVolumeStore->end(); thePhysicalVolume++ ) 
 
-       {           
-        //  if((*thePhysicalVolume)->GetName() == "window_box"&&(*thePhysicalVolume)->GetMotherLogical()==TIMINGBOX_FR)
-        //     G4LogicalBorderSurface* SilAirBord= new G4LogicalBorderSurface("SiOSurface", *thePhysicalVolume,TIMINGBOX_FR, OpSilSurface);
-         //  if((*thePhysicalVolume)->GetName() == "window_box"&&(*thePhysicalVolume)->GetMotherLogical()==TIMINGBOX_SL)
-        //     G4LogicalBorderSurface* SilAirBord= new G4LogicalBorderSurface("SiOSurface", *thePhysicalVolume,TIMINGBOX_SL, OpSilSurface);
-        //  if((*thePhysicalVolume)->GetName() == "window_box"&&(*thePhysicalVolume)->GetMotherLogical()==TIMINGBOX_FL)
-        //     G4LogicalBorderSurface* SilAirBord= new G4LogicalBorderSurface("SiOSurface", *thePhysicalVolume,TIMINGBOX_FL, OpSilSurface);
-         //  if((*thePhysicalVolume)->GetName() == "window_box"&&(*thePhysicalVolume)->GetMotherLogical()==TIMINGBOX_SL)
-        //     G4LogicalBorderSurface* SilAirBord= new G4LogicalBorderSurface("SiOSurface", *thePhysicalVolume,TIMINGBOX_SL, OpSilSurface);
-         if((*thePhysicalVolume)->GetName() == "window_box")
+       {        
+
+
+          int CopyNo=-1;
+          G4VPhysicalVolume* LBar_tmp = NULL;
+              
+          if((*thePhysicalVolume)->GetName() == "Lbar"&&(*thePhysicalVolume)->GetMotherLogical()==TIMINGBOX_FR->GetLogicalVolume()){
+             new G4LogicalBorderSurface("SiOSurface", *thePhysicalVolume,TIMINGBOX_FR, OpSilSurface);
+             CopyNo=(*thePhysicalVolume)->GetCopyNo();
+             LBar_tmp = *thePhysicalVolume;
+             
+             
+             for(itr thePhysicalVolume_FR = thePhysicalVolumeStore->begin(); thePhysicalVolume_FR != thePhysicalVolumeStore->end(); thePhysicalVolume_FR++ ){
+            
+                if((*thePhysicalVolume_FR)->GetName() == "window_box"&&(*thePhysicalVolume_FR)->GetMotherLogical()==TIMINGBOX_FR->GetLogicalVolume()&&(*thePhysicalVolume_FR)->GetCopyNo()==CopyNo )
+
+                new G4LogicalBorderSurface("SiOSurface", LBar_tmp,*thePhysicalVolume_FR, OpSilSurface);
   
-          {  
-              std::cout<<"window_box PHYSICALLLLLLLLLLLLLLLLLLLLLLLLLLL VOLUMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"<<std::endl;
-               std::cout<<"(*thePhysicalVolume)->GetMotherLogical() "<<(*thePhysicalVolume)->GetMotherLogical()->GetName()<<std::endl;
-              //G4LogicalBorderSurface* SilAirBord= new G4LogicalBorderSurface("SiOSurface", *thePhysicalVolume,TIMINGBOX, OpSilSurface);     
-            }    
+
+             }
+
+
+          }//
+ 
+          if((*thePhysicalVolume)->GetName() == "Lbar"&&(*thePhysicalVolume)->GetMotherLogical()==TIMINGBOX_SR->GetLogicalVolume()){
+             new G4LogicalBorderSurface("SiOSurface", *thePhysicalVolume,TIMINGBOX_SR, OpSilSurface);       
+             CopyNo=(*thePhysicalVolume)->GetCopyNo();
+             LBar_tmp = *thePhysicalVolume;             
+             
+             for(itr thePhysicalVolume_SR = thePhysicalVolumeStore->begin(); thePhysicalVolume_SR != thePhysicalVolumeStore->end(); thePhysicalVolume_SR++ ){
+            
+                if((*thePhysicalVolume_SR)->GetName() == "window_box"&&(*thePhysicalVolume_SR)->GetMotherLogical()==TIMINGBOX_SR->GetLogicalVolume()&&(*thePhysicalVolume_SR)->GetCopyNo()==CopyNo )
+
+                new G4LogicalBorderSurface("SiOSurface", LBar_tmp,*thePhysicalVolume_SR, OpSilSurface);
+  
+
+             }
+
+
+          }
+
+
+
+           if((*thePhysicalVolume)->GetName() == "Lbar"&&(*thePhysicalVolume)->GetMotherLogical()==TIMINGBOX_FL->GetLogicalVolume()){
+              new G4LogicalBorderSurface("SiOSurface", *thePhysicalVolume,TIMINGBOX_FL, OpSilSurface);
+              CopyNo=(*thePhysicalVolume)->GetCopyNo();
+              LBar_tmp = *thePhysicalVolume; 
+             
+              for(itr thePhysicalVolume_FL = thePhysicalVolumeStore->begin(); thePhysicalVolume_FL != thePhysicalVolumeStore->end(); thePhysicalVolume_FL++ ){
+            
+                if((*thePhysicalVolume_FL)->GetName() == "window_box"&&(*thePhysicalVolume_FL)->GetMotherLogical()==TIMINGBOX_FL->GetLogicalVolume()&&(*thePhysicalVolume_FL)->GetCopyNo()==CopyNo )
+
+                new G4LogicalBorderSurface("SiOSurface", LBar_tmp,*thePhysicalVolume_FL, OpSilSurface);
+  
+
+              }
+
+
+           }
+       
+
+         if((*thePhysicalVolume)->GetName() == "Lbar"&&(*thePhysicalVolume)->GetMotherLogical()==TIMINGBOX_SL->GetLogicalVolume()){
+            new G4LogicalBorderSurface("SiOSurface", *thePhysicalVolume,TIMINGBOX_SL, OpSilSurface);
+            CopyNo=(*thePhysicalVolume)->GetCopyNo();
+            LBar_tmp = *thePhysicalVolume;             
+             
+            for(itr thePhysicalVolume_SL = thePhysicalVolumeStore->begin(); thePhysicalVolume_SL != thePhysicalVolumeStore->end(); thePhysicalVolume_SL++ ){
+            
+                if((*thePhysicalVolume_SL)->GetName() == "window_box"&&(*thePhysicalVolume_SL)->GetMotherLogical()==TIMINGBOX_SL->GetLogicalVolume()&&(*thePhysicalVolume_SL)->GetCopyNo()==CopyNo )
+
+                new G4LogicalBorderSurface("SiOSurface", LBar_tmp,*thePhysicalVolume_SL, OpSilSurface);
+  
+
+            }
+
+
+          }     
+             
        }
 
+//TimingMaterialProperties::DumpSurfaceInfo();
 
- } // End of set material function.
+}//end of setsurface function.
+
+ void TimingMaterialProperties::DumpSurfaceInfo(){
+
+
+#define KRED  "\x1B[31m"
+#define KGRN  "\x1B[32m"
+#define KBLU  "\x1B[34m"
+#define KCYN  "\x1B[36m"
+#define KWHT  "\x1B[37m"
+#define RESET "\033[0m"
+
+
+const G4LogicalBorderSurfaceTable* surfaces = G4LogicalBorderSurface::GetSurfaceTable();
+ int TableEntry=1;
+for(G4LogicalBorderSurfaceTable::const_iterator itr= surfaces->begin();itr!=surfaces->end();itr++){
+
+
+
+printf("\n\nThe information of " KRED "%ith" RESET " border surface in %s .......\n",TableEntry, ((*itr)->GetVolume1()->GetMotherLogical()->GetName()).c_str());
+
+
+printf("The surface property between %s and %s with copy numbers " KRED "%i and %i" RESET " respectively:\n\n",((*itr)->GetVolume1()->GetName()).c_str(),((*itr)->GetVolume2()->GetName()).c_str(),(*itr)->GetVolume1()->GetCopyNo(),(*itr)->GetVolume2()->GetCopyNo() );
+
+G4OpticalSurface *   opticalsur=(G4OpticalSurface* )(*itr)->GetSurfaceProperty();
+
+
+
+//opticalsur->DumpTableInfo();
+printf(" General information\n====================\n\n");
+opticalsur->DumpInfo();
+printf(" Material properties\n====================\n\n");
+
+opticalsur->GetMaterialPropertiesTable()->DumpTable();
+
+
+TableEntry++;
+
+}
+
+G4LogicalBorderSurface::DumpInfo();
+
+}
+
