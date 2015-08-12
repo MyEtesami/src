@@ -510,6 +510,7 @@ void TimingMaterialProperties::SetSurfaceProperties(G4OpticalSurface* OpSilSurfa
  void TimingMaterialProperties::DumpSurfaceInfo(){
 
 
+
 #define KRED  "\x1B[31m"
 #define KGRN  "\x1B[32m"
 #define KBLU  "\x1B[34m"

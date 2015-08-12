@@ -519,10 +519,6 @@ void TimingMaterialProperties::SetSurfaceProperties(G4OpticalSurface* OpSilSurfa
 #define RESET "\033[0m"
 
 
-
-//G4LogicalBorderSurface border;
-//G4LogicalBorderSurface::DumpInfo();
-
 const G4LogicalBorderSurfaceTable* surfaces = G4LogicalBorderSurface::GetSurfaceTable();
  int TableEntry=1;
 for(G4LogicalBorderSurfaceTable::const_iterator itr= surfaces->begin();itr!=surfaces->end();itr++){
