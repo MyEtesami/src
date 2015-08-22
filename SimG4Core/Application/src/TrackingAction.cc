@@ -31,8 +31,16 @@ TrackingAction::~TrackingAction() {}
 
 void TrackingAction::PreUserTrackingAction(const G4Track * aTrack)
 {
+//PPS added
+
+//std::cout<<"PRE USER ACTION TRACKING"<<std::endl;
+  //  g4Track_ = aTrack;
   CurrentG4Track::setTrack(aTrack);
 
+/*std::cout<<"@@aTrack is set for CurrentG4Track IN PRE@@@@"<<std::endl;
+std::cout<<"TrackID(): "<<aTrack->GetTrackID()<<std::endl;
+std::cout<<"ParentID(): "<<aTrack->GetParentID()<<std::endl;
+*/
   if (currentTrack_ != 0) {
     throw SimG4Exception("TrackingAction: currentTrack is a mess...");
   }
@@ -70,12 +78,23 @@ void TrackingAction::PreUserTrackingAction(const G4Track * aTrack)
     G4Track* theTrack = (G4Track *)(aTrack);
     theTrack->SetTrackStatus(fStopAndKill);
   }      
+//std::cout<<"PRE USER ACTION TRACKING"<<std::endl;
+
 }
 
 void TrackingAction::PostUserTrackingAction(const G4Track * aTrack)
 {
-  CurrentG4Track::postTracking(aTrack);
-  if (eventAction_->trackContainer() != 0) {
+ 
+
+
+ CurrentG4Track::postTracking(aTrack);
+ 
+/*std::cout<<"@@aTrack is set for CurrentG4Track IN POST Tracking@@@@"<<std::endl;
+std::cout<<"TrackID(): "<<aTrack->GetTrackID()<<std::endl;
+std::cout<<"ParentID(): "<<aTrack->GetParentID()<<std::endl;
+*/
+
+ if (eventAction_->trackContainer() != 0) {
 
     TrackInformationExtractor extractor;
     if (extractor(aTrack).storeTrack()) {

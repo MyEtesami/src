@@ -8,8 +8,9 @@
 #include "G4Track.hh"
 #include "G4UnitsTable.hh"
 #include "G4SystemOfUnits.hh" 
-
+#include "SimG4Core/Notification/interface/CurrentG4Track.h"
 #include "FWCore/MessageLogger/interface/MessageLogger.h"
+#include "G4VProcess.hh"
 
 SteppingAction::SteppingAction(EventAction* e, const edm::ParameterSet & p) 
   : eventAction_(e), tracker(0), calo(0), initialized(false) {
@@ -68,11 +69,54 @@ SteppingAction::~SteppingAction() {}
 
 void SteppingAction::UserSteppingAction(const G4Step * aStep) 
 {
+//std::cout<<" ##################STARTING THE USER STEPING ACTION ##########################"<<std::endl;
+
   if (!initialized) { initialized = initPointer(); }
   m_g4StepSignal(aStep);
 
   G4Track * theTrack = aStep->GetTrack();
-  bool ok = (theTrack->GetTrackStatus() == fAlive);
+/*if(theTrack->GetTrackID()>10050){          
+std::cout<<" ##################STARTING THE USER STEPING ACTION ##########################"<<std::endl;
+
+std::cout<<"MOTHER TRACK STATUS Stepping action: "<<CurrentG4Track::track()->GetTrackStatus();
+if(CurrentG4Track::track()->GetTrackStatus()==fAlive) std::cout<<": fAlive"<<std::endl;
+if(CurrentG4Track::track()->GetTrackStatus()==fStopButAlive) std::cout<<": fStopButAlive"<<std::endl;
+if(CurrentG4Track::track()->GetTrackStatus()==fKillTrackAndSecondaries) std::cout<<": fKillTrackAndSecondaries"<<std::endl;
+if(CurrentG4Track::track()->GetTrackStatus()==fPostponeToNextEvent) std::cout<<": fPostponeToNextEvent"<<std::endl;
+if(CurrentG4Track::track()->GetTrackStatus()==fSuspend) std::cout<<": fSuspend"<<std::endl;
+if(CurrentG4Track::track()->GetTrackStatus()==fStopAndKill) std::cout<<": fStopAndKill"<<std::endl;
+
+std::cout<<"GRAND MOTHER TRACK ID Stepping action: "<<CurrentG4Track::track()->GetParentID()<<std::endl;
+std::cout<<"MOTHER TRACK ID Stepping action: "<<CurrentG4Track::track()->GetTrackID()<<std::endl;
+std::cout<<"MOTHER TRACK Volume Stepping action: "<<CurrentG4Track::track()->GetVolume()->GetName()<<std::endl;
+std::cout<<"MOTHER TRACK Volume CopyNO Stepping action: "<<CurrentG4Track::track()->GetVolume()->GetCopyNo()<<std::endl;
+std::cout<<"MOTHER TRACK Particle Name Stepping action: "<<CurrentG4Track::track()->GetDefinition()->GetParticleName()<<std::endl;
+
+
+std::cout<<" TRACK STATUS : "<<aStep->GetTrack()->GetTrackStatus();
+if(aStep->GetTrack()->GetTrackStatus()==fAlive) std::cout<<": fAlive"<<std::endl;
+if(aStep->GetTrack()->GetTrackStatus()==fStopButAlive) std::cout<<": fStopButAlive"<<std::endl;
+if(aStep->GetTrack()->GetTrackStatus()==fKillTrackAndSecondaries) std::cout<<": fKillTrackAndSecondaries"<<std::endl;
+if(aStep->GetTrack()->GetTrackStatus()==fPostponeToNextEvent) std::cout<<": fPostponeToNextEvent"<<std::endl;
+if(aStep->GetTrack()->GetTrackStatus()==fSuspend) std::cout<<": fSuspend"<<std::endl;
+if(aStep->GetTrack()->GetTrackStatus()==fStopAndKill) std::cout<<": fStopAndKill"<<std::endl;
+          
+std::cout<<"aStep->GetTrack()->GetParentID(): "<<aStep->GetTrack()->GetParentID()<<std::endl;
+std::cout<<"theTrack = aStep->GetTrack()->GetTrackID() "<<aStep->GetTrack()->GetTrackID()<<std::endl;
+std::cout<<" ParticleName is "<<aStep->GetTrack()->GetDefinition()->GetParticleName()<<std::endl;
+
+const G4VProcess* creatorProcess=(G4VProcess*)aStep->GetTrack()->GetCreatorProcess();
+if(creatorProcess)
+std::cout<<" Creator Proc: "<<creatorProcess->GetProcessName()<<std::endl; 
+else
+std::cout<<" Creator Proc: None"<<std::endl;
+
+std::cout<<"GetVolume (): "<<aStep->GetTrack()->GetVolume()->GetName()<<std::endl;
+std::cout<<"GetPosition (x,y,z): "<<aStep->GetTrack()->GetPosition().x()<<", "<<aStep->GetTrack()->GetPosition().y()<<", "<<aStep->GetTrack()->GetPosition().z()<<std::endl;
+std::cout<<"GetKineticEnergy() "<<aStep->GetTrack()->GetKineticEnergy()<<std::endl; 
+}
+*/  
+bool ok = (theTrack->GetTrackStatus() == fAlive);
   G4double kinEnergy = theTrack->GetKineticEnergy();
 
   if (ok && killBeamPipe && kinEnergy < theCriticalEnergyForVacuum
@@ -111,6 +155,10 @@ void SteppingAction::UserSteppingAction(const G4Step * aStep)
       }
     }
   }
+//if(theTrack->GetTrackID()>10050){
+
+//std::cout<<" ################## ENDING THE USER STEPING ACTION ##########################"<<std::endl;
+//}
 }
 
 bool SteppingAction::catchLowEnergyInVacuum(G4Track * theTrack, double theKenergy) 

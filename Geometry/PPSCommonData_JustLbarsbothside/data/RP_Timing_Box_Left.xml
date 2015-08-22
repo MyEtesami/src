@@ -1,0 +1,70 @@
+<DDDefinition xmlns="http://www.cern.ch/mms/DDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cern.ch/mms/DDL 
+../DDLSchema.xsd">
+<SolidSection label="RP_Timing_Box_Left.xml">
+    <Box name="PPS_timing_box"  dx="40*mm" dy="6.3*mm" dz="66.5*mm"/>
+
+        <Tubs name="RP_Cylinder_primary_vacuum" rMin="0*mm" rMax="[Cylindrical_pot:outer_diameter_lower_part]/2" dz="[Cylindrical_pot:height]/2" startPhi="0*deg" deltaPhi="360*deg"/>
+        <Tubs name="RP_Cylinder_lower_part_foil" rMin="[Cylindrical_pot:outer_diameter_lower_part]/2-[Cylindrical_pot:window_thickness_front]" rMax="[Cylindrical_pot:outer_diameter_lower_part]/2" dz="[Cylindrical_pot:height_lower_part]/2" startPhi="0*deg" deltaPhi="360*deg"/>
+        <Tubs name="RP_Cylinder_lower_part_wall" rMin="[Cylindrical_pot:outer_diameter_lower_part]/2-[Cylindrical_pot:wall_thickness_lower_part]" rMax="[Cylindrical_pot:outer_diameter_lower_part]/2-[Cylindrical_pot:window_thickness_front]" dz="[Cylindrical_pot:height_lower_part]/2" startPhi="0*deg" deltaPhi="180*deg"/>
+        <Tubs name="RP_Cylinder_upper_part" rMax="[Cylindrical_pot:outer_diameter_lower_part]/2-[Cylindrical_pot:wall_thickness_upper_part]" rMin="[Cylindrical_pot:outer_diameter_upper_part]/2" dz="[Cylindrical_pot:height_upper_part]/2" startPhi="0*deg" deltaPhi="360*deg"/>
+        <Tubs name="RP_Cylinder_ferrite" rMin="[Cylindrical_pot:outer_diameter_ferrite]/2-[Cylindrical_pot:thickness_ferrite]" rMax="[Cylindrical_pot:outer_diameter_ferrite]/2" dz="[Cylindrical_pot:height_ferrite]/2" startPhi="0*deg" deltaPhi="360*deg"/>
+        <Tubs name="RP_Cylinder_bottom_wall" rMin="0*mm" rMax="[Cylindrical_pot:outer_diameter_lower_part]/2-[Cylindrical_pot:wall_thickness_lower_part]" dz="[Cylindrical_pot:wall_thickness_bottom_wall]/2" startPhi="0*deg" deltaPhi="360*deg"/>
+
+    <Box name="RB_Cylinder_Window_Rect"  dx="[Cylindrical_pot:window_width]/2" dy="2*[Cylindrical_pot:wall_thickness_lower_part]" dz="[Cylindrical_pot:window_height]/2-[Cylindrical_pot:window_thickness_bottom]/2"/>
+    <Box name="RP_Cylinder_bottom_wall_cut"  dx="[Cylindrical_pot:window_width]/2" dy="[Cylindrical_pot:outer_diameter_lower_part]" dz="[Cylindrical_pot:wall_thickness_bottom_wall]/2"/>
+
+        <SubtractionSolid name="RP_Cylinder_lower_part_wall2">
+            <rSolid name="RP_Cylinder_lower_part_wall"/>
+            <rSolid name="RB_Cylinder_Window_Rect"/>
+            <Translation x="0*mm" y="[Cylindrical_pot:outer_diameter_lower_part]/2" z="-[Cylindrical_pot:height_lower_part]/2+[Cylindrical_pot:window_height]/2+[Cylindrical_pot:window_thickness_bottom]/2" />
+        </SubtractionSolid>
+
+        <SubtractionSolid name="RP_Cylinder_bottom_wall2">
+            <rSolid name="RP_Cylinder_bottom_wall"/>
+            <rSolid name="RP_Cylinder_bottom_wall_cut"/>
+            <Translation x="0*mm" y="0*mm" z="[Cylindrical_pot:window_thickness_bottom]" />
+        </SubtractionSolid>
+
+</SolidSection>
+
+
+<LogicalPartSection label="RP_Timing_Box_Left.xml">
+     <LogicalPart name="PPS_timing_box" category="unspecified">
+             <rSolid name="PPS_timing_box"/>
+             <rMaterial name="materials:Vacuum"/>
+     </LogicalPart>
+        <LogicalPart name="RP_Cylinder_primary_vacuum">
+            <rSolid name="RP_Cylinder_primary_vacuum"/>
+            <rMaterial name="materials:Vacuum"/>
+        </LogicalPart>
+
+        <LogicalPart name="RP_Cylinder_lower_part_foil">
+            <rSolid name="RP_Cylinder_lower_part_foil"/>
+            <rMaterial name="materials:Air"/>
+        </LogicalPart>
+
+        <LogicalPart name="RP_Cylinder_lower_part_wall">
+            <rSolid name="RP_Cylinder_lower_part_wall2"/>
+            <rMaterial name="materials:Air"/>
+        </LogicalPart>
+
+        <LogicalPart name="RP_Cylinder_upper_part">
+            <rSolid name="RP_Cylinder_upper_part"/>
+            <rMaterial name="materials:Air"/>
+        </LogicalPart>
+
+        <LogicalPart name="RP_Cylinder_ferrite">
+            <rSolid name="RP_Cylinder_ferrite"/>
+            <rMaterial name="materials:Air"/>
+        </LogicalPart>
+
+        <LogicalPart name="RP_Cylinder_bottom_wall">
+            <rSolid name="RP_Cylinder_bottom_wall2"/>
+            <rMaterial name="materials:Air"/>
+        </LogicalPart>
+
+</LogicalPartSection>
+
+
+</DDDefinition>
+

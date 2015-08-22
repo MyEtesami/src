@@ -235,9 +235,11 @@ std::cout<<"PPS_TIMING : There is no hit to process"<<std::endl<<std::endl;
 //}
 	  //if(Eloss>0.0 /*&& ParticleType==2212 && Pabs > 6000. */)
     //{
-  ImportInfotoHit();    // added pps //in addtion to import info to hit it STORE hit as well
 
-
+if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="window_box")
+ { ImportInfotoHit();    // added pps //in addtion to import info to hit it STORE hit as well
+theTrack->SetTrackStatus(fStopAndKill);
+}
 
 // TrackInformation * trkInfo = (TrackInformation *)(theTrack->GetUserInformation());
 //if (trkInfo) {

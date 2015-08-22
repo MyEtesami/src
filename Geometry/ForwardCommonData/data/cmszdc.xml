@@ -7,12 +7,14 @@
 
 <PosPartSection label="cmszdcPosPart">
  <PosPart copyNumber="1">
-   <rParent name="cms:CMSE"/>
+<!--   <rParent name="cms:CMSE"/>-->
+   <rParent name="TotemRPGlobal:OTOTEM"/>
    <rChild name="zdc:ZDC"/>
   <Translation x="0*fm" y="0*fm" z="[zposition]" />
  </PosPart>
  <PosPart copyNumber="2">
-   <rParent name="cms:CMSE"/>
+   <!--<rParent name="cms:CMSE"/>-->
+   <rParent name="TotemRPGlobal:OTOTEM"/>
    <rChild name="zdc:ZDC"/>
    <rRotation name="zdcrotations:R0"/>
   <Translation x="0*fm" y="0*fm" z="-[zposition]" />

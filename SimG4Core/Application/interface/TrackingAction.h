@@ -27,9 +27,16 @@ public:
     SimActivityRegistry::BeginOfTrackSignal m_beginOfTrackSignal;
     SimActivityRegistry::EndOfTrackSignal m_endOfTrackSignal;
 
+  //PPS added
+//const G4Track * geant4Track() const { return g4Track_; }
+
 private:
+
+
     EventAction * eventAction_;
     TrackWithHistory * currentTrack_;
+   //PPS added
+  //  const G4Track * g4Track_;
     G4VSolid * worldSolid;
     bool detailedTiming;
     bool checkTrack;

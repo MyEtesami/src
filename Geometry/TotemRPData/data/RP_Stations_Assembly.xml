@@ -10,25 +10,38 @@
         <Constant name="RP_220_Right_Station_Position_z" value="214020*mm"/>
         <!-- +-1500 mm for the two 220 m stations outside the IP-->
     </ConstantsSection>
-    
-    <PosPartSection label="RP_Stations_Assembly.xml">
 
- <PosPart copyNumber="1">
-            <!--<rParent name="cms:CMSE"/>-->
+
+
+     <PosPartSection label="RP_Stations_Assembly.xml">
+   
+<PosPart copyNumber="1">
            <rParent name="TotemRPGlobal:OTOTEM"/>
            <rChild name="RP_147_Right_Station:RP_147_Right_Station"/>
             <Translation x="0*mm" y="0*mm" z="[RP_147_Right_Station_Position_z]+[RP_147_Right_Station:RP_147_Right_Station_Length]/2"/>
         </PosPart>
         <PosPart copyNumber="1">
-            <!--<rParent name="cms:CMSE"/>-->
            <rParent name="TotemRPGlobal:OTOTEM"/>
          <rChild name="RP_147_Left_Station:RP_147_Left_Station"/>
             <Translation x="0*mm" y="0*mm" z="[RP_147_Left_Station_Position_z]-[RP_147_Left_Station:RP_147_Left_Station_Length]/2"/>
         </PosPart>
 
+<!--
+     <PosPart copyNumber="1">
+            <rParent name="TotemRPGlobal:OTOTEM"/>
+            <rChild name="RP_220_Right_Station:RP_220_Right_Station"/>
+            <Translation x="0*mm" y="0*mm" z="[RP_220_Right_Station_Position_z]+[RP_220_Right_Station:RP_220_Right_Station_Length]/2"/>
+        </PosPart>
+        <PosPart copyNumber="1">
+            <rParent name="TotemRPGlobal:OTOTEM"/>
+            <rChild name="RP_220_Left_Station:RP_220_Left_Station"/>
+            <Translation x="0*mm" y="0*mm" z="[RP_220_Left_Station_Position_z]-[RP_220_Left_Station:RP_220_Left_Station_Length]/2"/>
+        </PosPart>
 
 
 
+-->
+    </PosPartSection> 
 
-    </PosPartSection>
 </DDDefinition>
+
