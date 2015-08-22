@@ -4,6 +4,7 @@
 #include "SimG4Core/Notification/interface/NewTrackAction.h"
 #include "SimG4Core/Notification/interface/TrackInformation.h"
 #include "SimG4Core/Notification/interface/TrackInformationExtractor.h"
+#include "SimG4Core/Application/interface/TrackingAction.h"
 
 #include "FWCore/MessageLogger/interface/MessageLogger.h"
 
@@ -172,6 +173,9 @@ StackingAction::~StackingAction()
 
 G4ClassificationOfNewTrack StackingAction::ClassifyNewTrack(const G4Track * aTrack) 
 {
+
+//std::cout<<"@@@@@@@@@@@@@@@@@@@@@@@@@ STACKING ACTION  Entering ClassifyNewTrack @@@@@@@@@@@@@@@@@@@@@"<<std::endl;
+
   // G4 interface part
   G4ClassificationOfNewTrack classification = fUrgent;
     if (aTrack->GetCreatorProcess()==0 || aTrack->GetParentID()==0
@@ -181,8 +185,7 @@ G4ClassificationOfNewTrack StackingAction::ClassifyNewTrack(const G4Track * aTra
                 ) {
 
 
-
- /*
+/* 
     std::cout << "StackingAction: primary weight= " 
 	      << aTrack->GetWeight() << " "
 	      << aTrack->GetDefinition()->GetParticleName()
@@ -190,7 +193,20 @@ G4ClassificationOfNewTrack StackingAction::ClassifyNewTrack(const G4Track * aTra
 	      << " Id=" << aTrack->GetTrackID()
 	      << "  trackInfo " << aTrack->GetUserInformation() 
 	      << std::endl;
-    */
+*/
+
+/*
+std::cout<<"This is ";
+if(aTrack->GetCreatorProcess()==0 || aTrack->GetParentID()==0) std::cout<<"real Primary"<<std::endl;
+if(( aTrack->GetCreatorProcess()!=0&& aTrack->GetCreatorProcess()->GetProcessType()==fParameterisation && aTrack->GetCreatorProcess()->GetProcessName() == "TotemRPParameterisationProcess" ))
+std::cout<<"Parametrized Primary"<<std::endl;
+
+std::cout<<"Primary Particle is: "<<aTrack->GetDefinition()->GetParticleName()<<" TrackID is: "<<aTrack->GetTrackID()<<" ParentID is: "<<aTrack->GetParentID()<<std::endl;
+*/
+
+
+
+     
     newTA->primary(aTrack);
     /*
     if (!trackNeutrino) {
@@ -206,6 +222,7 @@ G4ClassificationOfNewTrack StackingAction::ClassifyNewTrack(const G4Track * aTra
       << " from " << aTrack->GetParentID()
       << " with PDG code " << aTrack->GetDefinition()->GetParticleName();
     classification = fKill;
+
   } else {
     int pdg = aTrack->GetDefinition()->GetPDGEncoding();
     
@@ -217,10 +234,12 @@ G4ClassificationOfNewTrack StackingAction::ClassifyNewTrack(const G4Track * aTra
 	  ((pdg == 2212) && (ke < kmaxProton)) ||
 	  ((pdg == 2112) && (ke < kmaxNeutron))) { classification = fKill; }
     }
+
     if (!trackNeutrino  && classification != fKill) {
       if (pdg == 12 || pdg == 14 || pdg == 16 || pdg == 18) 
 	classification = fKill;
     }
+
     if (classification != fKill && isItLongLived(aTrack))
       { classification = fKill; }
     if (killDeltaRay && classification != fKill) {
@@ -228,15 +247,40 @@ G4ClassificationOfNewTrack StackingAction::ClassifyNewTrack(const G4Track * aTra
 	  aTrack->GetCreatorProcess()->GetProcessSubType() == fIonisation)
 	classification = fKill;
     }
+
     if (killInCalo && classification != fKill) {
       if ( isThisVolume(aTrack->GetTouchable(),calo)) { 
         classification = fKill; 
       }
     }
+
+/*if(aTrack->GetTrackID()>100050){
+
+std::cout<<"MOTHER TRACK STATUS : "<<CurrentG4Track::track()->GetTrackStatus();
+if(CurrentG4Track::track()->GetTrackStatus()==fAlive) std::cout<<": fAlive"<<std::endl;
+if(CurrentG4Track::track()->GetTrackStatus()==fStopButAlive) std::cout<<": fStopButAlive"<<std::endl;
+if(CurrentG4Track::track()->GetTrackStatus()==fKillTrackAndSecondaries) std::cout<<": fKillTrackAndSecondaries"<<std::endl;
+if(CurrentG4Track::track()->GetTrackStatus()==fPostponeToNextEvent) std::cout<<": fPostponeToNextEvent"<<std::endl;
+if(CurrentG4Track::track()->GetTrackStatus()==fSuspend) std::cout<<": fSuspend"<<std::endl;
+if(CurrentG4Track::track()->GetTrackStatus()==fStopAndKill) std::cout<<": fStopAndKill"<<std::endl;
+
+std::cout<<"GRAND MOTHER TRACK ID : "<<CurrentG4Track::track()->GetParentID()<<std::endl;
+std::cout<<"MOTHER TRACK ID : "<<CurrentG4Track::track()->GetTrackID()<<std::endl;
+std::cout<<"MOTHER TRACK Volume : "<<CurrentG4Track::track()->GetVolume()->GetName()<<std::endl;
+std::cout<<"MOTHER TRACK Volume CopyNO: "<<CurrentG4Track::track()->GetVolume()->GetCopyNo()<<std::endl;
+std::cout<<"MOTHER TRACK Particle Name: "<<CurrentG4Track::track()->GetDefinition()->GetParticleName()<<std::endl;
+}
+*/
+
     // Russian roulette && MC truth
     if(classification != fKill) {
-      const G4Track * mother = CurrentG4Track::track();
-//exist in newer version      const G4Track * mother = trackAction->geant4Track();
+
+
+  const G4Track * mother = CurrentG4Track::track();
+
+
+
+    
 
       int flag = 0;
       if (savePDandCinTracker && isThisVolume(aTrack->GetTouchable(),tracker)) {
@@ -308,6 +352,7 @@ G4ClassificationOfNewTrack StackingAction::ClassifyNewTrack(const G4Track * aTra
         }  
       }
 
+
       if(classification != fKill && killInCaloEfH) {
         int pdgMother = mother->GetDefinition()->GetPDGEncoding();
         if ( (pdg == 22 || std::abs(pdg) == 11) && 
@@ -319,13 +364,45 @@ G4ClassificationOfNewTrack StackingAction::ClassifyNewTrack(const G4Track * aTra
         }
       }
 
+
       if (classification != fKill) {
-//std::cout<<"creating secondary in stacking action"<<std::endl;     
-if(aTrack->GetVolume()->GetName()=="window_box")
-std::cout<<"Mother particle: "<< mother->GetDefinition()->GetParticleName()<<" ID: "<<mother->GetTrackID()<<std::endl;
-   newTA->secondary(aTrack, *mother, flag);
+
+/*if(aTrack->GetTrackID()>100050){          
+
+std::cout<<"@@@CREATING Secondary in STACKING ACTION @@@@"<<std::endl;     
+std::cout<<" TRACK STATUS : "<<aTrack->GetTrackStatus();
+if(aTrack->GetTrackStatus()==fAlive) std::cout<<": fAlive"<<std::endl;
+if(aTrack->GetTrackStatus()==fStopButAlive) std::cout<<": fStopButAlive"<<std::endl;
+if(aTrack->GetTrackStatus()==fKillTrackAndSecondaries) std::cout<<": fKillTrackAndSecondaries"<<std::endl;
+if(aTrack->GetTrackStatus()==fPostponeToNextEvent) std::cout<<": fPostponeToNextEvent"<<std::endl;
+if(aTrack->GetTrackStatus()==fSuspend) std::cout<<": fSuspend"<<std::endl;
+if(aTrack->GetTrackStatus()==fStopAndKill) std::cout<<": fStopAndKill"<<std::endl;
+
+
+std::cout<<" Classification: "<<classification;
+if(classification==fUrgent)std::cout<<": fUrgent"<<std::endl;
+if(classification==fWaiting)std::cout<<": fWaiting"<<std::endl;
+if(classification==fPostpone)std::cout<<": fPostpone"<<std::endl;
+if(classification==fKill)std::cout<<": fKill"<<std::endl;
+
+
+std::cout<<"ParentID: "<<aTrack->GetParentID()<<std::endl;
+std::cout<<"GetParticleName()  "<<aTrack->GetDefinition()->GetParticleName()<<std::endl;
+std::cout<<"aTrack->GetTrackID()  "<<aTrack->GetTrackID()<<std::endl;
+std::cout<<"aTrack->GetKineticEnergy() "<<aTrack->GetKineticEnergy()<<std::endl;
+std::cout<<"Track Volume: "<<aTrack->GetVolume()->GetName()<<std::endl;
+std::cout<<"Track Volume CopyNo: "<<aTrack->GetVolume()->GetCopyNo()<<std::endl;
+ }
+*/  
+
+//std::cout<<"This is Secondary particle"<<std::endl;
+//std::cout<<"Secondary Particle is: "<<aTrack->GetDefinition()->GetParticleName()<<" TrackID is: "<<aTrack->GetTrackID()<<" ParentID is: "<<aTrack->GetParentID()<<" MotherID is : "<<mother->GetTrackID()<<" GrandParentID is : "<<mother->GetParentID()<<std::endl;
+
+
+ newTA->secondary(aTrack, *mother, flag);
       }
     }
+
   /*
   double wt2 = aTrack->GetWeight();
   if(wt2 != 1.0) { 
@@ -344,7 +421,8 @@ std::cout<<"Mother particle: "<< mother->GetDefinition()->GetParticleName()<<" I
   */
   }
 #ifdef DebugLog
-  LogDebug("SimG4CoreApplication") << "StackingAction:Classify Track "
+  LogDebug("SimG4CoreApplication") 
+                                   << "StackingAction:Classify Track "
                   	           << aTrack->GetTrackID() << " Parent " 
 				   << aTrack->GetParentID() << " Type "
 				   << aTrack->GetDefinition()->GetParticleName() 
@@ -353,13 +431,18 @@ std::cout<<"Mother particle: "<< mother->GetDefinition()->GetParticleName()<<" I
 				   << aTrack->GetCreatorProcess()->GetProcessType()
 				   << "|"
                                    << aTrack->GetCreatorProcess()->GetProcessSubType()
-				   << " as " << classification << " Flag " << flag;
+//				   << " as " << classification << " Flag " <<flag;
+  //  std::cout << std::endl;
+
 #endif
+//std::cout<<"@@@@@@@@@@@@@@@@@@@@@@@@@ STACKING ACTION  EXITING ClassifyNewTrack @@@@@@@@@@@@@@@@@@@@@"<<std::endl;
 
   return classification;
 }
 
-void StackingAction::NewStage() {}
+void StackingAction::NewStage() {
+
+}
 
 void StackingAction::PrepareNewEvent() {}
 

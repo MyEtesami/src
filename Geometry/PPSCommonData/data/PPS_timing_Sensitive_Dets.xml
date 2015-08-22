@@ -5,7 +5,7 @@
     <SpecParSection label="PPS_timing_Sensitive_Dets.xml">
         <SpecPar name="ROUHitsPPSTiming">
            <PartSelector path="//window_box"/>
-         <!--<PartSelector path="//RP_Timing_Lbar_.*:Lbar"/>-->
+         <!--  <PartSelector path="//RP_Timing_Lbar_.*:Lbar"/> -->
           <Parameter name="SensitiveDetector" value="PPSTimingSensitiveDetector" eval="false"/>
             <Parameter name="ReadOutName" value="PPSTimingHits" eval="false"/>
         </SpecPar>

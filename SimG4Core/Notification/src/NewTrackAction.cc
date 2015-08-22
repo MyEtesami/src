@@ -24,19 +24,9 @@ void NewTrackAction::secondary(const G4Track * aSecondary,const G4Track & mother
 }
 
 void NewTrackAction::secondary(G4Track * aSecondary,const G4Track & mother, int flag) const {
-//std::cout<< "GetTrackID(): "<<aSecondary->GetTrackID()<<"  aSecondary->GetCreatorProcess(): "<<aSecondary->GetCreatorProcess()->G4VProcess::GetProcessName()<<" GetParticleName() "<<aSecondary->GetDefinition()->GetParticleName()<<std::endl;
-//std::cout<<"aSecondary->GetParentID(): "<<aSecondary->GetParentID()<< "mother.GetTrackID(): "<<mother.GetTrackID()<<std::endl;
-//std::cout<<"GetVolume (): "<<aSecondary->GetVolume()->GetName()<<std::endl;
-//std::cout<<"GetPosition (x,y,z): "<<aSecondary->GetPosition().x()<<", "<<aSecondary->GetPosition().y()<<", "<<aSecondary->GetPosition().z()<<std::endl;
-//if(aSecondary->GetVolume()->GetName()=="window_box") 
-//std::cout<<"Mother particle: "<< mother.GetDefinition()->GetParticleName()<<std::endl; 
   if (aSecondary->GetParentID() != mother.GetTrackID()) 
 {
-//std::cout<<"aSecondary->GetParentID(): "<<aSecondary->GetParentID()<< "mother.GetTrackID(): "<<mother.GetTrackID()<<std::endl;
-//std::cout<<"  aSecondary->GetCreatorProcess(): "<<aSecondary->GetCreatorProcess()->G4VProcess::GetProcessName()<<" GetParticleName(): "<<aSecondary->GetDefinition()->GetParticleName()<<std::endl;   
-//std::cout<<"GetVolume (): "<<aSecondary->GetVolume()->GetName()<<std::endl;
-//std::cout<<"GetPosition (x,y,z): "<<aSecondary->GetPosition().x()<<", "<<aSecondary->GetPosition().y()<<", "<<aSecondary->GetPosition().z()<<std::endl;
-// throw SimG4Exception("NewTrackAction: secondary parent ID does not match mother id");
+ throw SimG4Exception("NewTrackAction: secondary parent ID does not match mother id");
 }
   TrackInformationExtractor extractor;
   const TrackInformation & motherInfo(extractor(mother));

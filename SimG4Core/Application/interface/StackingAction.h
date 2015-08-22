@@ -13,6 +13,8 @@
 
 class EventAction;
 class NewTrackAction;
+//PPA added
+class TrackingAction;
 
 class StackingAction : public G4UserStackingAction {
 
@@ -44,6 +46,9 @@ private:
   std::vector<std::string>      maxTimeNames;
   std::vector<G4Region*>        maxTimeRegions;
   std::vector<G4LogicalVolume*> tracker, calo, muon;
+
+//PPS added
+// const TrackingAction* trackAction;
 
   NewTrackAction*               newTA;
 
