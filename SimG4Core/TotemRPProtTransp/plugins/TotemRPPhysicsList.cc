@@ -67,13 +67,13 @@ TotemRPPhysicsList::TotemRPPhysicsList(G4LogicalVolumeToDDLogicalPartMap & map, 
 //  RegisterPhysics(new G4OpticalPhysics());
     
 G4OpticalPhysics* opticalPhysics = new G4OpticalPhysics();
-RegisterPhysics(opticalPhysics);
 //optical parameter
                               
  opticalPhysics->SetMaxNumPhotonsPerStep(100);
  // opticalPhysics->SetWLSTimeProfile("delta");
 //opticalPhysics->SetMaxBetaChangePerStep(10.0);
-opticalPhysics->SetTrackSecondariesFirst(kCerenkov,true);
+opticalPhysics->SetTrackSecondariesFirst(kCerenkov,false);
+RegisterPhysics(opticalPhysics);
 
 
   // Custom Physics
