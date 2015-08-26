@@ -78,9 +78,8 @@ std::cout<<"collectionName[0]: "<<collectionName[0]<<std::endl;
 
   slave  = new TrackingSlaveSD(name);
 
-std::cout<<"MoHSENNNNNNNNNNNNNNNNNNNNNNN"<<std::endl;
 
-TimingMaterialProperties::DumpSurfaceInfo();
+//PPS_Timing_MaterialProperties::DumpSurfaceInfo();
  
 
  //
@@ -93,20 +92,18 @@ TimingMaterialProperties::DumpSurfaceInfo();
   for (std::vector<std::string>::iterator it=lvNames.begin();  it !=lvNames.end(); it++)
   {
 
-std::cout<<"name: "<<name<<std::endl;
-std::cout<<"lvNames: "<<*it<<std::endl;
+    //std::cout<<"name: "<<name<<std::endl;
+    //std::cout<<"lvNames: "<<*it<<std::endl;
     this->AssignSD(*it);
     edm::LogInfo("PP_Timing_SD") << "PP_Timing_SD : Assigns SD to LV " << (*it);
   }
 
-std::cout<<"Register and Assign the right detector "<<std::endl;
   
 
   if (name == "PPSTimingHits")  
 {
 
     numberingScheme = dynamic_cast<PPSTimingVDetectorOrganization*>(new PPSTimingNumberingScheme(3));
-std::cout<<"find PPSTimingHits as name "<<std::endl;
   }
   else 
   {
@@ -114,7 +111,6 @@ std::cout<<"find PPSTimingHits as name "<<std::endl;
   }
   
   edm::LogInfo("PP_Timing_SD") << "PP_Timing_SD: Instantiation completed";
-  std::cout << "PPS_Timing_SD: Instantiation completed"<<std::endl;
 
 }
 
@@ -194,7 +190,6 @@ std::cout<<"PPS_TIMING : There is no hit to process"<<std::endl<<std::endl;
   else
   {
  
-//std::cout<<"MoHSENNNNNNNNNNNNNNNNNNNNNNN"<<std::endl;
 
 //std::cout
   //  << "*******************************************************\n"
@@ -204,23 +199,15 @@ std::cout<<"PPS_TIMING : There is no hit to process"<<std::endl<<std::endl;
  //   << "*******************************************************" << std::endl;
 
 
-   // G4Track* myTrack;
-//myTrack = aStep->GetTrack();
-//theTrack = aStep->GetTrack();
-//currentPV=aStep->GetPreStepPoint()->GetPhysicalVolume();
-//preStepPoint=aStep->GetPreStepPoint();
-//postStepPoint=aStep->GetPostStepPoint();
 
 
 
    GetStepInfo(aStep);
   
-// if ((theTrack->GetDefinition() != G4OpticalPhoton::OpticalPhotonDefinition())&&theTrack->GetDefinition()->GetParticleName()=="proton")   
-//s.mohsen
-//  Print_Hit_Info();
+    // if ((theTrack->GetDefinition() != G4OpticalPhoton::OpticalPhotonDefinition())&&theTrack->GetDefinition()->GetParticleName()=="proton")   
+      //  Print_Hit_Info();
 
 
-//}
 
 
 //    if(Vz>100000 && theTrack->GetDefinition()->GetParticleName()!="proton")
@@ -236,7 +223,9 @@ std::cout<<"PPS_TIMING : There is no hit to process"<<std::endl<<std::endl;
 	  //if(Eloss>0.0 /*&& ParticleType==2212 && Pabs > 6000. */)
     //{
 
-if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="window_box")
+
+
+if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="PhotoDetector_Window")
  { ImportInfotoHit();    // added pps //in addtion to import info to hit it STORE hit as well
 theTrack->SetTrackStatus(fStopAndKill);
 }
@@ -270,33 +259,11 @@ void PPS_Timing_SD::GetStepInfo(G4Step* aStep)
 
   preStepPoint = aStep->GetPreStepPoint(); 
   postStepPoint = aStep->GetPostStepPoint(); 
-//  theLocalEntryPoint = SensitiveDetector::InitialStepPosition(aStep,LocalCoordinates);  
-//  theLocalExitPoint = SensitiveDetector::FinalStepPosition(aStep,LocalCoordinates);
   hitPoint = preStepPoint->GetPosition();
-   exitPoint = postStepPoint->GetPosition();
+  exitPoint = postStepPoint->GetPosition();
   currentPV = preStepPoint->GetPhysicalVolume();
   theLocalEntryPoint = SetToLocal(hitPoint);
-   theLocalExitPoint = SetToLocal(exitPoint);
-
-// double weight = 1; 
-  G4String name = currentPV->GetName();
-  name.assign(name,0,4);
-//  if(name == "EBRY" || name == "EFRY")
-//   {
-//     weight = LY_curve(name, hitPoint);
-//  }
-//  TrackInformation * trkInfo =
-//  (TrackInformation *)(theTrack->GetUserInformation());
-  // G4String particleType = theTrack->GetDefinition()->GetParticleName();
-  //  if (particleType == "e-" ||
-  //   particleType == "e+" ||
-  //particleType == "gamma" ){
-
- 
-  //added pps
-  theglobaltimehit=preStepPoint->GetGlobalTime()/nanosecond;
-   incidentEnergy=(aStep->GetPreStepPoint()->GetTotalEnergy()/eV);
-
+  theLocalExitPoint = SetToLocal(exitPoint);
 
   tSlice = (postStepPoint->GetGlobalTime() )/nanosecond;
   tSliceID = (int) tSlice;
@@ -311,11 +278,14 @@ void PPS_Timing_SD::GetStepInfo(G4Step* aStep)
   p_x = (aStep->GetPreStepPoint()->GetMomentum().x())/GeV;
   p_y = (aStep->GetPreStepPoint()->GetMomentum().y())/GeV;
   p_z = (aStep->GetPreStepPoint()->GetMomentum().z())/GeV;
-//pps change post to pre
- Tof = aStep->GetPreStepPoint()->GetGlobalTime()/nanosecond;  
-//pps coment  Eloss = aStep->GetTotalEnergyDeposit()/GeV;
- Eloss = (aStep->GetPreStepPoint()->GetTotalEnergy()/eV); //pps added 
- ParticleType = theTrack->GetDefinition()->GetPDGEncoding();
+  
+  //pps change post to pre
+  Tof = aStep->GetPreStepPoint()->GetGlobalTime()/nanosecond;  
+  
+  //pps comment  Eloss = aStep->GetTotalEnergyDeposit()/GeV;
+  Eloss = (aStep->GetPreStepPoint()->GetTotalEnergy()/eV);  
+  
+  ParticleType = theTrack->GetDefinition()->GetPDGEncoding();
 
   //corrected phi and theta treatment
   G4ThreeVector gmd  = aStep->GetPreStepPoint()->GetMomentumDirection();
@@ -325,11 +295,11 @@ void PPS_Timing_SD::GetStepInfo(G4Step* aStep)
   ThetaAtEntry = lnmd.theta();
   PhiAtEntry = lnmd.phi();
 
-//  ThetaAtEntry     = aStep->GetPreStepPoint()->GetPosition().theta()/deg;
-//  PhiAtEntry       = aStep->GetPreStepPoint()->GetPosition().phi()/deg;
+  //ThetaAtEntry     = aStep->GetPreStepPoint()->GetPosition().theta()/deg;
+  //PhiAtEntry       = aStep->GetPreStepPoint()->GetPosition().phi()/deg;
 
-//  LogDebug("PP_Timing_SD") << "UUUUUUUNNNNNNNNNNIIIIIIIIIITTTTTTTTTTTTTIIIIDDDD " << 
-//    numberingScheme->GetUnitID(aStep) << std::endl ;
+  //LogDebug("PP_Timing_SD") << "UUUUUUUNNNNNNNNNNIIIIIIIIIITTTTTTTTTTTTTIIIIDDDD " << 
+  //numberingScheme->GetUnitID(aStep) << std::endl ;
  
 
  if(IsPrimary(theTrack))
@@ -367,13 +337,13 @@ void PPS_Timing_SD::ImportInfotoHit()    // added pps
 {
   currentHit = new PPS_Timing_G4Hit;
   currentHit->setTrackID(primaryID);
-   currentHit->setTimeSlice(tSlice);
+  currentHit->setTimeSlice(tSlice);
 
   currentHit->setUnitID(unitID);
   currentHit->setIncidentEnergy(incidentEnergy);
 
   currentHit->setPabs(Pabs);
-currentHit->setTof(Tof);
+  currentHit->setTof(Tof);
    currentHit->setEnergyLoss(Eloss);
   currentHit->setParticleType(ParticleType);
   currentHit->setThetaAtEntry(ThetaAtEntry);
@@ -397,8 +367,6 @@ currentHit->setTof(Tof);
   currentHit->set_p_y(p_y);
   currentHit->set_p_z(p_z);
 
-  // pps added
-  currentHit->setGlobalTimehit(Globaltimehit);
 
 
   StoreHit(currentHit);
@@ -508,8 +476,8 @@ bool PPS_Timing_SD::IsPrimary(const G4Track * track)
 
 void PPS_Timing_SD::initRun(){
 // construct your own material properties for setting refractionindex and so on
-  // theMaterialProperties = new TimingMaterialProperties(theMPDebug_);
-   theMaterialProperties = new TimingMaterialProperties(3);
+  // theMaterialProperties = new PPS_Timing_MaterialProperties(theMPDebug_);
+   theMaterialProperties = new PPS_Timing_MaterialProperties(3);
 
 }
   

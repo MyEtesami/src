@@ -27,11 +27,12 @@ process.load("Configuration.TotemOpticsConfiguration.OpticsConfig_6500GeV_90_cfi
 #process.load("mytestpps_cfi")
 #process.load("simpletest_cfi")
 
-process.load("justlbarswithwindowbothside_cfi")
+#process.load("justlbarswithwindowbothside_cfi")
 #process.load("justlbarswithwindowbothsidewithboxes_cfi")
 #process.load("cylinder_boxcutcorner_lbars_cfi")
 #process.load("PPSTiminggeometryRP_cfi")
 
+process.load("finalGeometry_barsboxcylinderstation_cfi")
 process.XMLIdealGeometryESSource.geomXMLFiles.append('Geometry/TotemRPData/data/RP_Beta_90/RP_Dist_Beam_Cent.xml')
 
 process.load("RecoTotemRP.RPInelasticReconstruction.Rec_6500GeV_beta_90_cfi")

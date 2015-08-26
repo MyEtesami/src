@@ -1,7 +1,9 @@
 ///////////////////////////////////////////////////////////////////////////////
-// File: CaloG4Hit.cc
-// Date: 11.10.02
-// Description: Transient Hit class for the calorimeters
+// File: PPS_Timing_G4Hit.h
+// Date: 26.05.2015
+//Author: Seyed Mohsen Etesami
+// Description: G4Hit class for PPS Timing Detectors
+// Modifications:
 ///////////////////////////////////////////////////////////////////////////////
 #include "SimG4CMS/PPS/interface/PPS_Timing_G4Hit.h"
 #include "FWCore/MessageLogger/interface/MessageLogger.h"
@@ -84,7 +86,7 @@ const PPS_Timing_G4Hit& PPS_Timing_G4Hit::operator=(const PPS_Timing_G4Hit &righ
 
 
 void PPS_Timing_G4Hit::Print() {
-  edm::LogInfo("TotemRP") << (*this);
+  edm::LogInfo("PPS_Timing") << (*this);
 }
 
 
@@ -159,8 +161,6 @@ double PPS_Timing_G4Hit::get_p_y() const {return p_y;}
 double PPS_Timing_G4Hit::get_p_z() const {return p_z;}
 
 
-double PPS_Timing_G4Hit::getGlobalTimehit() const {return theGlobaltimehit; }
-void PPS_Timing_G4Hit::setGlobalTimehit(double h) {theGlobaltimehit = h;}
 
 
 std::ostream& operator<<(std::ostream& os, const PPS_Timing_G4Hit& hit) {

@@ -1,13 +1,11 @@
 /****************************************************************************
- *
- * This is a part of TOTEM offline software.
- * Authors: 
- *	Hubert Niewiadomski
- *	Jan Ka??par (jan.kaspar@gmail.com) 
+ * Author: Seyed Mohsen Etesami
+ *	
+ *	 
  *    
  * $$RCSfile: PPSTimingDetId.cc,v $: $
- * $Revision: 1.4.2.3 $
- * $Date: 2009/09/08 16:39:22 $
+ * $Revision: 
+ * $Date: 2015/05/20 $
  *
  ****************************************************************************/
 
@@ -52,7 +50,7 @@ void PPSTimingDetId::init(unsigned int Arm, unsigned int Station,
 
   uint32_t ok=0xfe000000;
   id_ &= ok;
-
+  //0x3f= 3X8+15=39
   id_ |= ((Arm&0x1) << startArmBit);
   id_ |= ((Station&0x3) << startStationBit);
   id_ |= ((RomanPot&0x7) << startRPBit);

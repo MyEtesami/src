@@ -110,9 +110,6 @@ public:
   double get_p_y() const;
   double get_p_z() const;
 
-  //added pps-timing
-double getGlobalTimehit() const;     
-  void setGlobalTimehit(double h);
 
 
 
@@ -124,11 +121,9 @@ private:
   double theIncidentEnergy; //Energy of the primary particle
   int theTrackID;        //Identification number of the primary
                                   //particle
-  uint32_t theUnitID;         //Totem Unit Number
+  uint32_t theUnitID;         //PPS Unit Number
   double theTimeSlice;      //Time Slice Identification
 
-  //added pps
-  double theGlobaltimehit;     
 
 
   double theX;
@@ -154,4 +149,4 @@ private:
 
 std::ostream& operator<<(std::ostream&, const PPS_Timing_G4Hit&);
 
-#endif  //TotemRP_Totem_RP_G4Hit_h
+#endif  //PPS_PPS_Timing_G4Hit_h

@@ -1,18 +1,14 @@
-/** fake sensitive detector modelled after PSimHit for a user example;
-    the ORCA/CommonDet/BasicDet/interface/PSimHit.h and
-    ORCA/CommonDet/PBasicDet/interface/PSimHitROUFactory.h
-    are copied under Mantis/USDHitExample/test/stubs;
-    the user must provide links to ORCA libraries PBasicDet, BasicDet and
-    DetGeometry which must be loaded before the USDHitExample library -
-    see sens.macro under Mantis/G4Application/test
- */
+///////////////////////////////////////////////////////////////////////////////
+// File: PPS_Timing_SD.h
+// Date: 26.05.2015
+//Author: Seyed Mohsen Etesami
+// Description: Sensitive Detector class for PPS Timing Detectors
+// Modifications:
+///////////////////////////////////////////////////////////////////////////////
 
 #ifndef PPS_PPSTimingSD_h
 #define PPS_PPSTimingSD_h
 
-/**
-   In this example the TotemSensitiveDetector serves as a master for two different ExampleSD
- */
 
 #include "SimG4Core/Application/interface/SimTrackManager.h"
 #include "SimG4CMS/PPS/interface/PPS_Timing_G4Hit.h"
@@ -25,7 +21,7 @@
 #include "SimG4Core/Notification/interface/EndOfEvent.h"
  
 
-#include "SimG4CMS/PPS/interface/TimingMaterialProperties.h"
+#include "SimG4CMS/PPS/interface/PPS_Timing_MaterialProperties.h"
 
 
 #include "G4Step.hh"
@@ -47,7 +43,7 @@ class PPS_Timing_SD : public SensitiveTkDetector,
 {
  public:    
   PPS_Timing_SD(std::string, const DDCompactView &, SensitiveDetectorCatalog &,
-    edm::ParameterSet const &,const SimTrackManager*);
+  edm::ParameterSet const &,const SimTrackManager*);
   virtual ~PPS_Timing_SD();
   
   void Print_Hit_Info();
@@ -64,29 +60,27 @@ class PPS_Timing_SD : public SensitiveTkDetector,
   
   void fillHits(edm::PSimHitContainer&, std::string use);
 
- private:
+private:
   virtual void clearHits();
   virtual G4bool ProcessHits(G4Step * step, G4TouchableHistory * tHistory);
   virtual uint32_t setDetUnitId(G4Step * step);
   virtual void update(const BeginOfEvent *);
   virtual void update (const ::EndOfEvent*);
-    virtual void initRun();
+  virtual void initRun();
   
   void SetNumberingScheme(PPSTimingVDetectorOrganization* scheme);
 
   TrackingSlaveSD* slave;
   PPSTimingVDetectorOrganization * numberingScheme;
 
-//  int eventno;
 
 private:
   int verbosity_;
-int theMPDebug_;
+  int theMPDebug_;
 
   G4ThreeVector SetToLocal(G4ThreeVector globalPoint);
   void GetStepInfo(G4Step* aStep);
   G4bool HitExists();
-  // void CreateNewHit();
   void ImportInfotoHit(); //added pps
   void UpdateHit();
   void StoreHit(PPS_Timing_G4Hit*);
@@ -96,10 +90,6 @@ int theMPDebug_;
 
 private:
   
-  // Data relative to primary particle (the one which triggers a shower)
-  // These data are common to all Hits of a given shower.
-  // One shower is made of several hits which differ by the
-  // unit ID (cristal/fiber/scintillator) and the Time slice ID.
 
   G4ThreeVector entrancePoint;
   double incidentEnergy;
@@ -113,23 +103,20 @@ private:
   G4VPhysicalVolume* currentPV;
   unsigned int unitID;
   G4int primaryID, tSliceID;  
-  //coment pps
   G4double tSlice;
-TimingMaterialProperties* theMaterialProperties;
+  PPS_Timing_MaterialProperties* theMaterialProperties;
 
   G4StepPoint* preStepPoint; 
   G4StepPoint* postStepPoint;
   G4ThreeVector hitPoint;
-   G4ThreeVector exitPoint;
+  G4ThreeVector exitPoint;
   G4ThreeVector theLocalEntryPoint;
-   G4ThreeVector theLocalExitPoint;
+  G4ThreeVector theLocalExitPoint;
 
   double Pabs;
   double p_x, p_y, p_z;
-  //coment pps
   double Tof;
-  //coment pps 
-double Eloss;	
+  double Eloss;	
   short ParticleType; 
 
   double ThetaAtEntry;
@@ -138,9 +125,7 @@ double Eloss;
   int ParentId;
   double Vx,Vy,Vz;
 
-  //added pps-timing
- double Globaltimehit;
-double theglobaltimehit;
+
   //
   // Hist
   //
@@ -148,4 +133,4 @@ double theglobaltimehit;
   int eventno;
 };
 
-#endif // PPS_TotemRPSD_h
+#endif // PPS_PPSTimingSD_h

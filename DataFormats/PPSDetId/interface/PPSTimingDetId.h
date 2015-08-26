@@ -57,14 +57,14 @@
 
 
 /**
-*  PPS  The structure of the raw ID is the following (based on the concept of the DetId)
-* [28:31] 
-* [25:27]  PPStracking =1 PPSTiming=2
- * Bit 24 = Arm: 1=z>0 0=z<0
- * Bits [22:23] Station 0=210m 1=215m(timing) 2=220m
- * Bits [19:21] Roman Pot number 0= only RP
+ *  PPS  The structure of the raw ID is the following (based on the concept of the DetId)
+ *      [28:31] 4 bits Sub-detectors
+ *      [25:27] 2 bits  PPStracking =1 PPSTiming=2
+ * Bit  [24]    1 bit  Arm  1=z>0 0=z<0
+ * Bits [22:23] 2 bits Station 0=210m 1=215m(timing) 2=220m
+ * Bits [19:21] 3 bits Roman Pot number 0= only RP
  * Not apply this bit Bit 18= Timing detector Set 0= first set 1=second set(removed not sure if it is compatible with tracker   )
- * Bits [15:19] lbar det. number if  sets of Lbars detectors spearatly 1,2,..40
+ * Bits [13:18] 6 bits lbar det. number if  sets of Lbars detectors spearatly 0,1,2,..39
  *   Raw means the id included all 32 bit with main sub-detectors and sub-sub-dtectros included
 **/
 class PPSTimingDetId : public DetId
@@ -95,7 +95,7 @@ class PPSTimingDetId : public DetId
     }
   inline int Detector() const
     {
-      return int((id_>>startDetBit) & 0x3f); //63 decimal
+      return int((id_>>startDetBit) & 0x3f); //decimal equ=63
     }
   int RPCopyNumber() const {return RomanPot() + 10*Station() + 100*Arm();}
 
@@ -116,7 +116,7 @@ class PPSTimingDetId : public DetId
   static const unsigned int startArmBit = 24;
   static const unsigned int startStationBit = 22;
   static const unsigned int startRPBit = 19;
-  static const unsigned int startDetBit = 15; 
+  static const unsigned int startDetBit = 13; 
   // static const unsigned int totem_rp_subdet_id = 3;
   static const unsigned int pps_timing_subdet_id = 2;
 
@@ -127,7 +127,7 @@ class PPSTimingDetId : public DetId
   /*     ((raw >> DetId::kSubdetOffset) & 0x7) == totem_rp_subdet_id); */
   /* } */
 
- /// returns true it the raw ID is a PPS-timing RP  one
+ /// returns true if the raw ID is a PPS-timing one
   static bool Check(unsigned int raw)
   {
     return (((raw >>DetId::kDetOffset) & 0xF) == DetId::CTPPS &&
