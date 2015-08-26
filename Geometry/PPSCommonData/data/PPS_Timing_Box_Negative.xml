@@ -1,0 +1,293 @@
+<DDDefinition xmlns="http://www.cern.ch/mms/DDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cern.ch/mms/DDL 
+../DDLSchema.xsd">
+   <ConstantsSection label="PPS_Timing_Box_Negative.xml">
+        <Constant name="extend" value="6*mm"/>
+    </ConstantsSection>
+
+<SolidSection label="PPS_Timing_Box_Negative.xml">
+
+    <Box name="PPS_Timing_Box_FT"  dx="77/2*mm" dy="48.01/2*mm" dz="68.00/2*mm"/>
+    <Trd1 dx1 = "77/2*mm" dx2 = "77/2*mm" dy1 = "12.90/2*mm" dy2 = "0.01/2*mm" dz = "3.175/2*mm" name = "TID5"/>
+    <Trd1 dx1 = "77/2*mm" dx2 = "77/2*mm" dy1 = "12.90/2*mm" dy2 = "0.01/2*mm" dz = "3.175/2*mm" name = "TID6"/>
+    <Trd1 dx1 = "77/2*mm" dx2 = "77/2*mm" dy1 = "0.01/2*mm" dy2 = "12.90/2*mm" dz = "3.175/2*mm" name = "TID7"/>    
+    <Trd1 dx1 = "77/2*mm" dx2 = "77/2*mm" dy1 = "0.01/2*mm" dy2 = "12.90/2*mm" dz = "3.175/2*mm" name = "TID8"/>
+
+	<SubtractionSolid name = "PPS_Timing_Box_First_f">
+	<rSolid name = "PPS_Timing_Box_FT"/>
+	<rSolid name = "TID5"/>
+	<Translation x="0.0*m" y="48.01/2*mm" z="(-1.49/2-63.55/2)*mm"/>
+	</SubtractionSolid>
+
+	<SubtractionSolid name = "PPS_Timing_Box_First_f1">
+	<rSolid name = "PPS_Timing_Box_First_f"/>
+	<rSolid name = "TID6"/>
+	<Translation x="0.0*m" y="-48.01/2*mm" z="(-1.49/2-63.55/2)*mm"/>
+	</SubtractionSolid>
+
+	<SubtractionSolid name = "PPS_Timing_Box_First_f2">
+	<rSolid name = "PPS_Timing_Box_First_f1"/>
+	<rSolid name = "TID7"/>
+	<Translation x="0.0*m" y="-48.01/2*mm" z="(63.55/2+1.49/2)*mm"/>
+	</SubtractionSolid>
+
+	<SubtractionSolid name = "PPS_Timing_Box_First">
+	<rSolid name = "PPS_Timing_Box_First_f2"/>
+	<rSolid name = "TID8"/>
+	<Translation x="0.0*m" y="48.01/2*mm" z="(63.55/2+1.49/2)*mm"/>
+	</SubtractionSolid>
+
+
+    <Box name="PPS_Timing_Box_ST"  dx="77/2*mm" dy="48.01/2*mm" dz="68.00/2*mm"/>
+    <Trd1 dx1 = "77/2*mm" dx2 = "77/2*mm" dy1 = "12.90/2*mm" dy2 = "0.01/2*mm" dz = "3.175/2*mm" name = "TID9"/>
+    <Trd1 dx1 = "77/2*mm" dx2 = "77/2*mm" dy1 = "12.90/2*mm" dy2 = "0.01/2*mm" dz = "3.175/2*mm" name = "TID10"/>
+    <Trd1 dx1 = "77/2*mm" dx2 = "77/2*mm" dy1 = "0.01/2*mm" dy2 = "12.90/2*mm" dz = "3.175/2*mm" name = "TID11"/>
+    <Trd1 dx1 = "77/2*mm" dx2 = "77/2*mm" dy1 = "0.01/2*mm" dy2 = "12.90/2*mm" dz = "3.175/2*mm" name = "TID12"/>
+
+	<SubtractionSolid name = "PPS_Timing_Box_Second_s">
+	<rSolid name = "PPS_Timing_Box_ST"/>
+	<rSolid name = "TID9"/>
+	<Translation x="0.0*m" y="48.01/2*mm" z="(-1.49/2-63.55/2)*mm"/>
+	</SubtractionSolid>
+
+	<SubtractionSolid name = "PPS_Timing_Box_Second_s1">
+	<rSolid name = "PPS_Timing_Box_Second_s"/>
+	<rSolid name = "TID10"/>
+	<Translation x="0.0*m" y="-48.01/2*mm" z="(-1.49/2-63.55/2)*mm"/>
+	</SubtractionSolid>
+
+	<SubtractionSolid name = "PPS_Timing_Box_Second_s2">
+	<rSolid name = "PPS_Timing_Box_Second_s1"/>
+	<rSolid name = "TID11"/>
+	<Translation x="0.0*m" y="-48.01/2*mm" z="(63.55/2+1.49/2)*mm"/>
+	</SubtractionSolid>
+
+	<SubtractionSolid name = "PPS_Timing_Box_Second">
+	<rSolid name = "PPS_Timing_Box_Second_s2"/>
+	<rSolid name = "TID12"/>
+	<Translation x="0.0*m" y="48.01/2*mm" z="(63.55/2+1.49/2)*mm"/>
+	</SubtractionSolid>
+
+
+
+   <Trd1 dx1 = "69.371/2*mm" dx2 = "69.371/2*mm" dy1 = "12.90/2*mm" dy2 = "0.01/2*mm" dz = "3.175/2*mm" name = "TID"/>
+   <Trd1 dx1 = "69.371/2*mm" dx2 = "69.371/2*mm" dy1 = "0.01/2*mm" dy2 = "12.90/2*mm" dz = "3.175/2*mm" name = "TID2"/>
+   <Trd1 dx1 = "69.371/2*mm" dx2 = "69.371/2*mm" dy1 = "0.01/2*mm" dy2 = "12.90/2*mm" dz = "3.175/2*mm" name = "TID3"/>
+   <Trd1 dx1 = "69.371/2*mm" dx2 = "69.371/2*mm" dy1 = "12.90/2*mm" dy2 = "0.01/2*mm" dz = "3.175/2*mm" name = "TID4"/>
+
+
+   
+   
+
+   <Box name="Box1" dx="69.37/2*mm" dy="48.01/2*mm" dz="4.45/2*mm"/>
+   <Box name="Box2" dx="18.591/2*mm" dy="17.07/2*mm" dz="4.451/2*mm"/>
+	<!--Box name="Box2" dx="18.59/2*mm" dy="17.07/2*mm" dz="4.45/2*mm"/-->
+   <Box name="Box3" dx="4.801/2*mm" dy="35.31/2*mm" dz="4.451/2*mm"/>
+	<!--Box name="Box3" dx="4.80/2*mm" dy="35.31/2*mm" dz="4.45/2*mm"/-->
+  
+
+   <Box name="Box4" dx="23.60/2*mm" dy="28.68/2*mm" dz="6.00/2*mm"/>
+   <Box name="Box5" dx="17.391/2*mm" dy="15.87/2*mm" dz="6.001/2*mm"/>
+        <!--Box name="Box5" dx="17.39/2*mm" dy="15.87/2*mm" dz="6.00/2*mm"/-->
+
+   <Box name="Box6" dx="16.82/2*mm" dy="1.83/2*mm" dz="3.30/2*mm"/>
+   <Box name="Box7" dx="16.82/2*mm" dy="1.83/2*mm" dz="3.30/2*mm"/>
+
+   <Box name="Box8" dx="69.37/2*mm" dy="6.35/2*mm" dz="68.00/2*mm"/>
+   <Box name="Box9" dx="38.10/2*mm" dy="6.351/2*mm" dz="44.45/2*mm"/>
+        <!--Box name="Box5" dx="38.10/2*mm" dy="6.35/2*mm" dz="44.45/2*mm"/-->
+
+
+   <Box name="Box10" dx="69.37/2*mm" dy="48.01/2*mm" dz="0.99/2*mm"/>
+   <Box name="Box11" dx="18.591/2*mm" dy="17.07/2*mm" dz="0.991/2*mm"/>
+	<!--Box name="Box11" dx="18.59/2*mm" dy="17.07/2*mm" dz="0.99/2*mm"/-->
+   <Box name="Box12" dx="4.801/2*mm" dy="35.31/2*mm" dz="0.991/2*mm"/> 
+	 <!--Box name="Box12" dx="4.80/2*mm" dy="35.31/2*mm" dz="0.99/2*mm"/--> 
+
+
+   <Box name="Box13" dx="69.37/2*mm" dy="6.35/2*mm" dz="68.00/2*mm"/>
+   <Box name="Box14" dx="57.15/2*mm" dy="2.292/2*mm" dz="46.93/2*mm"/>
+	<!--Box name="Box14" dx="57.15/2*mm" dy="2.29/2*mm" dz="46.93/2*mm"/-->
+   <Box name="Box15" dx="38.10/2*mm" dy="4.062/2*mm" dz="44.45/2*mm"/>
+        <!--Box name="Box15" dx="38.10/2*mm" dy="4.06/2*mm" dz="44.45/2*mm"/-->
+
+   	
+
+    
+   	<SubtractionSolid name = "BBox">
+	<rSolid name = "Box1"/>
+	<rSolid name = "Box2"/>
+	<Translation x="-50.78/2*mm" y="0.0*m" z="0.0*m"/>
+	</SubtractionSolid>
+        <SubtractionSolid name = "BBox2">
+	<rSolid name = "BBox"/>
+	<rSolid name = "Box3"/>        
+	<Translation x="64.57/2*mm" y="0.0*m" z="0.0*m"/>
+	</SubtractionSolid>
+	
+        <SubtractionSolid name = "BBox3">
+	<rSolid name = "Box4"/>
+	<rSolid name = "Box5"/>
+	<Translation x="-6.21/2*mm" y="0.0*m" z="0.0*m"/>
+	</SubtractionSolid>
+
+        <UnionSolid name = "BBox4">
+	<rSolid name = "BBox2"/>
+	<rSolid name = "BBox3"/>        
+	<Translation x="-45.77/2*mm" y="0.0*m" z="10.45/2*mm"/>
+	</UnionSolid>
+
+        <UnionSolid name = "BBox5">
+	<rSolid name = "BBox4"/>
+	<rSolid name = "Box6"/>
+        <Translation x="-55.59/2*mm" y="14.04/2*mm" z="10.45/2*mm"/>
+        </UnionSolid>
+
+        <!--Translation x="(-69.37+16.82-2*1.52)/2*mm" y="14.04/2*mm" z="10.45/2*mm"/--> 
+        <!--Translation x="(-0.6937+0.1682)*m" y="0.1404*m" z="0.1045*m"/-->     
+        <!--Translation x="-0.5255*m" y="0.1404*m" z="0.1045*m"/--> 
+
+        <UnionSolid name = "BBox6">
+	<rSolid name = "BBox5"/>
+	<rSolid name = "Box7"/>
+        <Translation x="-55.59/2*mm" y="-14.04/2*mm" z="10.45/2*mm"/> 
+        </UnionSolid>       
+
+
+	<SubtractionSolid name = "BBox7">
+	<rSolid name = "Box8"/>
+	<rSolid name = "Box9"/>
+	<Translation x="0.0*m" y="0.0*m" z="0.0*m"/>
+	</SubtractionSolid>
+
+        <UnionSolid name = "BBox8">
+	<rSolid name = "BBox6"/>
+	<rSolid name = "BBox7"/>        
+	<Translation x="0.0*m" y="-41.66/2*mm" z="63.55/2*mm"/>
+	</UnionSolid>
+
+
+        <SubtractionSolid name = "BBox9">
+	<rSolid name = "BBox8"/>
+	<rSolid name = "TID"/>
+	<Translation x="0.0*m" y="-48.01/2*mm" z="-1.49/2*mm"/>
+	</SubtractionSolid>
+
+	<SubtractionSolid name = "BBox10">
+	<rSolid name = "Box10"/>
+	<rSolid name = "Box11"/>
+	<Translation x="-50.78/2*mm" y="0.0*m" z="0.0*m"/>
+	</SubtractionSolid>
+       	<SubtractionSolid name = "BBox11">
+	<rSolid name = "BBox10"/>
+	<rSolid name = "Box12"/>        
+	<Translation x="64.57/2*mm" y="0.0*m" z="0.0*m"/>
+	</SubtractionSolid>
+
+	<UnionSolid name = "BBox12">
+	<rSolid name = "BBox9"/>
+	<rSolid name = "BBox11"/> 
+        <Translation x="0.0*m" y="0.0*m" z="130.56/2*mm"/>       
+	</UnionSolid>
+
+	<SubtractionSolid name = "BBox13">
+	<rSolid name = "BBox12"/>
+	<rSolid name = "TID2"/>
+	<Translation x="0.0*m" y="-48.01/2*mm" z="128.55/2*mm"/>
+				<!--z=2*68−((3÷2)+(4.45÷2))--> 
+	</SubtractionSolid>
+
+	<SubtractionSolid name = "BBox14">
+	<rSolid name = "Box13"/>
+	<rSolid name = "Box14"/>
+	<Translation x="0.0*m" y="4.06/2*mm" z="0.0*m"/>
+	</SubtractionSolid>
+       	<SubtractionSolid name = "BBox15">
+	<rSolid name = "BBox14"/>
+	<rSolid name = "Box15"/>        
+	<Translation x="0.0*m" y="-2.292/2*mm" z="0.0*m"/>
+	</SubtractionSolid>
+
+        <UnionSolid name = "BBox16">
+	<rSolid name = "BBox13"/>
+	<rSolid name = "BBox15"/> 
+        <Translation x="0.0*m" y="41.66/2*mm" z="63.55/2*mm"/>       
+	</UnionSolid>
+
+
+	<SubtractionSolid name = "BBox17">
+	<rSolid name = "BBox16"/>
+	<rSolid name = "TID3"/>
+	<Translation x="0.0*m" y="48.01/2*mm" z="128.55/2*mm"/>
+				<!--z=2*68−((3÷2)+(4.45÷2))--> 
+	</SubtractionSolid>
+
+	<SubtractionSolid name = "BBox18">
+	<rSolid name = "BBox17"/>
+	<rSolid name = "TID4"/>
+	<Translation x="0.0*m" y="48.01/2*mm" z="-1.49/2*mm"/>
+	</SubtractionSolid>
+
+        <Tubs name="PPS_Timing_Cylinder_Primary_Vacuum" rMin="0*mm" rMax="[PPS_Timing_Horizontal_Pot:outer_diameter]/2+[PPS_Timing_Horizontal_Pot:surface_margin]" dz="[PPS_Timing_Horizontal_Pot:height]/2+[PPS_Timing_Horizontal_Pot:surface_margin]" startPhi="0*deg" deltaPhi="360*deg"/>
+
+        <Tubs name="PPS_Timing_Cylinder_wall" rMin="[PPS_Timing_Horizontal_Pot:outer_diameter]/2-[PPS_Timing_Horizontal_Pot:wall_thickness]" rMax="[PPS_Timing_Horizontal_Pot:outer_diameter]/2-[PPS_Timing_Horizontal_Pot:window_thickness_front]" dz="[PPS_Timing_Horizontal_Pot:height_lower_part]/2" startPhi="0*deg" deltaPhi="180*deg"/>
+
+        <Tubs name="PPS_Timing_Cylinder_bottom_wall" rMin="0*mm" rMax="[PPS_Timing_Horizontal_Pot:outer_diameter]/2-[PPS_Timing_Horizontal_Pot:wall_thickness]" dz="[PPS_Timing_Horizontal_Pot:wall_thickness_bottom_wall]/2" startPhi="0*deg" deltaPhi="360*deg"/>
+
+    <Box name="RB_Cylinder_Window_Rect"  dx="[PPS_Timing_Horizontal_Pot:window_width]/2" dy="2*[PPS_Timing_Horizontal_Pot:wall_thickness]" dz="[PPS_Timing_Horizontal_Pot:window_height]/2-[PPS_Timing_Horizontal_Pot:window_thickness_bottom]/2"/>
+    <Box name="PPS_Timing_Cylinder_bottom_wall_cut"  dx="48.01/2*mm+6.35*mm" dy="[PPS_Timing_Horizontal_Pot:outer_diameter]" dz="[PPS_Timing_Horizontal_Pot:wall_thickness_bottom_wall]/2"/>
+
+        <SubtractionSolid name="PPS_Timing_Cylinder_wall2">
+            <rSolid name="PPS_Timing_Cylinder_wall"/>
+            <rSolid name="RB_Cylinder_Window_Rect"/>
+            <Translation x="0*mm" y="[PPS_Timing_Horizontal_Pot:outer_diameter]/2" z="-[PPS_Timing_Horizontal_Pot:height_lower_part]/2+[PPS_Timing_Horizontal_Pot:window_height]/2+[PPS_Timing_Horizontal_Pot:window_thickness_bottom]/2" />
+        </SubtractionSolid>
+
+        <SubtractionSolid name="PPS_Timing_Cylinder_bottom_wall2">
+            <rSolid name="PPS_Timing_Cylinder_bottom_wall"/>
+            <rSolid name="PPS_Timing_Cylinder_bottom_wall_cut"/>
+            <Translation x="0*mm" y="0*mm" z="[PPS_Timing_Horizontal_Pot:window_thickness_bottom]" />
+        </SubtractionSolid>
+
+
+</SolidSection>
+
+
+<LogicalPartSection label="PPS_Timing_Box_Negative.xml">
+      <LogicalPart name="BoxOFlbar" category="unspecified">
+             <rSolid name="BBox18"/>
+             <rMaterial name="materials:Aluminium"/>
+      </LogicalPart>
+
+     <LogicalPart name="PPS_Timing_Box_First" category="unspecified">
+             <rSolid name="PPS_Timing_Box_First"/>
+             <rMaterial name="materials:Vacuum"/>
+    </LogicalPart>
+
+     <LogicalPart name="PPS_Timing_Box_Second" category="unspecified">
+             <rSolid name="PPS_Timing_Box_Second"/>
+             <rMaterial name="materials:Vacuum"/>
+    </LogicalPart>
+
+
+        <LogicalPart name="PPS_Timing_Cylinder_Primary_Vacuum">
+            <rSolid name="PPS_Timing_Cylinder_Primary_Vacuum"/>
+            <rMaterial name="materials:Vacuum"/>
+        </LogicalPart>
+
+        <LogicalPart name="PPS_Timing_Cylinder_wall">
+            <rSolid name="PPS_Timing_Cylinder_wall2"/>
+            <rMaterial name="materials:Air"/>
+        </LogicalPart>
+
+        <LogicalPart name="PPS_Timing_Cylinder_bottom_wall">
+            <rSolid name="PPS_Timing_Cylinder_bottom_wall2"/>
+            <rMaterial name="materials:Air"/>
+        </LogicalPart>
+
+
+
+</LogicalPartSection>
+
+
+</DDDefinition>
+
