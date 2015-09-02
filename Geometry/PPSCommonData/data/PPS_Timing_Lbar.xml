@@ -28,7 +28,7 @@ TIMING LBAR
 
 
    <ConstantsSection label="PPS_Timing_Lbar.xml">
-        <Constant name="lbar_xy_xz" value="2.9*mm"/>
+        <Constant name="lbar_xy_xz" value="3*mm"/>
 
         <Constant name="lbar_E24_z" value="23*mm"/>
         <Constant name="lbar_E_x" value="41.7*mm"/>
@@ -65,10 +65,9 @@ TIMING LBAR
 
 
         <Constant name="wind_x" value="2*mm"/>
-        <Constant name="wind_y" value="2.9*mm"/>
-        <Constant name="wind_z" value="2.9*mm"/>
-        <Constant name="shift" value="34*mm-9*mm-4.45/2*mm-1.27*mm"/>
-        <Constant name="shift2" value="-34*mm+9*mm+4.45/2*mm+1.27*mm"/>
+        <Constant name="wind_y" value="3*mm"/>
+        <Constant name="wind_z" value="3*mm"/>
+        <Constant name="shift" value="34*mm-9*mm-1.27*mm"/>
         <Constant name="shiftx" value="77/2*mm"/>
     </ConstantsSection>
 

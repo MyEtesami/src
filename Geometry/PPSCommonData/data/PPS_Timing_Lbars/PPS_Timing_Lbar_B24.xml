@@ -21,6 +21,8 @@ z    ===============   | |   | |   | |   | |
 
 ************************************BEAM********************************************
 
+Quartz LBars have 3mm * 3mm cross section in x-y plane (perpendicular to the beam axis z coordinate) and the distance between them is 0.1mm.
+
           ===============================
   y=+4.65 | A24 | B24 | C24 | D24 | E24 |
           ===============================
@@ -30,7 +32,7 @@ z    ===============   | |   | |   | |   | |
           ===============================
   y=-4.65 | A13 | B13 | C13 | D13 | E13 |
           ===============================
-  x=      0 1.45  4.55 7.65   10.75  13.85
+  x=      0 1.5  4.6    7.7   10.8  13.9
 
 
 ******************************************************************************
@@ -39,6 +41,7 @@ z    ===============   | |   | |   | |   | |
 
 TIMING LBAR
 -->
+
 
 <SolidSection label="PPS_Timing_Lbar_B24.xml">
     <Box  name="BoxHB24" dx="[PPS_Timing_Lbar:lbar_xy_xz]/2" dy="[PPS_Timing_Lbar:lbar_xy_xz]/2" dz="[PPS_Timing_Lbar:lbar_B24_z]/2"/>

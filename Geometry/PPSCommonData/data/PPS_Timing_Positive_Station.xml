@@ -56,7 +56,7 @@
     
     <PosPartSection label="PPS_Timing_Positive_Station.xml">
 
-<PosPart copyNumber="110">
+<PosPart copyNumber="1">
      <rParent name="PPS_Timing_Positive_Station_Vacuum_4"/>
      <rChild name="PPS_Timing_Box_Positive:PPS_Timing_Cylinder_Primary_Vacuum"/>
         <rRotation name="PPS_Timing_Transformations:PPS_Timing_90_x_90_y_rot"/>

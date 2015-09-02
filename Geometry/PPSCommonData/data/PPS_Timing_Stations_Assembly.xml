@@ -17,8 +17,8 @@
             <Translation x="0*mm" y="0*mm" z="[PPS_Timing_Positive_Station_Position_z]"/>
         </PosPart>
         <PosPart copyNumber="1">
-        <rParent name="TotemRPGlobal:OTOTEM"/>   
-        <!--<rParent name="cms:CMSE"/>-->
+          <rParent name="TotemRPGlobal:OTOTEM"/>   
+            <!--<rParent name="cms:CMSE"/>-->
             <rChild name="PPS_Timing_Negative_Station:PPS_Timing_Negative_Station"/>
             <Translation x="0*mm" y="0*mm" z="[PPS_Timing_Negative_Station_Position_z]"/>
         </PosPart>

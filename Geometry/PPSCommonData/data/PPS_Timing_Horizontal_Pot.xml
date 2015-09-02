@@ -18,8 +18,6 @@
         <Constant name="ferrite_upper_part_distance" value="[flange_thickness]-[distance_flange_upper_part]"/>
         <Constant name="height" value="138*mm"/>
         <Constant name="Cylinder_beam_distance" value="0*mm"/>
-        <Constant name="Lbar_beam_distance" value="0*mm-[PPS_Timing_Horizontal_Pot:window_thickness_bottom]"/>
-    
-</ConstantsSection>
+    </ConstantsSection>
 </DDDefinition>
 

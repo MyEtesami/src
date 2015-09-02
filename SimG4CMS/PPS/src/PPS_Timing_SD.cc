@@ -92,8 +92,8 @@ std::cout<<"collectionName[0]: "<<collectionName[0]<<std::endl;
   for (std::vector<std::string>::iterator it=lvNames.begin();  it !=lvNames.end(); it++)
   {
 
-    //std::cout<<"name: "<<name<<std::endl;
-    //std::cout<<"lvNames: "<<*it<<std::endl;
+    std::cout<<"name: "<<name<<std::endl;
+    std::cout<<"lvNames: "<<*it<<std::endl;
     this->AssignSD(*it);
     edm::LogInfo("PP_Timing_SD") << "PP_Timing_SD : Assigns SD to LV " << (*it);
   }
@@ -229,6 +229,19 @@ if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="PhotoDetector_Wind
  { ImportInfotoHit();    // added pps //in addtion to import info to hit it STORE hit as well
 theTrack->SetTrackStatus(fStopAndKill);
 }
+
+
+
+  
+//if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="BoxOFlbar"&&theTrack->GetDefinition()!= G4OpticalPhoton::OpticalPhotonDefinition())
+//if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"&&theTrack->GetDefinition()!= G4OpticalPhoton::OpticalPhotonDefinition())
+//if((aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"||aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="BoxOFlbar")&&theTrack->GetDefinition()!= G4OpticalPhoton::OpticalPhotonDefinition())
+// { ImportInfotoHit();    // added pps //in addtion to import info to hit it STORE hit as well
+//theTrack->SetTrackStatus(fStopAndKill);
+//}
+//else if(theTrack->GetDefinition()==G4OpticalPhoton::OpticalPhotonDefinition()){
+//theTrack->SetTrackStatus(fStopAndKill);
+//}
 
 // TrackInformation * trkInfo = (TrackInformation *)(theTrack->GetUserInformation());
 //if (trkInfo) {
