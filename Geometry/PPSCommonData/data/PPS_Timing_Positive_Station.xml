@@ -60,7 +60,7 @@
      <rParent name="PPS_Timing_Positive_Station_Vacuum_4"/>
      <rChild name="PPS_Timing_Box_Positive:PPS_Timing_Cylinder_Primary_Vacuum"/>
         <rRotation name="PPS_Timing_Transformations:PPS_Timing_90_x_90_y_rot"/>
-        <Translation x="[PPS_Timing_Horizontal_Pot:height]/2+[PPS_Timing_Horizontal_Pot:Cylinder_beam_distance]" y="0*m " z="0*m " />
+        <Translation x="[PPS_Timing_Horizontal_Pot:height]/2+[PPS_Timing_Cylinder_XDistance_From_Beam:Cylinder_beam_distance]" y="0*m " z="0*m " />
 </PosPart>
 
 

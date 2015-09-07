@@ -17,7 +17,6 @@
         <Constant name="distance_flange_upper_part" value="7.5*mm"/>
         <Constant name="ferrite_upper_part_distance" value="[flange_thickness]-[distance_flange_upper_part]"/>
         <Constant name="height" value="138*mm"/>
-        <Constant name="Cylinder_beam_distance" value="0*mm"/>
     </ConstantsSection>
 </DDDefinition>
 

@@ -226,13 +226,16 @@ std::cout<<"PPS_TIMING : There is no hit to process"<<std::endl<<std::endl;
 
 
 if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="PhotoDetector_Window")
+//if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"&&(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetCopyNo()==5||aStep->GetPreStepPoint()->GetPhysicalVolume()->GetCopyNo()==25))
+//if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar")
+//if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="PhotoDetector_Window"&&(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetCopyNo()==5||aStep->GetPreStepPoint()->GetPhysicalVolume()->GetCopyNo()==25))
  { ImportInfotoHit();    // added pps //in addtion to import info to hit it STORE hit as well
 theTrack->SetTrackStatus(fStopAndKill);
-}
+} 
 
 
 
-  
+   
 //if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="BoxOFlbar"&&theTrack->GetDefinition()!= G4OpticalPhoton::OpticalPhotonDefinition())
 //if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"&&theTrack->GetDefinition()!= G4OpticalPhoton::OpticalPhotonDefinition())
 //if((aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"||aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="BoxOFlbar")&&theTrack->GetDefinition()!= G4OpticalPhoton::OpticalPhotonDefinition())

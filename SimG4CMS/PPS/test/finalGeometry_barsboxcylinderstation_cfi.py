@@ -359,8 +359,9 @@ XMLIdealGeometryESSource = cms.ESSource("XMLIdealGeometryESSource",
 'Geometry/PPSCommonData/data/PPS_Timing_Negative_Station.xml',
 'Geometry/PPSCommonData/data/PPS_Timing_Positive_Station.xml',
 'Geometry/PPSCommonData/data/PPS_Timing_Stations_Assembly.xml',                               
+'Geometry/PPSCommonData/data/PPS_Timing_Cylinder_XDistance_From_Beam.xml',
 'Geometry/PPSCommonData/data/PPS_Timing_Sensitive_Dets.xml'
-
+  
                                   )),  # DIFF: TOTEM only
                                          #   rootNodeName = cms.string('cms:OCMS')
                                         rootNodeName = cms.string('TotemRPGlobal:OTOTEM')
