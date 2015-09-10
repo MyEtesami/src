@@ -36,15 +36,14 @@ uint32_t PPSTimingOrganization::GetUnitID(const G4Step* aStep)
   for(int ii = 0; ii < touch->GetHistoryDepth(); ii++ )
   {
     physVol = touch->GetVolume(ii);
-    if(physVol->GetName() == "PhotoDetector_Window")
+    if(physVol->GetName() == "PhotoDetector_Window"||physVol->GetName() == "QLbar")
 //    if(physVol->GetName() == "Lbar")
 
     {
       detector = physVol->GetCopyNo();
     }
    
-// else if(physVol->GetName() == "PPS_Timing_Cylinder_Primary_Vacuum") // The physical volume just after Station
-     else if(physVol->GetName() =="PPS_timing_box"||physVol->GetName() == "PPS_timing_box_First"||physVol->GetName() == "PPS_timing_box_Second") // The physical volume just after Station
+ else if(physVol->GetName() == "PPS_Timing_Cylinder_Primary_Vacuum") // The physical volume just after Station
 
     {
       int cpy_no = physVol->GetCopyNo();

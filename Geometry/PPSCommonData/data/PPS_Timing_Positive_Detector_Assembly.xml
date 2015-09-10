@@ -37,14 +37,14 @@ Copy number scheme of Lbars in the Positive side for both sets of L-bars matrix:
 <PosPart copyNumber="110">
      <rParent name="PPS_Timing_Box_Positive:PPS_Timing_Cylinder_Primary_Vacuum"/>
      <rChild name="PPS_Timing_Box_Positive:PPS_Timing_Box_First"/>
-        <Translation x="0*mm" y="-34*mm" z="-[PPS_Timing_Horizontal_Pot:height]/2+[PPS_Timing_Horizontal_Pot:window_thickness_bottom]+77/2*mm" />
+        <Translation x="0*mm" y="34*mm" z="-[PPS_Timing_Horizontal_Pot:height]/2+[PPS_Timing_Horizontal_Pot:window_thickness_bottom]+77/2*mm" />
         <rRotation name="PPS_Timing_Transformations:PPS_Timing_90_z_270_y_rot"/>
 </PosPart>
 
 <PosPart copyNumber="110">
      <rParent name="PPS_Timing_Box_Positive:PPS_Timing_Cylinder_Primary_Vacuum"/>
      <rChild name="PPS_Timing_Box_Positive:PPS_Timing_Box_Second"/>
-       <Translation x="0*mm" y="34*mm" z="-[PPS_Timing_Horizontal_Pot:height]/2+[PPS_Timing_Horizontal_Pot:window_thickness_bottom]+77/2*mm" />
+       <Translation x="0*mm" y="-34*mm" z="-[PPS_Timing_Horizontal_Pot:height]/2+[PPS_Timing_Horizontal_Pot:window_thickness_bottom]+77/2*mm" />
         <rRotation name="PPS_Timing_Transformations:PPS_Timing_90_z_270_y_rot"/>
 </PosPart>
 
