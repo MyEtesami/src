@@ -324,7 +324,7 @@ G4double AbsorptionLength_Glass[nEntries] =
 
   //       std::cout<<"The debug level::"<<theMPDebugLevel<<std::endl;
 
-         if ( (*theLogicalVolume)->GetName() == "PPS_Timing_Box"||(*theLogicalVolume)->GetName() == "PPS_Timing_Box_First"||(*theLogicalVolume)->GetName() == "PPS_Timing_Box_Second"  )
+         if ( (*theLogicalVolume)->GetName() == "PPS_Timing_Box_First"||(*theLogicalVolume)->GetName() == "PPS_Timing_Box_Second"  )
          {
          // set the material
              std::cout<<"Mohsen1 theLogicalVolume)->GetName() ::"<<(*theLogicalVolume)->GetName()<<std::endl;

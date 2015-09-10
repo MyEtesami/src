@@ -90,7 +90,7 @@ private:
 
 private:
   
-
+  
   G4ThreeVector entrancePoint;
   double incidentEnergy;
 
@@ -125,6 +125,10 @@ private:
   int ParentId;
   double Vx,Vy,Vz;
 
+  G4int TrackSwitchF;
+  std::vector <G4int> theTrackSwitchVecF;
+G4int TrackSwitchS;
+  std::vector <G4int> theTrackSwitchVecS;
 
   //
   // Hist

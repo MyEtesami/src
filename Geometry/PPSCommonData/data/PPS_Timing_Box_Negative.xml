@@ -244,14 +244,14 @@
 	<UnionSolid name = "ppsTimingBox5">
 	<rSolid name = "ppsTimingBox4"/>
 	<rSolid name = "Box_left_wall_in_extraup"/>
-        <Translation x="-[Box_left_wall_out_x]/2+[Box_left_wall_in_extraup_x]/2-2*[edge]" y="[Box_left_wall_in_small_y]/2-[Box_left_wall_in_extraup_y]/2" z="[Box_left_wall_out_z]/2+[Box_left_wall_in_small_z]/2"/>
+        <Translation x="-[Box_left_wall_out_x]/2+[Box_left_wall_in_extraup_x]/2-1*[edge]" y="[Box_left_wall_in_small_y]/2-[Box_left_wall_in_extraup_y]/2" z="[Box_left_wall_out_z]/2+[Box_left_wall_in_small_z]/2"/>
         </UnionSolid>
 
         
         <UnionSolid name = "ppsTimingBox6">
 	<rSolid name = "ppsTimingBox5"/>
 	<rSolid name = "Box_left_wall_in_extrado"/>
-        <Translation x="-[Box_left_wall_out_x]/2+[Box_left_wall_in_extrado_x]/2-2*[edge]" y="-[Box_left_wall_in_small_y]/2+[Box_left_wall_in_extrado_y]/2" z="[Box_left_wall_out_z]/2+[Box_left_wall_in_small_z]/2"/> 
+        <Translation x="-[Box_left_wall_out_x]/2+[Box_left_wall_in_extrado_x]/2-1*[edge]" y="-[Box_left_wall_in_small_y]/2+[Box_left_wall_in_extrado_y]/2" z="[Box_left_wall_out_z]/2+[Box_left_wall_in_small_z]/2"/> 
         </UnionSolid>
 
 

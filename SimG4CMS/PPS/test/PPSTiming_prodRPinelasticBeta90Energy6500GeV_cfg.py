@@ -9,7 +9,7 @@ process.load("Configuration.TotemCommon.LoggerMin_cfi")
 
 # Specify the maximum events to simulate
 process.maxEvents = cms.untracked.PSet(
-  input = cms.untracked.int32(5000)
+  input = cms.untracked.int32(2)
 )
 
 # Specify the output filename

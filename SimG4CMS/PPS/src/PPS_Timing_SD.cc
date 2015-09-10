@@ -131,6 +131,9 @@ std::cout << "PPS_Timing_SD: Initialize called for:   " << name<<std::endl<<std:
   if (hcID<0) 
     hcID = G4SDManager::GetSDMpointer()->GetCollectionID(collectionName[0]);
   HCE->AddHitsCollection(hcID, theHC);
+theTrackSwitchVecF.push_back(-1);
+theTrackSwitchVecS.push_back(-1);
+
 }
 
 
@@ -184,55 +187,79 @@ G4bool PPS_Timing_SD::ProcessHits(G4Step * aStep, G4TouchableHistory * )
 {
   if (aStep == NULL)
   {	    
-std::cout<<"PPS_TIMING : There is no hit to process"<<std::endl<<std::endl;
-  	return true;
+      std::cout<<"PPS_TIMING : There is no hit to process"<<std::endl<<std::endl;
+      return true;
   }
   else
   {
  
 
-//std::cout
-  //  << "*******************************************************\n"
-   // << "*                                                     *\n"
-  //  << "* PPS Timing Hit initialized  with name " << name << "\n" 
- //   << "*                                                     *\n" 
- //   << "*******************************************************" << std::endl;
-
-
-
-
 
    GetStepInfo(aStep);
-  
-    // if ((theTrack->GetDefinition() != G4OpticalPhoton::OpticalPhotonDefinition())&&theTrack->GetDefinition()->GetParticleName()=="proton")   
-      //  Print_Hit_Info();
+ 
 
 
 
-
-//    if(Vz>100000 && theTrack->GetDefinition()->GetParticleName()!="proton")
-
-// if(IsPrimary(theTrack))
-
-//{
-//std::cout<<"This is a Primary track"<<std::endl;
-//      Print_Hit_Info();
-      
-
-//}
-	  //if(Eloss>0.0 /*&& ParticleType==2212 && Pabs > 6000. */)
-    //{
-
-
+//if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"&&(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetCopyNo()==5||aStep->GetPreStepPoint()->GetPhysicalVolume()->GetCopyNo()==25))
+//if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar")
+//if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="PhotoDetector_Window"&&(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetCopyNo()==5||aStep->GetPreStepPoint()->GetPhysicalVolume()->GetCopyNo()==25))
 
 if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="PhotoDetector_Window")
  { ImportInfotoHit();    // added pps //in addtion to import info to hit it STORE hit as well
-theTrack->SetTrackStatus(fStopAndKill);
-}
+   Print_Hit_Info();
+   theTrack->SetTrackStatus(fStopAndKill);
+ } 
+
+if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"&&theTrack->GetDefinition()==G4OpticalPhoton::OpticalPhotonDefinition())
+    //Print_Hit_Info();
+
+    TrackSwitchF=-1;
+    TrackSwitchS=-1;
 
 
+ const G4VTouchable* thetouch = aStep->GetPreStepPoint()->GetTouchable();
 
+if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"&&theTrack->GetDefinition()!=G4OpticalPhoton::OpticalPhotonDefinition()&&thetouch->GetVolume(1)->GetName()=="PPS_Timing_Box_First")
+ {
+  for(unsigned int i=0;i<theTrackSwitchVecF.size();i++)
+    {
+      if(theTrackSwitchVecF[i]==theTrack->GetTrackID())
+        TrackSwitchF=1;
+    }
+    
+    if(TrackSwitchF!=1)
+    {    
+      theTrackSwitchVecF.push_back(theTrack->GetTrackID());
+      ImportInfotoHit();
+      Print_Hit_Info();
+
+    } 
+    
+ }
+
+if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"&&theTrack->GetDefinition()!= G4OpticalPhoton::OpticalPhotonDefinition()&&thetouch->GetVolume(1)->GetName()=="PPS_Timing_Box_Second")
+ {
+  for(unsigned int i=0;i<theTrackSwitchVecS.size();i++)
+    {
+      if(theTrackSwitchVecS[i]==theTrack->GetTrackID())
+        TrackSwitchS=1;
+    }
+
+    if(TrackSwitchS!=1)
+    {
+      theTrackSwitchVecS.push_back(theTrack->GetTrackID());
+      ImportInfotoHit();
+      Print_Hit_Info();
   
+    }
+
+ }
+
+
+
+
+
+   
 //if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="BoxOFlbar"&&theTrack->GetDefinition()!= G4OpticalPhoton::OpticalPhotonDefinition())
 //if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"&&theTrack->GetDefinition()!= G4OpticalPhoton::OpticalPhotonDefinition())
 //if((aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"||aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="BoxOFlbar")&&theTrack->GetDefinition()!= G4OpticalPhoton::OpticalPhotonDefinition())
@@ -246,15 +273,7 @@ theTrack->SetTrackStatus(fStopAndKill);
 // TrackInformation * trkInfo = (TrackInformation *)(theTrack->GetUserInformation());
 //if (trkInfo) {
 
-//if (!(trkInfo->isPrimary())){
-//if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="window_box"&&theTrack->GetDefinition()== G4OpticalPhoton::OpticalPhotonDefinition())
-//theTrack->SetTrackStatus(fStopAndKill);
-//}
-//}
 
-// if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="window_box"&&theTrack->GetDefinition()== G4OpticalPhoton::OpticalPhotonDefinition())
-//  clearTrack(theTrack);   //added pps
- //  theTrack->SetTrackStatus(fStopAndKill);
 
 
       //LogDebug("PP_Timing_SD")<<"New hit created"<<std::endl;
@@ -399,6 +418,10 @@ G4ThreeVector PPS_Timing_SD::SetToLocal(G4ThreeVector global)
 
 void PPS_Timing_SD::EndOfEvent(G4HCofThisEvent* )
 {
+
+    theTrackSwitchVecF.clear();
+    theTrackSwitchVecS.clear();
+
   // here we loop over transient hits and make them persistent
   for (int j=0; j<theHC->entries() && j<15000; j++)
   {
