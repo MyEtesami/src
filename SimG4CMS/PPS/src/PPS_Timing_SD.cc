@@ -206,18 +206,20 @@ G4bool PPS_Timing_SD::ProcessHits(G4Step * aStep, G4TouchableHistory * )
 
 if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="PhotoDetector_Window")
  { ImportInfotoHit();    // added pps //in addtion to import info to hit it STORE hit as well
-   Print_Hit_Info();
+   //Print_Hit_Info();
    theTrack->SetTrackStatus(fStopAndKill);
  } 
 
-if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"&&theTrack->GetDefinition()==G4OpticalPhoton::OpticalPhotonDefinition())
-    //Print_Hit_Info();
-
+//if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"&&theTrack->GetDefinition()==G4OpticalPhoton::OpticalPhotonDefinition())
+   // Print_Hit_Info();
+  // ImportInfotoHit();
+   
     TrackSwitchF=-1;
     TrackSwitchS=-1;
 
 
  const G4VTouchable* thetouch = aStep->GetPreStepPoint()->GetTouchable();
+ //theTrack->GetDefinition()->GetParticleName()=="proton"
 
 if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"&&theTrack->GetDefinition()!=G4OpticalPhoton::OpticalPhotonDefinition()&&thetouch->GetVolume(1)->GetName()=="PPS_Timing_Box_First")
  {
@@ -231,7 +233,8 @@ if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"&&theTrack->
     {    
       theTrackSwitchVecF.push_back(theTrack->GetTrackID());
       ImportInfotoHit();
-      Print_Hit_Info();
+      if(theTrack->GetDefinition()->GetParticleName()=="proton")
+        Print_Hit_Info();
 
     } 
     
@@ -249,8 +252,8 @@ if(aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName()=="QLbar"&&theTrack->
     {
       theTrackSwitchVecS.push_back(theTrack->GetTrackID());
       ImportInfotoHit();
-      Print_Hit_Info();
-  
+      if(theTrack->GetDefinition()->GetParticleName()=="proton")
+        Print_Hit_Info();  
     }
 
  }

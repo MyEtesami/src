@@ -31,23 +31,23 @@ TIMING LBAR
         <Constant name="lbar_xy_xz" value="3*mm"/>
 
         <Constant name="lbar_E24_z" value="23*mm"/>
-        <Constant name="lbar_E_x" value="41.7*mm"/>
+        <Constant name="lbar_E_x" value="61.8*mm"/>
         <Constant name="lbar_E13_z" value="18*mm"/>
 
         <Constant name="lbar_D24_z" value="33*mm"/>
-        <Constant name="lbar_D_x" value="64.8*mm"/>
+        <Constant name="lbar_D_x" value="64.9*mm"/>
         <Constant name="lbar_D13_z" value="28*mm"/>
 
         <Constant name="lbar_C24_z" value="43*mm"/>
-        <Constant name="lbar_C_x" value="67.9*mm"/>
+        <Constant name="lbar_C_x" value="68*mm"/>
         <Constant name="lbar_C13_z" value="38*mm"/>
 
         <Constant name="lbar_B24_z" value="53*mm"/>
-        <Constant name="lbar_B_x" value="71*mm"/>
+        <Constant name="lbar_B_x" value="71.1*mm"/>
         <Constant name="lbar_B13_z" value="48*mm"/>
 
         <Constant name="lbar_A24_z" value="63*mm"/>
-        <Constant name="lbar_A_x" value="74.1*mm"/>
+        <Constant name="lbar_A_x" value="74.2*mm"/>
         <Constant name="lbar_A13_z" value="58*mm"/>
 
         <Constant name="pos_x_A" value="1.45*mm"/>

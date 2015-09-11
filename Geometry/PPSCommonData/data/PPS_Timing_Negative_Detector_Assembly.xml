@@ -48,7 +48,7 @@ Copy number scheme of Lbars in the Negative side for both sets of L-bars matrix:
         <rRotation name="PPS_Timing_Transformations:PPS_Timing_90_z_270_y_rot"/>
 </PosPart>
 
-
+<!--
 <PosPart copyNumber="10">
      <rParent name="PPS_Timing_Box_Negative:PPS_Timing_Box_First"/>
      <rChild name="PPS_Timing_Box_Negative:BoxOFlbar"/>
@@ -60,7 +60,7 @@ Copy number scheme of Lbars in the Negative side for both sets of L-bars matrix:
      <rChild name="PPS_Timing_Box_Negative:BoxOFlbar"/>
         <Translation x="-2.295*mm " y="0*mm" z="-34*mm+4.45/2*mm" />
 </PosPart>
-
+-->
 
 
 <PosPart copyNumber="14">
