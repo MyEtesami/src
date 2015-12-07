@@ -13,6 +13,9 @@ from Configuration.TotemCommon.mixNoPU_cfi import *
 
 # RP Strip digitization
 from SimTotem.RPDigiProducer.RPSiDetConf_cfi import *
+
+# PPSTiming digitization
+from SimPPS.TimingDigiProducer.PPSTimingDetConf_cfi import *
 #RPSiDetDigitizer.RPVerbosity = 1
 
 from RecoTotemRP.RPClusterizer.RPClusterizationConf_cfi import *

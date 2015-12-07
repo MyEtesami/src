@@ -1,0 +1,175 @@
+#include <vector>
+#include <iostream>
+#include <math.h>
+
+#include "FWCore/ParameterSet/interface/ParameterSet.h"
+#include "SimPPS/TimingDigiProducer/interface/PPSDetDigitizer.h"
+#include "Geometry/TotemRPDetTopology/interface/RPTopology.h"
+
+
+//RPDetDigitizer::RPDetDigitizer(const edm::ParameterSet &params, CLHEP::HepRandomEngine& eng, RPDetId det_id, const edm::EventSetup& iSetup)
+PPSDetDigitizer::PPSDetDigitizer(const edm::ParameterSet &params, CLHEP::HepRandomEngine& eng, TimingId det_id)
+  : params_(params), det_id_(det_id)
+
+{
+  verbosity_ = params.getParameter<int>("PPSVerbosity");
+//  numStrips = RPTopology().DetStripNo();
+//  theNoiseInElectrons = params.getParameter<double>("RPEquivalentNoiseCharge300um");
+//  theStripThresholdInE = params.getParameter<double>("RPVFATThreshold");
+//  noNoise = params.getParameter<bool>("RPNoNoise");
+//  misalignment_simulation_on_ = params_.getParameter<bool>("RPDisplacementOn");
+  _links_persistence = params.getParameter<bool>("PPSDigiSimHitRelationsPresistence");
+
+//std::cout<<"verbosity_ "<<verbosity_<<" numStrips "<<numStrips<<" theNoiseInElectrons "<<theNoiseInElectrons<<" theStripThresholdInE "<<theStripThresholdInE<<" noNoise "<<noNoise<<" misalignment_simulation_on_ "<<misalignment_simulation_on_<<" _links_persistence "<<_links_persistence<<std::endl;
+
+  thePPSPhotoelectronArrTime = new PPSPhotoelectronArrTime(params_, eng, det_id_);
+  thePPSNINOSimulator = new PPSNINOSimulator(params_, det_id_);
+//std::cout<<"$$$$$$$$$$$$$$$$$$"<<std::endl;
+//  theRPGaussianTailNoiseAdder = new RPGaussianTailNoiseAdder(numStrips, 
+//      theNoiseInElectrons, theStripThresholdInE, verbosity_);
+//std::cout<<"1111111111111111111111"<<std::endl;
+//  theRPPileUpSignals = new RPPileUpSignals(params_, det_id_);
+//std::cout<<"2222222222222222222"<<std::endl;
+//  theRPVFATSimulator = new RPVFATSimulator(params_, det_id_);
+//std::cout<<"3333333333333333333"<<std::endl;
+//  theRPHitChargeConverter = new RPHitChargeConverter(params_, eng, det_id_);
+//std::cout<<"4444444444444444444"<<std::endl;
+//  theRPDisplacementGenerator = new RPDisplacementGenerator(params_, det_id_, iSetup);
+}
+
+PPSDetDigitizer::~PPSDetDigitizer()
+{
+  delete thePPSPhotoelectronArrTime;
+  delete thePPSNINOSimulator;
+//  delete theRPGaussianTailNoiseAdder;
+//  delete theRPPileUpSignals;
+//  delete theRPVFATSimulator;
+//  delete theRPHitChargeConverter;
+//  delete theRPDisplacementGenerator;
+}
+
+// void RPDetDigitizer::run(const std::vector<PSimHit> &input, const std::vector<int> &input_links, 
+  //  std::vector<RPStripDigi> &output_digi, std::vector<RPDetTrigger> &output_trig, 
+  //  SimPPSTiming::DigiPrimaryMapType &output_digi_links, 
+//    SimPPSTiming::TriggerPrimaryMapType &output_trig_links)
+void PPSDetDigitizer::run(const std::vector<PSimHit> &input, const std::vector<int> &input_links,
+    std::vector<PPSTimingLBarDigi> &output_digi, std::vector<PPSTimingTrigger> &output_trig,
+    SimPPSTiming::TimingDigiPrimaryMapType &output_digi_links,
+    SimPPSTiming::TimingTriggerPrimaryMapType &output_trig_links)
+
+{
+  if(verbosity_)
+    std::cout<<"PPSDetDigitizer "<<det_id_<<" received input.size()="<<input.size()<<std::endl;
+//  theRPPileUpSignals->reset();
+//  thePPSPhotoelectronArrTime->reset();
+
+  int LBarNr = -1;
+  double CollectedCharge = 0.0; 
+
+  double TotalAmplitude = 0.0;
+
+  bool links_persistence_checked = _links_persistence && input_links.size()==input.size();
+  
+  int input_size = input.size();
+
+  for (int i=0; i<input_size; ++i)
+  {
+/*
+    SimPPSTiming::strip_charge_map the_strip_charge_map;
+    the_strip_charge_map = theRPHitChargeConverter->processHit(input[i]); 
+
+    if(misalignment_simulation_on_)
+      the_strip_charge_map = theRPHitChargeConverter->processHit(
+            theRPDisplacementGenerator->Displace(input[i]));
+    else
+      the_strip_charge_map = theRPHitChargeConverter->processHit(input[i]);
+      
+    if(verbosity_)
+      std::cout<<"RPHitChargeConverter "<<det_id_<<" returned hits="<<the_strip_charge_map.size()<<std::endl;
+    if(links_persistence_checked)
+      theRPPileUpSignals->add(the_strip_charge_map, input_links[i]);
+    else
+      theRPPileUpSignals->add(the_strip_charge_map, 0);
+*/
+/*
+    SimPPSTiming::PhotoElectron_ArrTime_vec the_PhotoElectron_ArrTime_vec;
+
+    SimPPSTiming::PhotoElectron_ArrTime_map_links_type the_PhotoElectron_ArrTime_map_links_type;
+*/
+//std::cout<<"TotalAmplitude is: "<<TotalAmplitude<<std::endl;
+//
+std::cout<<"LBarNr is: "<<LBarNr<<" input[i].particleType(): "<<input[i].particleType()<<std::endl;
+    if (input[i].particleType()==2212) LBarNr= PPSDetDigitizer::GetLBarNumber(det_id_);
+
+    if(links_persistence_checked)
+      TotalAmplitude+=thePPSPhotoelectronArrTime->processHit(input[i], input_links[i]);
+    else
+      TotalAmplitude+=thePPSPhotoelectronArrTime->processHit(input[i], 0);
+  }
+/*
+  const SimPPSTiming::strip_charge_map &theSignal = theRPPileUpSignals->dumpSignal();
+  SimPPSTiming::strip_charge_map_links_type &theSignalProvenance = theRPPileUpSignals->dumpLinks();
+
+      std::cout<<"########PPSTiming for "<<det_id_<<" returned hits= "<<theSignal.size()<<std::endl;
+      std::cout<<"$$$$$$$$PPSTiming for "<<det_id_<<" returned hits= "<<theSignalProvenance.size()<<std::endl;
+
+  SimPPSTiming::strip_charge_map afterNoise;
+  if(noNoise)
+    afterNoise = theSignal;
+  else
+    afterNoise = theRPGaussianTailNoiseAdder->addNoise(theSignal);
+
+  theRPVFATSimulator->ConvertChargeToHits(afterNoise, theSignalProvenance,
+        output_digi, output_trig, output_digi_links, output_trig_links);
+
+*/
+
+  const SimPPSTiming::PhotoElectron_ArrTime_vec &theSignal1 = thePPSPhotoelectronArrTime->dumpSignal();
+  SimPPSTiming::PhotoElectron_ArrTime_map_links_type &theSignalProvenance1 = thePPSPhotoelectronArrTime->dumpLinks();
+
+  if (verbosity_){
+     std::cout<<"*****PPSTiming for DetId("<<det_id_<<") returned number of photoelectrons: "<<theSignal1.size()<<std::endl;
+     std::cout<<"$$$$$PPSTiming for DetId("<<det_id_<<") returned number of photoelectrons: "<<theSignalProvenance1.size()<<std::endl;
+  }
+
+//  std::cout<<"&&&&&&&&&&&&&&For His on Det_id("<<det_id_<<") with LBarNumber: "<<RPDetDigitizer::GetLBarNumber(det_id_)<<" , the number of photoelectron is: "<<theSignal1.size()<<" and charge is: "<<(theSignal1.size())*1.6*0.0001<<" fC"<<std::endl;
+
+//  LBarNr = PPSDetDigitizer::GetLBarNumber(det_id_);
+//  CollectedCharge = (theSignal1.size())*1.6*0.0001;
+CollectedCharge = int(TotalAmplitude)*1.6*0.0001;
+  std::cout<<"LBarNr: "<<LBarNr<<", CollectedCharge: "<<CollectedCharge<<std::endl;
+
+//  std::cout<<"$$$$$PPSTiming for DetId("<<det_id_<<") returned number of photoelectrons: "<<theSignalProvenance1.size()<<std::endl;
+
+  SimPPSTiming::PhotoElectron_ArrTime_vec afterNoise1;
+//  if(noNoise)
+    afterNoise1 = theSignal1;
+//  else
+//    afterNoise = theRPGaussianTailNoiseAdder->addNoise(theSignal);
+
+
+  thePPSNINOSimulator->ConvertTimeToHits(LBarNr, CollectedCharge, afterNoise1, theSignalProvenance1,
+        output_digi, output_trig, output_digi_links, output_trig_links);
+
+
+}
+
+int PPSDetDigitizer::GetLBarNumber(uint32_t decimal)
+{
+        int rem=0, iterator=0, LBar=0;
+        char bin32[32];
+
+         while (decimal!=0)
+         {
+               rem=decimal%2;
+               decimal/=2;
+               bin32[31-iterator]=rem;
+               iterator+=1;
+         }
+
+         for (int i=13; i<19; i++) LBar+=((int)bin32[i])*(std::pow(2, 18-i));
+
+         return LBar;
+}
+
+

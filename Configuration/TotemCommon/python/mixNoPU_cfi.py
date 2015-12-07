@@ -114,6 +114,7 @@ mix.mixObjects.mixSH.crossingFrames = cms.untracked.vstring('MuonCSCHits',
 'MuonRPCHits',
 'TotemHitsT1',
 'TotemHitsT2Gem',
-'TotemHitsRP')
+'TotemHitsRP',
+'PPSTimingHits')
 
 

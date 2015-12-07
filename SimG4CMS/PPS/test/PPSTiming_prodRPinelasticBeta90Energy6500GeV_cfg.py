@@ -9,7 +9,7 @@ process.load("Configuration.TotemCommon.LoggerMin_cfi")
 
 # Specify the maximum events to simulate
 process.maxEvents = cms.untracked.PSet(
-  input = cms.untracked.int32(2000)
+  input = cms.untracked.int32(10)
 )
 
 # Specify the output filename
@@ -46,6 +46,6 @@ process.g4SimHits.PPSSD = cms.PSet(
 )
 
 
-process.p1 = cms.Path(process.generator*process.SmearingGenerator*process.g4SimHits*process.mix
+process.p1 = cms.Path(process.generator*process.SmearingGenerator*process.g4SimHits*process.mix*process.PPSTimingDigitizer
 #*process.RPSiDetDigitizer*process.RPClustProd*process.RPHecoHitProd*process.RPSinglTrackCandFind*process.RPSingleTrackCandCollFit*process.RP220Reconst
 )

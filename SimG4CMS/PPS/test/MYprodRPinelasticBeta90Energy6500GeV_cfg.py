@@ -6,7 +6,7 @@ process.setName_("prodRPinelasticBeta90Energy6500GeV")
 
 # Specify the maximum events to simulate
 process.maxEvents = cms.untracked.PSet(
-  input = cms.untracked.int32(20)
+  input = cms.untracked.int32(2)
 )
 
 # Specify the output filename
